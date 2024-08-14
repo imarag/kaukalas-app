@@ -1,0 +1,14 @@
+.section--team .section__title {
+    text-align: center;
+}
+
+.section--team .section__subtitle {
+    text-align: center;
+}
+
+.section--company .section__title {
+    text-align: center;
+}
+@media (min-width: 992px) {
+    
+}

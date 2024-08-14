@@ -1,0 +1,241 @@
+
+.nav {
+    height: var(--nav-height);
+    display: flex;
+    flex-direction: row;
+    height: var(--nav-height);
+    align-items: center;
+    padding: 0 2.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+}
+
+.nav__logo-img {
+    width: 13rem;
+}
+
+.nav__list {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav__link {
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.nav__link:hover {
+    background-color: var(--nav-link-hover-color);
+}
+
+.nav_menubutton {
+    border: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav_menubutton-svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.nav-offcanvas {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    transition: right 0.5s;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.nav-offcanvas.visible {
+    right: 0;
+    
+}
+
+.nav-offcanvas__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10rem 5rem;
+}
+
+.nav-offcanvas__logo {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    transform: translateY(-50%);
+}
+
+.nav-offcanvas__logo-img {
+    width: 13rem;
+}
+
+.nav-offcanvas__closebutton {
+    border: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    transform: translateY(-50%);
+}
+
+.nav-offcanvas__closebutton-svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.nav-offcanvas__link {
+    white-space: nowrap;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-offcanvas__link-svg {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.footer {
+    padding: 3rem 2rem;
+}
+
+.footer--dark {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.footer__columns {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer__column {
+    flex-basis: 15rem;
+}
+
+.footer__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer--sitemap .footer__svg {
+    color: white;
+}
+
+.footer__link-anchor {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-left: 0.4rem;
+}
+
+.footer__app {
+    background-color: white;
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--primary-color);
+}
+
+.footer__title {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer__paragraph {
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.footer__logo-img {
+    width: 13rem;
+    display: block;
+    margin: 0;
+}
+
+.footer__information {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer__information-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.footer__information-text {
+    margin: 0;
+}
+
+.footer__information-icon {
+    background-color: white;
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+@media (min-width: 992px) {
+    .nav__list {
+        display: flex;
+    }
+
+    .nav_menubutton {
+        display: none;
+    }
+}

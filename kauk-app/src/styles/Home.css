@@ -1,0 +1,110 @@
+.section--hero {
+    padding-top: var(--nav-height);
+    background-image: url("../images/hero-image-gradient.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+}
+
+.section--hero .section__title {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    margin-top: var(--nav-height);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.393);
+}
+
+.section--hero .section__subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.393);
+}
+
+.section--hero .btn{
+    margin: 5rem auto;
+}
+
+.section--main-service .section__title {
+    text-align: center;
+}
+
+.section--main-service .section__paragraph {
+    text-align: center;
+}
+
+.section--gallery .section__title {
+    text-align: center;
+}
+
+.section--gallery .section__subtitle {
+    text-align: center;
+}
+
+.section--contact .section__title {
+    text-align: center;
+}
+
+.section--contact .section__subtitle {
+    text-align: center;
+}
+
+.section--contact .btn{
+    margin: 2rem auto;
+}
+
+.section--clients .section__title {
+    text-align: center;
+}
+
+.section--clients .section__subtitle {
+    text-align: center;
+}
+
+.section--testimonials .section__title {
+    text-align: center;
+}
+
+.section--testimonials .section__subtitle {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .section--hero .section__title {
+        text-align: center;
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    .section--hero .section__subtitle {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .section--main-service .section__title {
+        text-align: start;
+    }
+
+    .section--main-service .section__paragraph {
+        text-align: start;
+    }
+
+    .section--contact .section__title {
+        text-align: start;
+    }
+    
+    .section--contact .section__subtitle {
+        text-align: start;
+    }
+
+    .section--contact .btn{
+        margin: 2rem 0;
+    }
+    
+    
+}
