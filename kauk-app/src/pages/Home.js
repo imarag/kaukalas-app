@@ -45,8 +45,8 @@ export default function Home() {
             </section>
             <section className="section section--main-service">
                 <div className="section__content">
-                    <div className="section__columns">
-                        <div className="section__column">
+                    <div className="section__grid">
+                        <div className="section__grid-item">
                             <h1 className="section__title">Αξιόπιστες Υπηρεσίες Συντήρησης Και Καθαρισμού Πισίνας</h1>
                             <p className="section__paragraph">
                                 Στην εταιρεία μας, προσφέρουμε μια σειρά υπηρεσιών 
@@ -55,7 +55,7 @@ export default function Home() {
                                 αποτελεσματικές λύσεις που ικανοποιούν τις ανάγκες σας.
                             </p>
                         </div>
-                        <div className="section__column">
+                        <div className="section__grid-item">
                             <img className="section__image" src={MainServiceImage} alt=" " />
                         </div>
                     </div>
@@ -95,11 +95,11 @@ export default function Home() {
             </section>
             <section className="section section--contact">
                 <div className="section__content">
-                    <div className="section__columns">
-                        <div className="section__column">
+                    <div className="section__grid">
+                        <div className="section__grid-item">
                             <img className="section__image" src={CTAImage} alt="contact me" />
                         </div>
-                        <div className="section__column">
+                        <div className="section__grid-item">
                             <h1 className="section__title">Επικοινωνήστε για να κλείσετε ραντεβού τώρα</h1>
                             <p className="section__paragraph">
                                 Είμαστε εδώ για να σας βοηθήσουμε με οποιεσδήποτε ερωτήσεις ή απορίες έχετε σχετικά με τις υπηρεσίες καθαρισμού πισίνας μας. Επικοινωνήστε μαζί μας σήμερα για να προγραμματίσετε το επόμενο ραντεβού σας.
@@ -122,11 +122,11 @@ export default function Home() {
                 <div className="section__content">
                     <h1 className="section__title">Σχόλια Πελατών</h1>
                     <h2 className="section__subtitle">Οι απόψεις των πελατών μας για τις υπηρεσίες μας </h2>
-                    <div className="section__cards">
+                    <div className="section__grid">
                         {
                             testimonyData.map(person => (
-                                <div key={person.name} className="card">
-                                    <img src={UserImage} className="card__avatar" />
+                                <div key={person.name} className="card section__grid-item">
+                                    <img src={UserImage} className="avatar" />
                                     <h1 className="card__title">{person.name}</h1>
                                     <h2 className="card__subtitle">{person.profession}</h2>
                                     <p className="card__quotation card__quotation--start">🙶</p>

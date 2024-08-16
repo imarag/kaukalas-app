@@ -29,49 +29,66 @@
     margin: 5rem auto;
 }
 
-.section--main-service .section__title {
-    text-align: center;
+.section--main-service .section__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
-.section--main-service .section__paragraph {
-    text-align: center;
+.section--main-service .section__grid-item {
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 
-.section--gallery .section__title {
-    text-align: center;
+.section--gallery .section__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.section--gallery .section__subtitle {
-    text-align: center;
+.section--gallery .section__grid-item {
+    flex-grow: 1;
+    flex-basis: calc((100% - 1rem) / 2);
 }
 
-.section--contact .section__title {
-    text-align: center;
+.section--contact .section__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
-.section--contact .section__subtitle {
-    text-align: center;
+.section--contact .section__grid-item {
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 
 .section--contact .btn{
     margin: 2rem auto;
 }
 
-.section--clients .section__title {
-    text-align: center;
+.section--testimonials .section__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.section--clients .section__subtitle {
-    text-align: center;
+.section--testimonials .section__grid-item {
+    flex-grow: 1;
+    flex-basis: calc(50%);
 }
 
-.section--testimonials .section__title {
-    text-align: center;
-}
-
-.section--testimonials .section__subtitle {
-    text-align: center;
-}
 
 @media (min-width: 992px) {
     .section--hero .section__title {
@@ -79,7 +96,7 @@
         font-size: 6rem;
         line-height: 6rem;
     }
-
+    
     .section--hero .section__subtitle {
         text-align: center;
         font-size: 2rem;
@@ -94,17 +111,31 @@
         text-align: start;
     }
 
+    .section--main-service .section__grid {
+        flex-wrap: nowrap;
+    }
+
     .section--contact .section__title {
         text-align: start;
     }
     
-    .section--contact .section__subtitle {
+    .section--contact .section__paragraph {
         text-align: start;
+    }
+
+    .section--contact .section__grid {
+        flex-wrap: nowrap;
     }
 
     .section--contact .btn{
         margin: 2rem 0;
     }
     
-    
+    .section--testimonials .section__grid {
+        flex-wrap: nowrap;
+    }
+
+    .section--testimonials .section__grid-item {
+        flex-basis: calc((100% - 2rem) / 3);
+    }
 }

@@ -1,14 +1,92 @@
 .section--team .section__title {
-    text-align: center;
+    padding-top: var(--nav-height);
 }
 
-.section--team .section__subtitle {
-    text-align: center;
+.section--team .section__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.section--team .section__grid-item {
+    width: 10rem;
 }
 
 .section--company .section__title {
-    text-align: center;
+    text-align: start;
 }
+
+.section--company .section__paragraph {
+    text-align: start;
+}
+
+.section--company .section__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section--company .section__grid-item {
+    flex-grow: 1;
+    flex-basis: calc(50% - 4rem);
+}
+
+.elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.elements .section__smalltitle {
+    text-align: start;
+}
+
+.elements svg {
+    width: 4rem;
+    height: 4rem;
+    fill: white !important;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.section--why-us .section__smalltitle {
+    text-align: left;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+}
+
+.section--why-us .section__paragraph {
+    text-align: left;
+}
+
+.why-us--grid {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+}
+
+.why-us--grid-item {
+    flex-grow: 1;
+    flex-basis: 90%;
+}
+
 @media (min-width: 992px) {
-    
+    .section--team .section__grid {
+        flex-wrap: nowrap;
+    }
+
+    .why-us--grid {
+        flex-wrap: nowrap;
+    }
 }
