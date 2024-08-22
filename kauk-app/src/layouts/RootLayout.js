@@ -3,7 +3,12 @@ import { NavLink, Outlet, Link } from "react-router-dom"
 import Logo from "../images/Logo.svg"
 import LogoDark from "../images/Logo-dark.svg"
 
+import { LinkIcon } from "../SvgIcons"
+import { CloseX } from "../SvgIcons"
+
 import '../styles/RootLayout.css'
+
+import { menuLinks } from "../data"
 
 export default function RootLayout() {
 
@@ -30,56 +35,22 @@ export default function RootLayout() {
                         <img className="nav-offcanvas__logo-img" src={LogoDark} alt="logo of the page"/>
                     </Link>
                     <button className="nav-offcanvas__closebutton" onClick={handleOffCanvasCloseButton}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="nav-offcanvas__closebutton-svg  bi bi-x-lg nav-offcanvas-svg" viewBox="0 0 16 16">
-                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                        </svg>
+                        <CloseX classParam="nav-offcanvas__closebutton-svg" />
                     </button>
                 </div>
                 <ul className="nav-offcanvas__list">
-                    <li className="nav-offcanvas__item">
-                        <NavLink className="nav-offcanvas__link" to="/" onClick={handleOffCanvasLinkClick}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="nav-offcanvas__link-svg  bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                                <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                            </svg>
-                            <span>
-                                Αρχική Σελίδα
-                            </span>
-                        </NavLink>
-                    </li>
-                    <li className="nav-offcanvas__item">
-                        <NavLink className="nav-offcanvas__link" to="/about" onClick={handleOffCanvasLinkClick}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="nav-offcanvas__link-svg  bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                                <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                            </svg>
-                            <span>
-                                Σχετικά με εμάς 
-                            </span>
-                        </NavLink>
-                    </li>
-                    <li className="nav-offcanvas__item">
-                        <NavLink className="nav-offcanvas__link" to="/gallery" onClick={handleOffCanvasLinkClick}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="nav-offcanvas__link-svg  bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                                <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                            </svg>
-                            <span>
-                                Τα έργα μας
-                            </span>
-                        </NavLink>
-                    </li>
-                    <li className="nav-offcanvas__item">
-                        <NavLink className="nav-offcanvas__link" to="/contact" onClick={handleOffCanvasLinkClick}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="nav-offcanvas__link-svg  bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                                <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                            </svg>
-                            <span>
-                                Επικοινωνία
-                            </span>
-                        </NavLink>
-                    </li> 
+                    {
+                        menuLinks.map(item => (
+                            <li className="nav-offcanvas__item" key={ item["label"] }>
+                                <NavLink className="nav-offcanvas__link" to={ item["to"] } onClick={handleOffCanvasLinkClick}>
+                                    <LinkIcon classParam="nav-offcanvas__link-svg" />
+                                    <span>
+                                        { item["label"] }
+                                    </span>
+                                </NavLink>
+                            </li>
+                        ))
+                    }
                 </ul>
             </nav>
             <nav className="nav">
@@ -89,18 +60,15 @@ export default function RootLayout() {
                     </Link>
                 </div>
                 <ul className="nav__list">
-                    <li className="nav__item">
-                        <NavLink className="nav__link" to="/">Αρχική Σελίδα</NavLink>
-                    </li>
-                    <li className="nav__item">
-                        <NavLink className="nav__link" to="/about">Σχετικά με εμάς</NavLink>
-                    </li>
-                    <li className="nav__item">
-                        <NavLink className="nav__link" to="/gallery">Τα έργα μας</NavLink>
-                    </li>
-                    <li className="nav__item">
-                        <NavLink className="nav__link" to="/contact">Επικοινωνία</NavLink>
-                    </li> 
+                    {
+                        menuLinks.map(item => (
+                            <li className="nav__item" key={ item["label"] }>
+                                <NavLink className="nav__link" to={ item["to"] }>
+                                    { item["label"] }
+                                </NavLink>
+                            </li>
+                        ))
+                    }
                 </ul>
                 <button className="nav_menubutton" onClick={handleMenuButtonClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-list nav_menubutton-svg" viewBox="0 0 16 16">

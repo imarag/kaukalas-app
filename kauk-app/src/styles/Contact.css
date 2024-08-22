@@ -1,4 +1,17 @@
-.company-form {
+.contact {
+    margin: 4rem 0;
+}
+
+.contact__title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.095);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
     padding-top: var(--nav-height);
     background-image: url("../images/contact-pool-water.png");
     background-repeat: no-repeat;
@@ -75,110 +88,29 @@
     margin-right: auto;
 }
 
-
-.company-info .contact__grid {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: center;
-  flex-wrap: wrap;
+.company-info .section__image {
+    margin: 1rem 0;
 }
 
-.company-info .contact__grid-item {
-  flex-grow: 1;
-  flex-basis: calc(100% / 1.8);
+.company-info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.contact__infocard {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  gap: 1rem;
-  margin: 2rem 0;
+.company-info-card__title {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-.contact__title {
-  text-align: start;
-  font-size: 1.6rem;
-  font-weight: bold;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.095);
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
+.company-info-card__info {
+    font-size: 0.9rem;
 }
 
-.contact__icon {
-  padding: 0.8rem;
-  background-color: var(--primary-color);
-  border-radius: 10%;
-}
-
-.contact__icon-svg {
-  fill: var(--tertiary-color);
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.contact__smalltitle {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.contact__paragraph {
-  font-size: 0.8rem;
-  margin: 0;
-}
-
-.company-info__map-img {
-  border-radius: 1rem;
-  width: 100%;
-  height: 100%;
-  max-width: 30rem;
-  object-fit: cover;
-}
-
-
-.company-social .contact__grid {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: start;
-  gap: 2rem;
-}
-
-.company-info,
-.company-contact,
-.company-form,
-.company-social {
-  padding: 2rem 0.5rem;
-}
-
-
-@media (min-width: 768px) {  
-  .form__content {
-    max-width: 500px;
-  }
-}
-
-@media (min-width: 992px) {  
-    .form__content {
-      max-width: 500px;
-    }
-
-    .form__title {
-        font-size: 4rem;
-    }
-  }
-
-@media (min-width: 1200px) {    
-  .form__content {
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 1400px) {    
-  .form__content {
-    max-width: 800px;
-  }
+.social-media__container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
 }
