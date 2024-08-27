@@ -1,0 +1,23 @@
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: start;
+    font-size: var(--fs-body);
+    margin-bottom: var(--size-300);
+}
+
+.info-card-value {
+    font-size: var(--fs-small);
+    color: var(--clr-muted);
+}
+
+.info-card-key {
+    font-weight: var(--fw-bold);
+}
+
+.info-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

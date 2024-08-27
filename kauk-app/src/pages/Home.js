@@ -5,46 +5,48 @@ import CTAImage from "../images/cta-image.png"
 import ClientsImage from "../images/clients.png"
 import UserImage from "../images/user.png"
 
+import Card from '../components/Card'
+
 import {galleryImages} from "../data"
 import {testimonyData} from "../data"
 
 export default function Home() {
     return (
-        <>
+        <div className="Home">
             <section className="hero">
                 <div className="container">
-                    <h1 className="fs-primary-heading text-light shadow-large fw-bold text-center margin-top-nav-height">GK Pool & Villas<br />Services</h1>
-                    <h2 className="fs-primary-subheading text-light shadow-large fw-semibold text-center margin-top-400 margin-bottom-800">Επαγγελματικός Καθαρισμός Πισίνας, Εύκολα και Γρήγορα</h2>
-                    <button className="btn btn--large btn--dark btn--center">Κλείστε ραντεβού τώρα</button>
+                    <h1 className="hero-title">GK Pool & Villas<br />Services</h1>
+                    <h2 className="hero-subtitle">Επαγγελματικός Καθαρισμός Πισίνας, Εύκολα και Γρήγορα</h2>
+                    <button className="btn btn-large">Κλείστε ραντεβού τώρα</button>
                 </div>
             </section>
             <section className="section services">
                 <div className="container">
-                    <div className="grid grid-gap-large grid-lg-two-columns">
-                        <div className="column">
-                            <h1 className="fs-secondary-heading fw-bold text-center text-lg-start margin-bottom-300">Αξιόπιστες Υπηρεσίες Συντήρησης Και Καθαρισμού Πισίνας</h1>
-                            <p className="fs-body text-center text-lg-start margin-bottom-800">
+                    <div className="services-grid">
+                        <div>
+                            <h1 className="section-title">Αξιόπιστες Υπηρεσίες Συντήρησης Και Καθαρισμού Πισίνας</h1>
+                            <p className="section-paragraph">
                                 Στην εταιρεία μας, προσφέρουμε μια σειρά υπηρεσιών 
                                 καθαρισμού πισίνας για να διασφαλίσουμε ότι η πισίνα σας είναι πάντα 
                                 καθαρή και ασφαλής. Η έμπειρη ομάδα μας παρέχει αξιόπιστες και 
                                 αποτελεσματικές λύσεις που ικανοποιούν τις ανάγκες σας.
                             </p>
                         </div>
-                        <div className="column">
-                            <img src={MainServiceImage} alt=" " />
+                        <div>
+                            <img className="image" src={MainServiceImage} alt=" " />
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="section gallery bg-primary text-light">
+            <section className="section gallery">
                 <div className="container">
-                    <h1 className="fs-secondary-heading fw-bold text-center margin-bottom-300">Τα Εργα Μας</h1>
-                    <h2 className="fs-subheading fw-regular text-center margin-bottom-800">Ανακαλύψτε τις υπηρεσίες καθαρισμού πισίνας μας μέσα από την συλλογή φωτογραφιών πριν και μετά τον καθαρισμό</h2>
-                    <div className="grid grid-gap-small grid-two-columns">
+                    <h1 className="section-title">Τα Εργα Μας</h1>
+                    <h2 className="section-subtitle">Ανακαλύψτε τις υπηρεσίες καθαρισμού πισίνας μας μέσα από την συλλογή φωτογραφιών πριν και μετά τον καθαρισμό</h2>
+                    <div className="gallery-grid">
                         {
                             galleryImages.map(image => (
-                                <div className="column">
-                                    <img className="section__image" src={image} alt="gallery" />
+                                <div key={image}>
+                                    <img className="image" src={image} alt="gallery" />
                                 </div>
                             ))
                         }
@@ -53,49 +55,46 @@ export default function Home() {
             </section>
             <section className="section cta">
                 <div className="container">
-                    <div className="grid grid-gap-large grid-lg-two-columns">
-                        <div className="column">
-                            <img className="section__image" src={CTAImage} alt="contact me" />
+                    <div className="cta-grid">
+                        <div>
+                            <img className="image" src={CTAImage} alt="contact me" />
                         </div>
-                        <div className="column">
-                            <h1 className="fs-secondary-heading fw-bold text-center text-lg-start margin-bottom-300">Επικοινωνήστε για να κλείσετε ραντεβού τώρα</h1>
-                            <p className="fs-body fw-regular text-center text-lg-start margin-bottom-800">
+                        <div>
+                            <h1 className="section-title">Επικοινωνήστε για να κλείσετε ραντεβού τώρα</h1>
+                            <p className="section-paragraph">
                                 Είμαστε εδώ για να σας βοηθήσουμε με οποιεσδήποτε ερωτήσεις ή απορίες έχετε σχετικά με τις υπηρεσίες καθαρισμού πισίνας μας. Επικοινωνήστε μαζί μας σήμερα για να προγραμματίσετε το επόμενο ραντεβού σας.
                             </p>
-                            <button className="btn btn--medium btn--dark cta__button">Κλείστε ραντεβού τώρα</button>
+                            <button className="btn">Κλείστε ραντεβού τώρα</button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="section clients bg-primary text-light">
+            <section className="section clients">
                 <div className="container">
-                    <h1 className="fs-secondary-heading fw-bold text-center margin-bottom-300">Οι Πελάτες Μας</h1>
-                    <h2 className="fs-subheading fw-regular text-center margin-bottom-800">Οργανισμοί που έχουν εμπιστευτεί την εταιρεία μας για τις υπηρεσίες που προσφέρουμε</h2>
+                    <h1 className="section-title">Οι Πελάτες Μας</h1>
+                    <h2 className="section-subtitle">Οργανισμοί που έχουν εμπιστευτεί την εταιρεία μας για τις υπηρεσίες που προσφέρουμε</h2>
                     <div>
-                        <img className="section__image" src={ClientsImage} alt="image of the company's clients" />
+                        <img className="image" src={ClientsImage} alt="image of the company's clients" />
                     </div>
                 </div>
             </section>
             <section className="section testimonials">
                 <div className="container">
-                    <h1 className="fs-secondary-heading fw-bold text-center margin-bottom-300">Σχόλια Πελατών</h1>
-                    <h2 className="fs-subheading fw-regular text-center margin-bottom-800">Οι απόψεις των πελατών μας για τις υπηρεσίες μας </h2>
-                    <div className="flex align-items-stretch">
+                    <h1 className="section-title">Σχόλια Πελατών</h1>
+                    <h2 className="section-subtitle">Οι απόψεις των πελατών μας για τις υπηρεσίες μας </h2>
+                    <div className="testimonials-grid">
                         {
                             testimonyData.map(person => (
-                                <div key={person.name} className="testimonial flex-basis-100 flex-basis-lg-0 flex-grow-1 margin-bottom-500">
-                                    <img src={UserImage} className="avatar avatar--medium" />
-                                    <h1 className="fs-subheading fw-semibold text-center">{person.name}</h1>
-                                    <h2 className="fs-small fw-regular text-muted text-center">{person.profession}</h2>
-                                    <p className="text-start">🙶</p>
-                                    <p className="fs-body fs-small fst-italic fw-light text-center">{person.description}</p>
-                                    <p className="text-end">🙸</p>
+                                <div>
+                                    <Card person={person}>
+                                        <img src={UserImage} />
+                                    </Card>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }

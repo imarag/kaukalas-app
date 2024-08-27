@@ -2,9 +2,9 @@ import { useState } from "react";
 
 import "../styles/Contact.css"
 
-import CompanyMap from "../images/company-map-location.png"
+import Accordion from "../components/Accordion.js"
 
-import Accordion from '../components/Accordion';
+import CompanyMap from "../images/company-map-location.png"
 
 import { BiInstagram } from "../SvgIcons"
 import { BiFacebook } from "../SvgIcons"
@@ -16,27 +16,11 @@ import { Time } from "../SvgIcons";
 
 import { qaList } from '../data';
 
-function CompanyInfoCard({title, info, children}) {
-    return (
-        <div>
-            <div className="company-info-card">
-                <div className="company-info-card__item">
-                    { children }
-                </div>
-                <div className="company-info-card__item">
-                    <h1 className="company-info-card__title">{ title }</h1>
-                    <p className="company-info-card__info">{ info }</p>
-                </div>
-            </div>
-        </div>
-    )
-}
+import CompanyInfoCard from "../components/CompanyInfoCard.js";
 
 export default function Contact() {
-
     const [accordionShownId, setAccordionShownId] = useState(null)
 
- 
     function handleClickAccordion(index) {
         if (index === accordionShownId) {
             setAccordionShownId(null)
@@ -47,94 +31,72 @@ export default function Contact() {
     }
 
     return (
-        <>
-            <section className="contact-form form">
-                <h1 className="form__title">Επικοινωνίστε Μαζί Μας</h1>
-                <div className="form__content">
-                    <form className="form">
-                        <div className="form__element">
-                            <label className="form__label" htmlFor="name">ΟΝΟΜΑ</label>
-                            <input className="form__textinput" type="text" id="name" placeholder="π.χ. Ιωάννης"/>
-                        </div>
-                        <div className="form__element">
-                            <label className="form__label" htmlFor="surname">ΕΠΙΘΕΤΟ</label>
-                            <input className="form__textinput" type="text" id="surname" placeholder="π.χ. Μαραγκάκης"/>
-                        </div>
-                        <div className="form__element">
-                            <label className="form__label" htmlFor="comments">ΣΧΟΛΙΑ</label>
-                            <textarea className="form__textarea" rows="5" placeholder="Πληκτρολογήστε τα σχόλιά σας">
+        <div className="Contact">
+            <section className="form-section">
+                <form className="form">
+                    <h1 className="form-title">Επικοινωνίστε<br />Μαζί Μας</h1>
+                    <div className="form-element">
+                        <label className="form-label" htmlFor="name">ΟΝΟΜΑ</label>
+                        <input className="form-textinput" type="text" id="name" placeholder="π.χ. Ιωάννης"/>
+                    </div>
+                    <div className="form-element">
+                        <label className="form-label" htmlFor="surname">ΕΠΙΘΕΤΟ</label>
+                        <input className="form-textinput" type="text" id="surname" placeholder="π.χ. Μαραγκάκης"/>
+                    </div>
+                    <div className="form-element">
+                        <label className="form-label" htmlFor="comments">ΣΧΟΛΙΑ</label>
+                        <textarea className="form-textarea" rows="4" placeholder="Πληκτρολογήστε τα σχόλιά σας">
 
-                            </textarea>
-                        </div>
-                        <button className="btn btn--dark btn--medium">Αποστολή</button>
-                    </form>
-                </div>
+                        </textarea>
+                    </div>
+                    <button className="btn">Αποστολή</button>
+                </form>
             </section>
-            <section className="contact contact-info">
+            <section className="section communication">
                 <div className="container">
-                    <h1 className="contact__title">Στοιχεία Επικοινωνίας</h1>
+                    <h1 className="section-title">Στοιχεία Επικοινωνίας</h1>
                     <CompanyInfoCard title="Τηλέφωνο Επικοινωνίας" info="+306982972144">
-                        <div className="icon__container icon__container--dark icon__container--medium icon__container--pill">
-                            <BiTelephone classParam="icon__svg icon__svg--small icon__svg--light" />
-                        </div>
+                        <BiTelephone className="icon icon-dark"/>
                     </CompanyInfoCard>
                     <CompanyInfoCard title="Ηλεκτρονική Διεύθυνση" info="giannis.marar@hotmail.com">
-                        <div className="icon__container icon__container--dark icon__container--medium icon__container--pill">
-                            <BiEnvelopeFill classParam="icon__svg icon__svg--small icon__svg--light" />
-                        </div>
+                        <BiEnvelopeFill className="icon icon-dark"/>
                     </CompanyInfoCard>
                 </div>
             </section>
-            <section className="contact company-info">
+            <section className="section company">
                 <div className="container">
-                    <h1 className="contact__title">Η Εταιρεία Μας</h1>
+                    <h1 className="section-title">Η Εταιρεία Μας</h1>
                     <CompanyInfoCard title="Τοποθεσία" info="Μηνα Βίστα 33, Θεσσαλονίκη, 73005">
-                        <div className="icon__container icon__container--dark icon__container--medium icon__container--pill">
-                            <Location classParam="icon__svg icon__svg--small icon__svg--light" />
-                        </div>
+                        <Location className="icon icon-dark"/>
                     </CompanyInfoCard>
                     <CompanyInfoCard title="Ωρες Λειτουργίας" info="Δευτ. - Παρ. 08:00 AM - 06:00 PM">
-                        <div className="icon__container icon__container--dark icon__container--medium icon__container--pill">
-                            <Time classParam="icon__svg icon__svg--small icon__svg--light" />
-                        </div>
+                        <Time className="icon icon-dark"/>
                     </CompanyInfoCard>
-                    <div className="company-info__map">
-                        <img className="section__image section__image--small" src={CompanyMap} alt="company map" />
+                    <div>
+                        <img className="image map" src={CompanyMap} alt="company map" />
                     </div>
                 </div>
             </section>
-            <section className="contact social-media">
+            <section className="section contact-social-media">
                 <div className="container">
-                    <h1 className="contact__title">Social Media</h1>
-                    <div className="social-media__container">
-                        <div className="social-media__item">
-                            <div className="icon">
-                                <div className="icon__container icon__container--dark icon__container--medium icon__container--pill">
-                                    <BiInstagram classParam="icon__svg icon__svg--small icon__svg--light" />
-                                </div>
-                            </div>
+                    <h1 className="section-title">Κοινωνικά Μέσα Δικτύωσης</h1>
+                    <div className="contact-social-media-container">
+                        <div>
+                            <BiInstagram className="icon icon-dark"/>
                         </div>
-                        <div className="social-media__item">
-                            <div className="icon">
-                                <div className="icon__container icon__container--dark icon__container--medium icon__container--pill">
-                                    <BiFacebook classParam="icon__svg icon__svg--small icon__svg--light" />
-                                </div>
-                            </div>
+                        <div>
+                            <BiFacebook className="icon icon-dark"/>
                         </div>
-                        <div className="social-media__item">
-                            <div className="icon">
-                                <div className="icon__container icon__container--dark icon__container--medium icon__container--pill">
-                                    <BiTwitter classParam="icon__svg icon__svg--small icon__svg--light" />
-                                </div>
-                            </div>
+                        <div>
+                            <BiTwitter className="icon icon-dark"/>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="contact company-faq">
+            <section className="section faq">
                 <div className="container">
-                    <h1 className="contact__title">Συχνές Ερωτήσεις</h1>
-                    <div className="accordion">
+                    <h1 className="section-title">Συχνές Ερωτήσεις</h1>
+                    <div>
                         {
                             qaList.map((item, index) => (
                                 <div key = {item.question} onClick={() => handleClickAccordion(index)}>
@@ -149,6 +111,6 @@ export default function Contact() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }

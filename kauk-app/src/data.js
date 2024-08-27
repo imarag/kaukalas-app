@@ -10,7 +10,6 @@ import { BiCrossHair } from "./SvgIcons"
 import { Truck } from "./SvgIcons"
 import { ClipboardFillIcon } from "./SvgIcons"
 
-
 import Image1Before from "./images/image 1 before.png"
 import Image1After from "./images/image 1 after.png"
 import Image2Before from "./images/image 2 before.png"
@@ -53,26 +52,25 @@ export const companyTeam = [
 export const coreValues = [
     {
         "title": "Ποιότητα",
-        "image": <BiClipboardCheckFill classParam="icon__svg icon__svg--large icon__svg--light"/>,
+        "image": <BiClipboardCheckFill className="icon icon-light icon-large"/>,
         "text": "Δεσμευόμαστε να παρέχουμε υπηρεσίες που πληρούν τα υψηλότερα πρότυπα ποιότητας, εξασφαλίζοντας την πλήρη ικανοποίηση των πελατών μας."
     },
     {
         "title": "Ακεραιότητα",
-        "image": <BiPeopleFill classParam="icon__svg icon__svg--large icon__svg--light"/>,
+        "image": <BiPeopleFill className="icon icon-light icon-large"/>,
         "text": "Λειτουργούμε με ειλικρίνεια και διαφάνεια σε όλες μας τις συναλλαγές, χτίζοντας σχέσεις εμπιστοσύνης με τους πελάτες μας."
     },
     {
         "title": "Αξιοπιστία",
-        "image": <BiGraphUpArrow classParam="icon__svg icon__svg--large icon__svg--light"/>,
+        "image": <BiGraphUpArrow className="icon icon-light icon-large"/>,
         "text": "Παρέχουμε αξιόπιστες λύσεις που ξεπερνούν τις προσδοκίες, με συνεπή και επαγγελματική εξυπηρέτηση."
     },
     {
         "title": "Εξειδίκευση",
-        "image": <BiCrossHair classParam="icon__svg icon__svg--large icon__svg--light"/>,
+        "image": <BiCrossHair className="icon icon-light icon-large"/>,
         "text": "Εφαρμόζουμε τις πιο σύγχρονες τεχνικές και μεθόδους, αξιοποιώντας την εξειδίκευσή μας για την επίτευξη εξαιρετικών αποτελεσμάτων."
     }
 ];
-
 
 export const servicesOffered = ["Εξαιρετική Ποιότητα", "Ευθύνη", "Ικανοποίηση Πελατών"]
 
@@ -80,17 +78,17 @@ export const whyUs = [
     {
         "title": "Οικολογικές Λύσεις",
         "description": "Χρησιμοποιούμε οικολογικά προϊόντα και μεθόδους για να διατηρούμε την πισίνα σας καθαρή, ενώ προστατεύουμε τον πλανήτη.",
-        "icon": <Truck classParam="icon__svg icon__svg--medium icon__svg--dark"/>
+        "icon": <Truck className="icon icon-dark"/>
     },
     {
         "title": "Εξειδικευμένο Προσωπικό",
         "description": "Η ομάδα μας αποτελείται από εξειδικευμένους επαγγελματίες με πολυετή εμπειρία στον καθαρισμό και τη συντήρηση πισίνας.",
-        "icon": <BiPeopleFill classParam="icon__svg icon__svg--medium icon__svg--dark"/>
+        "icon": <BiPeopleFill className="icon icon-dark"/>
     },
     {
         "title": "Άμεση Υποστήριξη",
         "description": "Παρέχουμε άμεση και αποτελεσματική υποστήριξη για όλες τις ανάγκες σας, εξασφαλίζοντας την άριστη λειτουργία της πισίνας σας.",
-        "icon": <ClipboardFillIcon classParam="icon__svg icon__svg--medium icon__svg--dark"/>
+        "icon": <ClipboardFillIcon className="icon icon-dark"/>
     }
 ];
 
@@ -125,6 +123,7 @@ export const menuLinks = [
         label: "Σχετικά με εμάς",
         to: "/about"
     },
+
     {
         label: "Τα έργα μας",
         to: "/gallery"
@@ -134,42 +133,3 @@ export const menuLinks = [
         to: "/contact"
     }
 ];
-
-// export const services = [
-//     {
-//         title: "Καθαρισμός Πισίνας",
-//         text: "Επαγγελματικός καθαρισμός πισίνας για κρυστάλλινο και υγιεινό νερ",
-//         svg: <BucketFillIcon width="56" height="56"/>
-//     },
-//     {
-//         title: "Συντήρηση",
-//         text: "Εκτεταμένος έλεγχος και συντήρηση εξοπλισμού για άψογη λειτουργία της πισίνας σας",
-//         svg: <ClockFillIcon width="56" height="56"/>
-//     },
-//     {
-//         title: "Έλεγχος Εξοπλισμού Πισίνας",
-//         text: "Συνεχής και αξιόπιστη συντήρηση για να διατηρείτε την πισίνα σας σε άριστη κατάσταση όλο το χρόνο",
-//         svg: <CardCheckListIcon width="56" height="56"/>
-//     },
-//     {
-//         title: "Έλεγχος και Ισορροπία Χημικών",
-//         text: "Επαγγελματικός καθαρισμός πισίνας για κρυστάλλινο και υγιεινό νερ",
-//         svg: <ClipboardFillIcon width="56" height="56"/>
-//     },
-//     {
-//         title: "Καθαρισμός Φίλτρων Πισίνας",
-//         text: "Εκτεταμένος έλεγχος και συντήρηση εξοπλισμού για άψογη λειτουργία της πισίνας σας",
-//         svg: <FilterSquareFillIcon width="56" height="56"/>
-//     },
-//     {
-//         title: "Αναπλήρωση Νερού",
-//         text: "Συνεχής και αξιόπιστη συντήρηση για να διατηρείτε την πισίνα σας σε άριστη κατάσταση όλο το χρόνο",
-//         svg: <DropletHalfIcon width="56" height="56"/>
-//     }
-// ];
-
-// export const galleryListItems = [
-//     "δέσμευσή μας στην ποιότητα",
-//     "προσοχή στη λεπτομέρεια",
-//     "ικανοποίηση των πελατών μας"
-// ]

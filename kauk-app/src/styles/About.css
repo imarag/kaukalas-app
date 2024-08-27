@@ -1,0 +1,74 @@
+
+.About .team {
+    margin-top: var(--nav-height);
+}
+
+.About .avatar {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+}
+
+.About .avatar-title {
+    font-weight: var(--fw-bold);
+}
+
+.About .team-members-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.About .team-member {
+    flex-basis: max-content;
+}
+
+.About .company-history {
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+}
+
+.About .core-values {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--size-600);
+    align-items: center;
+    justify-content: center;
+    margin-block: var(--size-500);
+}
+
+.About .core-value {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.About .core-value-title {
+    font-weight: var(--fw-bold);
+}
+
+.About .why-us-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--size-500);
+    align-items: center;
+    justify-content: center;
+}
+
+.About .why-us-title {
+    font-weight: var(--fw-bold);
+}
+
+
+
+@media (min-width: 768px) {
+    .About .core-values {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .About .why-us-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
