@@ -7,6 +7,11 @@ import MenuBurger from "../icons/menu-burger.svg"
 import XMarkSolid from "../icons/xmark-solid.svg"
 import LinkTo from "../icons/link-to.svg"
 
+import HouseIcon from "../icons/house.svg"
+import PeopleIcon from "../icons/people-fill.svg"
+import ImagesIcon from "../icons/images.svg"
+import HeadsetIcon from "../icons/headset.svg"
+
 import '../styles/RootLayout.css'
 
 import { menuLinks } from "../data"
@@ -30,7 +35,7 @@ export default function RootLayout() {
         navOffcanvas.classList.remove("visible");
         document.body.classList.toggle("offnav-active")
     }
-
+    const offNavIcons = [HouseIcon, PeopleIcon, ImagesIcon, HeadsetIcon]
     return (
         <>
             <header className="header">
@@ -43,10 +48,10 @@ export default function RootLayout() {
                         </div>
                         <ul className="offnav-list">
                             {
-                                menuLinks.map(item => (
+                                menuLinks.map((item, ind) => (
                                     <li className="offnav-item" key={ item["label"] }>
                                         <NavLink className="offnav-link" to={ item["to"] } onClick={handleOffCanvasLinkClick}>
-                                            <img src={LinkTo} alt="link to, icon" />
+                                            <img src={offNavIcons[ind]} alt="link to, icon" />
                                             <span>
                                                 { item["label"] }
                                             </span>

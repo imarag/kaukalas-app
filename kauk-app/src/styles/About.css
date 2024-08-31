@@ -47,6 +47,11 @@
 
 .About .core-value-title {
     font-weight: var(--fw-bold);
+    text-align: left;
+}
+
+.About .company-history .section-paragraph {
+    text-align: left;
 }
 
 .About .why-us-cards {

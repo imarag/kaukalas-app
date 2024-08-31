@@ -34,7 +34,7 @@ export default function Contact() {
         <div className="Contact">
             <section className="form-section">
                 <form className="form">
-                    <h1 className="form-title">Επικοινωνίστε<br />Μαζί Μας</h1>
+                    <h1 className="form-title">Επικοινωνίστε Μαζί Μας</h1>
                     <div className="form-element">
                         <label className="form-label" htmlFor="name">ΟΝΟΜΑ</label>
                         <input className="form-textinput" type="text" id="name" placeholder="π.χ. Ιωάννης"/>

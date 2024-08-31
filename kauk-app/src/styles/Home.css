@@ -7,7 +7,7 @@
     height: 100vh;
     min-height: 35rem;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
 }
 
@@ -73,7 +73,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 
@@ -106,7 +106,6 @@
     .Home .cta-grid {
         grid-template-columns: 1fr 1fr;
     }
-
 
     .Home .testimonials-grid {
         grid-template-columns: 1fr 1fr 1fr;

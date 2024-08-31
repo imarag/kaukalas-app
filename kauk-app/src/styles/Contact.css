@@ -1,18 +1,21 @@
-
+.Contact .section {
+    padding-block: 1.5rem;
+}
 
 .Contact .form-section {
-    margin-top: var(--nav-height);
+  
     background-image: url("../images/contact-pool-water.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     height: 50vh;
     min-height: 500px;
-    margin-top: var(--nav-height);
+    padding-block: 50px;
 }
 
 .Contact .form-title {
     font-size: var(--fs-secondary-heading);
+    margin-bottom: var(--size-600);
     text-align: center;
     border: 0;
     font-weight: var(--fw-regular);
@@ -27,7 +30,7 @@
     padding-block: var(--size-600);
     border-radius: var(--size-200);
     display: block;
-    margin: 0 auto;
+    margin-inline:  auto;
     width: 100%;
 }
 
