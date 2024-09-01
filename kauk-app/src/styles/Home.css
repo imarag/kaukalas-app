@@ -1,9 +1,9 @@
 .hero {
     padding-top: var(--nav-height);
-    background-image: url("../images/hero-image-gradient.png");
+    background-image: url("../images/hero-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: 50% 20%;
     height: 100vh;
     min-height: 35rem;
     display: flex;
@@ -15,8 +15,6 @@
     font-size: var(--fs-primary-heading);
     font-weight: var(--fw-bold);
     margin-bottom: var(--size-300);
-    text-align: center;
-    color: var(--clr-light);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.393);
     line-height: var(--ln-primary-heading);
 }
@@ -25,8 +23,6 @@
     font-size: var(--fs-primary-subheading);
     font-weight: var(--fw-semibold);
     margin-bottom: var(--size-600);
-    text-align: center; 
-    color: var(--clr-light); 
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.393);  
 }
 
@@ -42,11 +38,6 @@
     justify-content: center;
 }
 
-.Home .gallery {
-    background-color: var(--clr-primary);
-    color: var(--clr-light);
-}
-
 .Home .gallery-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -55,18 +46,12 @@
     justify-content: center;
 }
 
-
 .Home .cta-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     align-items: center;
     justify-content: center;
-}
-
-.Home .clients {
-    background-color: var(--clr-primary);
-    color: var(--clr-light);
 }
 
 .Home .testimonials-grid {
@@ -78,29 +63,8 @@
 }
 
 @media (min-width: 768px) {
-
-    .Home .services .section-title {
-        text-align: left;
-    }
-
-    .Home .services .section-paragraph {
-        text-align: left;
-    }
-
     .Home .services-grid {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .Home .cta .section-title {
-        text-align: left;
-    }
-
-    .Home .cta .section-paragraph {
-        text-align: left;
-    }
-
-    .Home .cta .btn {
-        margin-left: 0;
     }
 
     .Home .cta-grid {

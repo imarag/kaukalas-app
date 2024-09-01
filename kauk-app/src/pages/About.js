@@ -11,8 +11,8 @@ export default function About() {
         <div className="About">
             <section className="section team">
                 <div className="container">
-                    <h1 className="section-title">Γνωρίστε την Ομάδα Μας</h1>
-                    <h2 className="section-subtitle">Εξειδικευμένο προσωπικό, απόλυτα αφοσιωμένο στην παροχή των υπηρεσιών μας με αξιοπιστία και συνέπεια.</h2>
+                    <h1 className="section-title text-center">Γνωρίστε την Ομάδα Μας</h1>
+                    <h2 className="section-subtitle text-center">Εξειδικευμένο προσωπικό, απόλυτα αφοσιωμένο στην παροχή των υπηρεσιών μας με αξιοπιστία και συνέπεια.</h2>
                     <div className="team-members-grid">
                         {
                             companyTeam.map(member => (
@@ -25,10 +25,10 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section className="section company-history">
+            <section className="section company-history bg-primary">
                 <div className="container">
-                    <h1 className="section-title">Η Ιστορία Της Εταιρείας Μας</h1>
-                    <p className="section-paragraph">
+                    <h1 className="section-title text-light">Η Ιστορία Της Εταιρείας Μας</h1>
+                    <p className="section-paragraph text-light">
                         Η GK Pool Cleaning ιδρύθηκε το 2012 με σκοπό να επαναστατήσει στον καθαρισμό πισίνας μέσω οικολογικών πρακτικών και επαγγελματισμού. Αυτό που ξεκίνησε ως μια μικρή τοπική επιχείρηση έχει εξελιχθεί σε ένα αξιόπιστο όνομα, δεσμευμένο στη διατήρηση άψογων πισίνων με έμφαση στη βιωσιμότητα. Οι βασικές αξίες της εταιρείας μας περιλαμβάνουν:
                     </p>
                     <div className="core-values">
@@ -52,7 +52,7 @@ export default function About() {
                             ))
                         }
                     </div>
-                    <p className="section-paragraph">
+                    <p className="section-paragraph text-light">
                         Προσφέρουμε μια γκάμα υπηρεσιών, από καθαρισμό οικιακών πισίνων έως πλήρη συντήρηση εμπορικών πισίνων. Οι οικολογικές μας λύσεις διατηρούν τις πισίνες λαμπερές και συμβάλλουν σε ένα υγιέστερο περιβάλλον, εξασφαλίζοντας ασφαλείς και ευχάριστες εμπειρίες κολύμβησης για όλους.
                     </p>
                 </div>
@@ -62,8 +62,8 @@ export default function About() {
             </section>
             <section className="section why-us">
                 <div className="container">
-                    <h1 className="section-title">Γιατί Εμας ?</h1>
-                    <h2 className="section-subtitle">Βασικοί λόγοι για τους οποίους οι πελάτες μας, μας εμπιστεύονται για τη Φροντίδα της πισίνας τους</h2>
+                    <h1 className="section-title text-center">Γιατί Εμας ?</h1>
+                    <h2 className="section-subtitle text-center">Βασικοί λόγοι για τους οποίους οι πελάτες μας, μας εμπιστεύονται για τη Φροντίδα της πισίνας τους</h2>
                     <div className="why-us-cards">
                         {
                             whyUs.map(item => (

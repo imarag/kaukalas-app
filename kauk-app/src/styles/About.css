@@ -25,11 +25,6 @@
     flex-basis: max-content;
 }
 
-.About .company-history {
-    background-color: var(--clr-primary);
-    color: var(--clr-light);
-}
-
 .About .core-values {
     display: grid;
     grid-template-columns: 1fr;
@@ -37,6 +32,7 @@
     align-items: center;
     justify-content: center;
     margin-block: var(--size-500);
+    color: var(--clr-light);
 }
 
 .About .core-value {

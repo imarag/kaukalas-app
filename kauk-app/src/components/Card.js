@@ -1,5 +1,5 @@
 import "../styles/Card.css"
-
+import { StarIcon } from "../SvgIcons"
 export default function Card({person, children}) {
     return (
         <div className="card">
@@ -8,9 +8,14 @@ export default function Card({person, children}) {
             </div>
             <h1 className="card-title">{person.name}</h1>
             <h2 className="card-subtitle">{person.profession}</h2>
-            <p className="card-opening-quote">🙶</p>
+            <div className="card-rating">
+                <StarIcon className="icon icon-small"/>
+                <StarIcon className="icon icon-small"/>
+                <StarIcon className="icon icon-small"/>
+                <StarIcon className="icon icon-small"/>
+                <StarIcon className="icon icon-small"/>
+            </div>
             <p className="card-text">{person.description}</p>
-            <p className="card-closing-quote">🙸</p>
         </div>
     )
 }
