@@ -1,24 +1,10 @@
 .accordion {
-    font-size: var(--fs-small);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.095);
-}
+    border-radius: 1rem;
 
+}
 .accordion-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    margin: var(--size-400) 0;
-}
-
-.accordion-question {
-    font-weight: var(--fw-semibold);
-}
-
-.accordion-content {
-    padding: var(--size-200) 0;
-}
-
-.accordion-answer {
-    font-weight: var(--fw-light);
 }

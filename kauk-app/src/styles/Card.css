@@ -1,36 +1,8 @@
-.card {
-    font-weight: var(--fw-regular);
-    font-size: var(--fs-body);
-    color: var(--clr-dark);
-}
-
 .card-avatar img {
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
     display: block;
-    margin: var(--size-200) auto;
-}
-
-.card-title {
-
-    text-align: center;
-    font-size: var(--fs-body);
-    color: var(--clr-primary);
-}
-
-.card-subtitle {
-    text-align: center;
-    font-size: var(--fs-body);
-    font-size: var(--fs-small);
-    margin-top: var(--size-200);
-    color: var(--clr-muted);
-}
-
-.card-text {
-    font-size: var(--fs-small);
-    text-align: center;
-    line-height: 1.3rem;
 }
 
 .card-rating {
@@ -38,7 +10,6 @@
     align-items: center;
     justify-content: center;
     gap: 0.1rem;
-    margin-block: var(--size-300);
 }
 
 .card-rating svg {

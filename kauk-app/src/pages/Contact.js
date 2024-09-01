@@ -32,7 +32,7 @@ export default function Contact() {
 
     return (
         <div className="Contact">
-            <section className="form-section">
+            <section className="form-section mt-nav-height">
                 <form className="form">
                     <h1 className="form-title">Επικοινωνίστε Μαζί Μας</h1>
                     <div className="form-element">
@@ -52,9 +52,11 @@ export default function Contact() {
                     <button className="btn">Αποστολή</button>
                 </form>
             </section>
-            <section className="section communication">
+            <section className="communication mt-very-big">
                 <div className="container">
-                    <h1 className="section-title">Στοιχεία Επικοινωνίας</h1>
+                    <h1 className="section-title">
+                        Στοιχεία Επικοινωνίας
+                    </h1>
                     <CompanyInfoCard title="Τηλέφωνο Επικοινωνίας" info="+306982972144">
                         <BiTelephone className="icon icon-dark"/>
                     </CompanyInfoCard>
@@ -63,23 +65,27 @@ export default function Contact() {
                     </CompanyInfoCard>
                 </div>
             </section>
-            <section className="section company">
+            <section className="company my-6">
                 <div className="container">
-                    <h1 className="section-title">Η Εταιρεία Μας</h1>
+                    <h1 className="section-title">
+                        Η Εταιρεία Μας
+                    </h1>
                     <CompanyInfoCard title="Τοποθεσία" info="Μηνα Βίστα 33, Θεσσαλονίκη, 73005">
                         <Location className="icon icon-dark"/>
                     </CompanyInfoCard>
                     <CompanyInfoCard title="Ωρες Λειτουργίας" info="Δευτ. - Παρ. 08:00 AM - 06:00 PM">
                         <Time className="icon icon-dark"/>
                     </CompanyInfoCard>
-                    <div>
+                    <div className="mt-5">
                         <img className="image map" src={CompanyMap} alt="company map" />
                     </div>
                 </div>
             </section>
-            <section className="section contact-social-media">
+            <section className="contact-social-media my-6">
                 <div className="container">
-                    <h1 className="section-title">Κοινωνικά Μέσα Δικτύωσης</h1>
+                    <h1 className="section-title">
+                        Κοινωνικά Μέσα Δικτύωσης
+                    </h1>
                     <div className="contact-social-media-container">
                         <div>
                             <BiInstagram className="icon icon-dark"/>
@@ -93,10 +99,12 @@ export default function Contact() {
                     </div>
                 </div>
             </section>
-            <section className="section faq">
+            <section className="faq my-6">
                 <div className="container">
-                    <h1 className="section-title">Συχνές Ερωτήσεις</h1>
-                    <div>
+                    <h1 className="section-title">
+                        Συχνές Ερωτήσεις
+                    </h1>
+                    <div className="mt-5 container">
                         {
                             qaList.map((item, index) => (
                                 <div key = {item.question} onClick={() => handleClickAccordion(index)}>

@@ -9,29 +9,33 @@ import "../styles/About.css"
 export default function About() {
     return (
         <div className="About">
-            <section className="section team">
+            <section className="team py-6 mt-nav-height">
                 <div className="container">
-                    <h1 className="section-title text-center">Γνωρίστε την Ομάδα Μας</h1>
-                    <h2 className="section-subtitle text-center">Εξειδικευμένο προσωπικό, απόλυτα αφοσιωμένο στην παροχή των υπηρεσιών μας με αξιοπιστία και συνέπεια.</h2>
+                    <h1 className="section-title">
+                        Γνωρίστε την Ομάδα Μας
+                    </h1>
+                    <h2 className="section-subtitle">
+                        Εξειδικευμένο προσωπικό, απόλυτα αφοσιωμένο στην παροχή των υπηρεσιών μας με αξιοπιστία και συνέπεια.
+                    </h2>
                     <div className="team-members-grid">
                         {
                             companyTeam.map(member => (
                                 <div key={member["name"]} className="team-member">
                                     <img src={member["icon-src"]} alt={member.name + " avatar"} className="avatar"/>
-                                    <h1 className="avatar-title">{member.name}</h1>
+                                    <h1 className="fw-semibold my-4">{member.name}</h1>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
             </section>
-            <section className="section company-history bg-primary">
+            <section className="company-history bg-primary py-6">
                 <div className="container">
-                    <h1 className="section-title text-light">Η Ιστορία Της Εταιρείας Μας</h1>
-                    <p className="section-paragraph text-light">
+                    <h1 className="section-title text-light text-start">Η Ιστορία Της Εταιρείας Μας</h1>
+                    <p className="text-light">
                         Η GK Pool Cleaning ιδρύθηκε το 2012 με σκοπό να επαναστατήσει στον καθαρισμό πισίνας μέσω οικολογικών πρακτικών και επαγγελματισμού. Αυτό που ξεκίνησε ως μια μικρή τοπική επιχείρηση έχει εξελιχθεί σε ένα αξιόπιστο όνομα, δεσμευμένο στη διατήρηση άψογων πισίνων με έμφαση στη βιωσιμότητα. Οι βασικές αξίες της εταιρείας μας περιλαμβάνουν:
                     </p>
-                    <div className="core-values">
+                    <div className="core-values my-5">
                         {
                             coreValues.map(coreValue => (
                                 <div key={coreValue["title"]}>
@@ -40,10 +44,10 @@ export default function About() {
                                             {coreValue["image"]}
                                         </div>
                                         <div className="">
-                                            <h1 className="core-value-title">
+                                            <h1 className="text-light fw-bold">
                                                 {coreValue["title"]}
                                             </h1>
-                                            <p className="section-paragraph">
+                                            <p className="text-light">
                                                 {coreValue["text"]}
                                             </p>
                                         </div>
@@ -52,7 +56,7 @@ export default function About() {
                             ))
                         }
                     </div>
-                    <p className="section-paragraph text-light">
+                    <p className="text-light">
                         Προσφέρουμε μια γκάμα υπηρεσιών, από καθαρισμό οικιακών πισίνων έως πλήρη συντήρηση εμπορικών πισίνων. Οι οικολογικές μας λύσεις διατηρούν τις πισίνες λαμπερές και συμβάλλουν σε ένα υγιέστερο περιβάλλον, εξασφαλίζοντας ασφαλείς και ευχάριστες εμπειρίες κολύμβησης για όλους.
                     </p>
                 </div>
@@ -60,10 +64,10 @@ export default function About() {
             <section>
                 <img src={WhyUs} className="image"/>
             </section>
-            <section className="section why-us">
+            <section className="why-us py-6">
                 <div className="container">
-                    <h1 className="section-title text-center">Γιατί Εμας ?</h1>
-                    <h2 className="section-subtitle text-center">Βασικοί λόγοι για τους οποίους οι πελάτες μας, μας εμπιστεύονται για τη Φροντίδα της πισίνας τους</h2>
+                    <h1 className="section-title">Γιατί Εμας ?</h1>
+                    <h2 className="section-subtitle">Βασικοί λόγοι για τους οποίους οι πελάτες μας, μας εμπιστεύονται για τη Φροντίδα της πισίνας τους</h2>
                     <div className="why-us-cards">
                         {
                             whyUs.map(item => (

@@ -1,16 +1,7 @@
-
-.About .team {
-    margin-top: var(--nav-height);
-}
-
 .About .avatar {
     width: 8rem;
     height: 8rem;
     border-radius: 100%;
-}
-
-.About .avatar-title {
-    font-weight: var(--fw-bold);
 }
 
 .About .team-members-grid {
@@ -31,8 +22,6 @@
     gap: var(--size-600);
     align-items: center;
     justify-content: center;
-    margin-block: var(--size-500);
-    color: var(--clr-light);
 }
 
 .About .core-value {
@@ -41,25 +30,12 @@
     gap: 1rem;
 }
 
-.About .core-value-title {
-    font-weight: var(--fw-bold);
-    text-align: left;
-}
-
-.About .company-history .section-paragraph {
-    text-align: left;
-}
-
 .About .why-us-cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--size-500);
     align-items: center;
     justify-content: center;
-}
-
-.About .why-us-title {
-    font-weight: var(--fw-bold);
 }
 
 
