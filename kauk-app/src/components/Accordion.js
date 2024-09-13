@@ -6,7 +6,7 @@ import '../styles/Accordion.css'
 export default function Accordion({ question, answer, show }) {
     return (
         <div className="accordion bg-primary text-light my-2">
-            <div className="accordion-header p-4">
+            {/* <div className="accordion-header p-4">
                 <p className="accordion-question fw-semibold">
                     { question }
                 </p>
@@ -22,7 +22,7 @@ export default function Accordion({ question, answer, show }) {
                 <div className="accordion-content py-4 px-6">
                     <p className="accordion-answer fw-light">{ answer}</p>
                 </div>
-            )}
+            )} */}
         </div>
     )
 }
