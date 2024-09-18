@@ -1,15 +1,16 @@
 .hero {
-    background-image: url("../images/hero-image.jpg");
+    background-image: url("../images/Untitled\(3\).jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 20%;
+    background-position: 50% 30%;
     height: 100vh;
     min-height: 35rem;
 }
 
-.hero .container-lg {
-    backdrop-filter: blur(2px);
+.hero h1, .hero h2 {
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.406);
 }
+
 
 @media (max-width: 991px) {
     .sidebar {

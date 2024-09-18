@@ -4,6 +4,10 @@
 // Include any default variable overrides here (though functions won't be available)
 $primary: #001A4C;
 $secondary: #C5D7F9; 
+$danger: #f28b82;
+$tertiary: #001D56;
+
+$input-border-radius: 1px; 
 
 $display-font-sizes: (
   1: 7rem,
@@ -18,16 +22,8 @@ $btn-border-radius: 0;
 
 @import '~bootstrap/scss/bootstrap';
 
-$tertiary: #001D56;
-
-// Then add additional custom code here
-
 body {
   overflow-x: hidden;
-}
-
-.footer-gallery img {
-  width: 5rem;
 }
 
 .img-hover-scale {
@@ -48,43 +44,45 @@ body {
 }
 
 .pt-nav-height {
-  padding-top: 5rem;
+  padding-top: 8rem;
+}
+
+.container-rect {
+  width: 8rem;
+  height: 8rem;
 }
 
 .icon {
-    width: 1.6rem;
-    height: 1.6rem;
-    fill: #001D56;
-    color: #001D56;
-  }
-  
-  .icon-light {
-    fill: $light !important;
-    color: $light !important;
-  }
-  
-  .icon-secondary {
-    fill: $secondary !important;
-    color: $secondary !important;
-  }
-  
-  
-  .icon-small {
-    width: 0.8rem !important;
-    height: 0.8rem !important;
-  }
-  
-  .icon-large {
-    width: 3rem !important;
-    height: 3rem !important;
-  }
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: #001D56;
+  color: #001D56;
+}
 
-  .icon-very-large {
-    width: 5rem !important;
-    height: 5rem !important;
-  }
+.icon-light {
+  fill: $light !important;
+  color: $light !important;
+}
 
-  .container-rect {
-    width: 8rem;
-    height: 8rem;
-  }
+.icon-secondary {
+  fill: $secondary !important;
+  color: $secondary !important;
+}
+
+
+.icon-small {
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+}
+
+.icon-large {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+.icon-very-large {
+  width: 5rem !important;
+  height: 5rem !important;
+}
+
+  

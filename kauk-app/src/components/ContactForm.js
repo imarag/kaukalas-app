@@ -1,13 +1,11 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-import { validateFormData } from "../validate.js";
-
-export default function ContactForm() {
+export default function ContactForm({ currentLang }) {
     const form = useRef();
+    
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [stateMessage, setStateMessage] = useState(null);
-    const [formDataError, setFormDataError] = useState(null);
     const [error, setError] = useState(null);
 
     const [name, setName] = useState("");
@@ -15,34 +13,94 @@ export default function ContactForm() {
     const [telephone, setTelephone] = useState("");
     const [message, setMessage] = useState("");
 
+    const [nameError, setNameError] = useState(null);
+    const [emailError, setEmailError] = useState(null);
+    const [telephoneError, setTelephoneError] = useState(null);
+    const [messageError, setMessageError] = useState(null);
+
     function sendEmail(e) {
         e.preventDefault();
-      
-        // Validate form data
-        let errorsList = validateFormData(name, email, telephone, message);
 
-        if (errorsList.length !== 0) {
-            setFormDataError(errorsList);
+        // Declare local variables for errors
+        let localNameError = null;
+        let localEmailError = null;
+        let localTelephoneError = null;
+        let localMessageError = null;
+
+        // Validate Name
+        if (!name) {
+            localNameError = currentLang === "gr" ? "Παρακαλώ εισάγετε το ονοματεπώνυμό σας" : "Please enter your full name.";
+        } else if (name.length > 50) {
+            localNameError = currentLang === "gr" ? "Το όνομα είναι πολύ μεγάλο." : "The name is too long.";
+        } else if (name.length < 5) {
+            localNameError = currentLang === "gr" ? "Το όνομα είναι πολύ μικρό." : "The name is too short.";
+        }
+
+        // Validate Email
+        const isEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+
+        if (!email) {
+            localEmailError = currentLang === "gr" ? "Παρακαλώ εισάγετε το email σας." : "Please enter your email.";
+        } else if (!isEmail) {
+            localEmailError = currentLang === "gr" ? "Η μορφή του email δεν είναι σωστή." : "Invalid email format.";
+        } else if (email.length > 250) {
+            localEmailError = currentLang === "gr" ? "Το email είναι πολύ μεγάλο." : "The email is too long.";
+        }
+        
+        // Validate Telephone
+        const hasOnlyDigits = /^\d+$/.test(telephone);
+        if (!telephone) {
+            localTelephoneError = currentLang === "gr" ? "Παρακαλώ εισάγετε το τηλέφωνό σας." : "Please enter your telephone number.";
+        } else if (telephone.length < 8 || telephone.length > 15) {
+            localTelephoneError = currentLang === "gr" ? "Το τηλέφωνο πρέπει να έχει 8-15 ψηφία." : "The telephone must have 8-15 digits.";
+        } else if (!hasOnlyDigits) {
+            localTelephoneError = currentLang === "gr" ? "Το τηλέφωνο πρέπει να περιέχει μόνο ψηφία." : "The telephone should only contain digits.";
+        }
+
+        // Validate Message
+        if (!message) {
+            localMessageError = currentLang === "gr" ? "Παρακαλώ εισάγετε το μήνυμά σας." : "Please enter your message.";
+        } else if (message.length < 10) {
+            localMessageError = currentLang === "gr" ? "Το μήνυμα είναι πολύ μικρό." : "The message is too short.";
+        }
+        else if (message.length > 1000) {
+            localMessageError = currentLang === "gr" ? "Το μήνυμα είναι πολύ μεγάλο." : "The message is too large.";
+        }
+
+        // Check if there are any validation errors
+        if (localNameError || localEmailError || localTelephoneError || localMessageError) {
+            // Update state with local error messages
+            setNameError(localNameError);
+            setEmailError(localEmailError);
+            setTelephoneError(localTelephoneError);
+            setMessageError(localMessageError);
             return;
         }
 
-        setFormDataError(null);  // Clear any form errors
+        // reseting the errors
+        setNameError(null);
+        setEmailError(null);
+        setTelephoneError(null);
+        setMessageError(null);
+
+        // Proceed with form submission if no errors
         setIsSubmitting(true);
-       
-        // Send the email using emailjs
+
         emailjs
             .sendForm('service_6tgskmr', 'template_aj14h5c', form.current, {
                 publicKey: 'ux8hQOzLCp6f8Utvu',
             })
             .then(() => {
-                setStateMessage('Το μήνυμα εστάλει!');
-                setIsSubmitting(false);
                 
                 // Clear form fields after successful submission
                 setName('');
                 setEmail('');
                 setTelephone('');
                 setMessage('');
+
+                setIsSubmitting(false);
+                
+                setStateMessage(currentLang === "gr" ? 'Το μήνυμα εστάλη με επιτυχία!' : 'Message sent successfully!');
                 
                 // Hide success message after 5 seconds
                 setTimeout(() => {
@@ -51,10 +109,10 @@ export default function ContactForm() {
             })
             .catch((error) => {
                 // Handle network or server error
-                setStateMessage('Κάτι πήγε στραβά, παρακαλώ προσπαθήστε αργότερα!');
+                setStateMessage(currentLang === "gr" ? 'Υπήρξε κάποιο πρόβλημα, παρακαλούμε δοκιμάστε αργότερα.' : 'There was an issue, please try again later.');
                 setIsSubmitting(false);
                 setError(error.message);
-                
+
                 // Hide error message after 5 seconds
                 setTimeout(() => {
                     setError(null);
@@ -64,14 +122,13 @@ export default function ContactForm() {
 
     return (
         <div>
-            {formDataError && formDataError.map((err, index) => (
-                <p key={index} className="text-danger text-center my-2">{err}</p>
-            ))}
             {error && <p className="my-5 py-4 text-danger fw-light bg-dark">{error}</p>}
             
             <form ref={form} onSubmit={sendEmail}>
                 <div className="my-3">
-                    <label htmlFor="name" className="form-label text-light">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</label>
+                    <label htmlFor="name" className="form-label text-light">
+                        {currentLang === "gr" ? "ΟΝΟΜΑΤΕΠΩΝΥΜΟ" : "FULL NAME"}
+                    </label>
                     <input 
                         type="text" 
                         className="form-control"
@@ -81,9 +138,12 @@ export default function ContactForm() {
                         onChange={(e) => setName(e.target.value)} 
                         required 
                     />
+                    {nameError && <p className="text-danger fw-light">{nameError}</p>}
                 </div>
                 <div className="my-3">
-                    <label htmlFor="email" className="form-label text-light">EMAIL</label>
+                    <label htmlFor="email" className="form-label text-light">
+                        {currentLang === "gr" ? "EMAIL" : "EMAIL"}
+                    </label>
                     <input 
                         type="email" 
                         className="form-control"
@@ -93,11 +153,14 @@ export default function ContactForm() {
                         onChange={(e) => setEmail(e.target.value)} 
                         required 
                     />
+                    {emailError && <p className="text-danger fw-light">{emailError}</p>}
                 </div>
                 <div className="my-3">
-                    <label htmlFor="telephone" className="form-label text-light">ΤΗΛΕΦΩΝΟ</label>
+                    <label htmlFor="telephone" className="form-label text-light">
+                        {currentLang === "gr" ? "ΤΗΛΕΦΩΝΟ" : "TELEPHONE"}
+                    </label>
                     <input 
-                        type="tel"  // Changed to "tel" for better handling of phone numbers
+                        type="tel" 
                         id="telephone" 
                         className="form-control"
                         name="telephone" 
@@ -105,9 +168,12 @@ export default function ContactForm() {
                         onChange={(e) => setTelephone(e.target.value)} 
                         required 
                     />
+                    {telephoneError && <p className="text-danger fw-light">{telephoneError}</p>}
                 </div>
-                <div className="my-3" disabled={isSubmitting}>
-                    <label htmlFor="message" className="form-label text-light">ΜΗΝΥΜΑ</label>
+                <div className="my-3">
+                    <label htmlFor="message" className="form-label text-light">
+                        {currentLang === "gr" ? "ΜΗΝΥΜΑ" : "MESSAGE"}
+                    </label>
                     <textarea 
                         id="message" 
                         className="form-control"
@@ -118,26 +184,28 @@ export default function ContactForm() {
                         disabled={isSubmitting} 
                         required
                     ></textarea>
+                    {messageError && <p className="text-danger fw-light">{messageError}</p>}
                 </div>
                 <div className="mt-5 text-center">
                     <button 
                         className="btn btn-secondary btn-lg d-inline-flex align-items-center" 
-                        type="button" 
+                        type="submit" 
                         disabled={isSubmitting}
-                        onClick={sendEmail}
-                        >
-                        Αποστολή
+                    >
+                        {currentLang === "gr" ? "Αποστολή" : "Send"}
                         <span 
                             className="spinner-border spinner-border-sm ms-2" 
                             role="status" 
                             aria-hidden="true" 
                             hidden={!isSubmitting} 
                         ></span>
-                        <span className="visually-hidden">Αποστολή...</span>
+                        <span className="visually-hidden">
+                            {currentLang === "gr" ? "Αποστολή..." : "Sending..."}
+                        </span>
                     </button>
                 </div>
-                {stateMessage && <p className="my-5 py-4 text-light fw-light bg-dark">{stateMessage}</p>}
             </form>
+            {stateMessage && <p className="mt-3 text-success text-center fw-light">{stateMessage}</p>}
         </div>
     );
 }

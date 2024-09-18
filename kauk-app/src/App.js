@@ -1,6 +1,5 @@
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 import RootLayout from './layouts/RootLayout';
 
 import Home from './pages/Home';

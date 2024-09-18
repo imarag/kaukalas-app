@@ -1,3 +1,11 @@
 .logo-img {
-    width: 12rem;
+    width: 13rem;
 }
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.167);
+}
+
+.footer-gallery img {
+    width: 5rem;
+  }
