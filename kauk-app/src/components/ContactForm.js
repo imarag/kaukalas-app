@@ -126,12 +126,12 @@ export default function ContactForm({ currentLang }) {
             
             <form ref={form} onSubmit={sendEmail}>
                 <div className="my-3">
-                    <label htmlFor="name" className="form-label text-light">
+                    <label htmlFor="name" className="block text-sm mb-2 font-semibold leading-6 text-light">
                         {currentLang === "gr" ? "ΟΝΟΜΑΤΕΠΩΝΥΜΟ" : "FULL NAME"}
                     </label>
                     <input 
                         type="text" 
-                        className="form-control"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         id="name" 
                         name="user_name" 
                         value={name} 
@@ -141,12 +141,12 @@ export default function ContactForm({ currentLang }) {
                     {nameError && <p className="text-danger fw-light">{nameError}</p>}
                 </div>
                 <div className="my-3">
-                    <label htmlFor="email" className="form-label text-light">
+                    <label htmlFor="email" className="block text-sm mb-2 font-semibold leading-6 text-light">
                         {currentLang === "gr" ? "EMAIL" : "EMAIL"}
                     </label>
                     <input 
                         type="email" 
-                        className="form-control"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         id="email" 
                         name="user_email" 
                         value={email} 
@@ -156,13 +156,13 @@ export default function ContactForm({ currentLang }) {
                     {emailError && <p className="text-danger fw-light">{emailError}</p>}
                 </div>
                 <div className="my-3">
-                    <label htmlFor="telephone" className="form-label text-light">
+                    <label htmlFor="telephone" className="block text-sm mb-2 font-semibold leading-6 text-light">
                         {currentLang === "gr" ? "ΤΗΛΕΦΩΝΟ" : "TELEPHONE"}
                     </label>
                     <input 
                         type="tel" 
                         id="telephone" 
-                        className="form-control"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         name="telephone" 
                         value={telephone} 
                         onChange={(e) => setTelephone(e.target.value)} 
@@ -171,12 +171,12 @@ export default function ContactForm({ currentLang }) {
                     {telephoneError && <p className="text-danger fw-light">{telephoneError}</p>}
                 </div>
                 <div className="my-3">
-                    <label htmlFor="message" className="form-label text-light">
+                    <label htmlFor="message" className="block text-sm mb-2 font-semibold leading-6 text-light">
                         {currentLang === "gr" ? "ΜΗΝΥΜΑ" : "MESSAGE"}
                     </label>
                     <textarea 
                         id="message" 
-                        className="form-control"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         name="message" 
                         value={message} 
                         rows="5" 
@@ -199,9 +199,6 @@ export default function ContactForm({ currentLang }) {
                             aria-hidden="true" 
                             hidden={!isSubmitting} 
                         ></span>
-                        <span className="visually-hidden">
-                            {currentLang === "gr" ? "Αποστολή..." : "Sending..."}
-                        </span>
                     </button>
                 </div>
             </form>

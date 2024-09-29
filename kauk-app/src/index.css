@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply border-2 border-transparent text-center rounded-sm bg-secondary hover:bg-light/90 text-primary px-6 py-3 text-lg font-semibold shadow-lg transition-all;
+    }
+
+    .btn-light {
+        @apply bg-light hover:bg-primary text-primary hover:text-light
+    }
+
+    .btn-outline-light {
+        @apply bg-transparent hover:bg-light text-light hover:text-primary border-light
+    }
+
+    .btn-outline-secondary {
+        @apply bg-transparent hover:bg-secondary text-secondary  hover:text-primary border-secondary
+    }
+
+    .btn-small {
+        @apply px-3 py-2 text-sm
+    }
+}

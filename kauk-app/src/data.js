@@ -197,21 +197,21 @@ export const galleryImages = [
     {
         "title": "Ποιότητα",
         "titleEn": "Quality",
-        "icon": <TrophyIcon className="icon icon-secondary icon-large"/>,
+        "icon": <TrophyIcon className="size-16 fill-secondary"/>,
         "text": "Δεσμευόμαστε να παρέχουμε υπηρεσίες που πληρούν τα υψηλότερα πρότυπα ποιότητας, εξασφαλίζοντας την πλήρη ικανοποίηση των πελατών μας.",
         "textEn": "We are committed to delivering services that meet the highest standards of quality, ensuring complete customer satisfaction."
     },
     {
         "title": "Αξιοπιστία",
         "titleEn": "Reliability",
-        "icon": <BarChartIcon className="icon icon-secondary icon-large"/>,
+        "icon": <BarChartIcon className="size-16 fill-secondary"/>,
         "text": "Παρέχουμε αξιόπιστες λύσεις που ξεπερνούν τις προσδοκίες, με συνεπή και επαγγελματική εξυπηρέτηση.",
         "textEn": "We provide reliable solutions that exceed expectations, with consistent and professional service."
     },
     {
         "title": "Εξειδίκευση",
         "titleEn": "Expertise",
-        "icon": <GearIcon className="icon icon-secondary icon-large"/>,
+        "icon": <GearIcon className="size-16 fill-secondary"/>,
         "text": "Εφαρμόζουμε τις πιο σύγχρονες τεχνικές και μεθόδους, αξιοποιώντας την εξειδίκευσή μας για την επίτευξη εξαιρετικών αποτελεσμάτων.",
         "textEn": "We apply the latest techniques and methods, leveraging our expertise to achieve exceptional results."
     }
@@ -252,42 +252,42 @@ export const faqs = [
 
 export const whyUs = [
     {
-        icon: <TrophyIcon className="icon-secondary icon-large" />,
+        icon: <TrophyIcon className="size-16 fill-secondary" />,
         title: "Επαγγελματισμός και Εμπειρία",
         titleEn: "Professionalism and Experience",
         description: "Χρόνια εμπειρίας στον τομέα της κατασκευής γυψοσανίδων με άρτια καταρτισμένη ομάδα.",
         descriptionEn: "Years of experience in drywall construction with a highly skilled team."
     },
     {
-        icon: <BinocularsIcon className="icon-secondary icon-large" />,
+        icon: <BinocularsIcon className="size-16 fill-secondary" />,
         title: "Αναλυτική Προσέγγιση",
         titleEn: "Analytical Approach",
         description: "Κάθε έργο παρακολουθείται με μεγάλη προσοχή στη λεπτομέρεια για άριστα αποτελέσματα.",
         descriptionEn: "Every project is monitored with great attention to detail for excellent results."
     },
     {
-        icon: <BarChartIcon className="icon-secondary icon-large" />,
+        icon: <BarChartIcon className="size-16 fill-secondary" />,
         title: "Υψηλής Ποιότητας Υλικά",
         titleEn: "High-Quality Materials",
         description: "Χρησιμοποιούμε μόνο υλικά υψηλής ποιότητας για τη διασφάλιση της μακροχρόνιας αντοχής και ανθεκτικότητας.",
         descriptionEn: "We use only high-quality materials to ensure long-lasting durability and resistance."
     },
     {
-        icon: <CalendarCheckedIcon className="icon-secondary icon-large" />,
+        icon: <CalendarCheckedIcon className="size-16 fill-secondary" />,
         title: "Σαφείς Χρονοδιαγράμματα",
         titleEn: "Clear Timelines",
         description: "Δεσμευόμαστε να ολοκληρώνουμε τα έργα εντός των συμφωνημένων προθεσμιών.",
         descriptionEn: "We are committed to completing projects within agreed timelines."
     },
     {
-        icon: <GearIcon className="icon-secondary icon-large" />,
+        icon: <GearIcon className="size-16 fill-secondary" />,
         title: "Προσαρμοσμένες Λύσεις",
         titleEn: "Customized Solutions",
         description: "Παρέχουμε εξατομικευμένες λύσεις που ανταποκρίνονται στις μοναδικές ανάγκες του κάθε πελάτη.",
         descriptionEn: "We provide customized solutions that meet each client's unique needs."
     },
     {
-        icon: <PigIcon className="icon-secondary icon-large" />,
+        icon: <PigIcon className="size-16 fill-secondary" />,
         title: "Ανταγωνιστικές Τιμές",
         titleEn: "Competitive Prices",
         description: "Σαφείς και δίκαιες τιμές χωρίς κρυφές χρεώσεις ή εκπλήξεις.",

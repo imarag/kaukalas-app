@@ -1,5 +1,5 @@
 .hero {
-    background-image: url("../images/Untitled\(3\).jpeg");
+    background-image: url("../images/sea-view-951852_1920.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 30%;
@@ -7,9 +7,17 @@
     min-height: 35rem;
 }
 
+@media (min-width: 1200px) {
+    .hero {
+        background-image: url('../images/sea-view-951852_5184.jpg');
+    }
+}
+
 .hero h1, .hero h2 {
     text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.406);
 }
+
+
 
 
 @media (max-width: 991px) {

@@ -1,6 +1,6 @@
 export default function SubTitle({ text }) {
     return (
-        <h2 className="text-light fs-4 fw-light text-center mb-4 mt-2  mx-auto col-11 col-md-10">
+        <h2 className="text-light text-2xl font-light text-center mb-10 mt-4 mx-auto w-full lg:w-2/3">
             { text }
         </h2>
     )
