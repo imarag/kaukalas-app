@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@source "./public/*.{html,js}";
+@plugin "daisyui" {
+  themes: all;
+}
+
+.show-nav {
+  width: 100%;
+}
+
+.bg-hero-image {
+  background-image: url("../src/images/hero-image.png");
+}
