@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="../../dist/style.css" />
+    <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body data-theme="synthwave">
     <header>
@@ -121,139 +121,183 @@
         </label>
       </nav>
     </header>
-    <main class="text-base-content text-base">
+    <main class="text-base-content text-base py-">
       <section class="py-24 container">
         <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4">
-          <span data-lang="gr">Ανακαλύψτε Τα Εργα Μας</span>
-          <span data-lang="en">Explore Our Work</span>
+          <span data-lang="gr">Επικοινωνίστε Μαζί Μας</span>
+          <span data-lang="en">Contact Us</span>
         </h2>
         <p
           class="text-lg md:text-2xl text-center lg:max-w-3/4 mx-auto mt-4 mb-16 font-light"
         >
           <span data-lang="gr">
-            Εξερευνήστε τη δουλειά μας μέσα από μια ποικιλία εικόνων που
-            αναδεικνύουν την ποιότητα, την καινοτομία, που χαρακτηρίζουν κάθε
-            μας έργο
+            Η ομάδα μας είναι έτοιμη να σας εξυπηρετήσει και να σας βοηθήσει με
+            ό,τι χρειάζεστε, με στόχο την καλύτερη εξυπηρέτησή σας
           </span>
           <span data-lang="en">
-            Explore our work through a variety of images showcasing the quality,
-            innovation, and attention to detail that characterize each of our
-            projects
+            Our team is ready to assist you and help with whatever you need,
+            aiming to provide the best service possible
           </span>
         </p>
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-stretch py-5"
-        >
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery1.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
+        <div class="bg-base-200 p-8 lg:p-16 rounded-lg max-w-3xl mx-auto">
+          <form class="flex flex-col gap-4">
+            <div>
+              <label class="block uppercase mb-2 font-semibold" for="name">
+                <span data-lang="gr">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</span>
+                <span data-lang="en">Full Name</span>
+              </label>
+              <input
+                class="input block w-full bg-white"
+                type="text"
+                id="name"
+                name="user_name"
+                required
+              />
+            </div>
+            <div>
+              <label class="block uppercase mb-2 font-semibold" for="email">
+                <span data-lang="gr">EMAIL</span>
+                <span data-lang="en">Email</span>
+              </label>
+              <input
+                class="input block w-full bg-white"
+                type="email"
+                id="email"
+                name="user_email"
+                required
+              />
+            </div>
+            <div>
+              <label class="block uppercase mb-2 font-semibold" for="telephone">
+                <span data-lang="gr">Τηλεφωνο</span>
+                <span data-lang="en">Telephone</span>
+              </label>
+              <input
+                class="input block w-full bg-white"
+                type="tel"
+                id="telephone"
+                name="telephone"
+                required
+              />
+            </div>
+            <div>
+              <label class="block uppercase mb-2 font-semibold" for="message">
+                <span data-lang="gr">ΜΗΝΥΜΑ</span>
+                <span data-lang="en">Message</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="textarea block w-full bg-white"
+                required
+              ></textarea>
+            </div>
+            <div class="mt-6 text-center">
+              <button class="btn btn-primary block w-full">
+                <span data-lang="gr">Αποστολή</span>
+                <span data-lang="en">Send</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="bg-base-200 p-8 rounded-lg my-8">
+          <h2 class="text-xl font-bold text-start mb-8">
+            <span data-lang="gr">Στοιχεία Επικοινωνίας</span>
+            <span data-lang="en">Contact Information</span>
+          </h2>
+          <div class="flex justify-between items-center lg:w-1/2 my-8">
+            <div class="flex items-center gap-4">
+              <div class="bg-primary rounded-full p-2">
+                <img src="icons/telephone.svg" class="size-5" />
+              </div>
+              <p>
+                <span data-lang="gr">Τηλέφωνο Επικοινωνίας</span>
+                <span data-lang="en">Contact Phone</span>
+              </p>
+            </div>
+            <p>+306982972144</p>
           </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery2.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
+          <div class="flex justify-between items-center lg:w-1/2 mt-8">
+            <div class="flex items-center gap-4">
+              <div class="bg-primary rounded-full p-2">
+                <img src="icons/email.svg" class="size-5" />
+              </div>
+              <p>
+                <span data-lang="gr">Ηλεκτρονική Διεύθυνση</span>
+                <span data-lang="en">Email</span>
+              </p>
+            </div>
+            <p>giannis.marar@hotmail.com</p>
           </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery3.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
+        </div>
+        <div class="bg-base-200 p-8 rounded-lg my-8">
+          <h2 class="text-xl font-bold text-start mb-8">
+            <span data-lang="gr">Μέσα Κοινωνικής Δικτύωσης</span>
+            <span data-lang="en">Social Media</span>
+          </h2>
+          <div class="flex justify-start items-center gap-4 mt-8">
+            <div class="bg-primary rounded-full p-2">
+              <img src="icons/instagram.svg" class="size-6" />
+            </div>
+            <div class="bg-primary rounded-full p-2">
+              <img src="icons/facebook.svg" class="size-6" />
+            </div>
+            <div class="bg-primary rounded-full p-2">
+              <img src="icons/twitter.svg" class="size-6" />
+            </div>
           </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery4.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery5.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery6.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery7.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery8.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery9.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery10.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery11.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery12.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery13.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery14.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              src="../images/gallery15.jpg"
-              alt="a pool after the application of our pool cleaning services"
-              class="hover:scale-110 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
-            />
+        </div>
+        <div class="bg-base-200 p-8 rounded-lg my-8">
+          <h2 class="text-xl font-bold text-start mb-8">
+            <span data-lang="gr">Η Εταιρεία Μας</span>
+            <span data-lang="en">Our Company</span>
+          </h2>
+          <div class="items-center gap-4 mt-8">
+            <div>
+              <div class="flex items-center gap-4 my-8">
+                <div class="bg-primary rounded-full p-2">
+                  <img src="icons/location.svg" class="size-5" />
+                </div>
+                <div>
+                  <p>
+                    <span data-lang="gr">Τοποθεσία</span>
+                    <span data-lang="en">Location</span>
+                  </p>
+                  <p>
+                    <span data-lang="gr">Μηνά Βίστα 33, Χανιά</span>
+                    <span data-lang="en">Mina Vista 33, Chania</span>
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 my-8">
+                <div class="bg-primary rounded-full p-2">
+                  <img src="icons/clock.svg" class="size-5" />
+                </div>
+                <div>
+                  <p>
+                    <span data-lang="gr">Ωρες λειτουργίας</span>
+                    <span data-lang="en">Hour Schedule</span>
+                  </p>
+                  <p>
+                    <span data-lang="gr">Δευτ. - Παρ. 08:00 ΠM - 06:00 ΜM</span>
+                    <span data-lang="en">Mon. - Fri. 08:00 AM - 06:00 PM</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-2xl rounded-xl">
+              <img
+                src="images/company-map-location.png"
+                class="w-full rounded-xl"
+              />
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer
-      class="bg-base-200 text-base-content text-base font-normal rounded p-12 flex flex-col items-center gap-8"
+      class="bg-base-200 text-base-content text-base font-normal rounded p-8 flex flex-col items-center gap-8"
     >
       <nav class="grid grid-cols-1 md:grid-flow-col text-center gap-4">
         <a class="link link-hover">
@@ -351,6 +395,6 @@
         <p>Copyright © 2025 - All right reserved</p>
       </aside>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

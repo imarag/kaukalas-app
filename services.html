@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="../../dist/style.css" />
+    <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body data-theme="synthwave">
     <header>
@@ -121,176 +121,308 @@
         </label>
       </nav>
     </header>
-    <main class="text-base-content text-base py-">
+    <main class="text-base-content text-base">
       <section class="py-24 container">
         <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4">
-          <span data-lang="gr">Επικοινωνίστε Μαζί Μας</span>
-          <span data-lang="en">Contact Us</span>
+          <span data-lang="gr">Οι Υπηρεσίες Μας</span>
+          <span data-lang="en">Our Services</span>
         </h2>
         <p
           class="text-lg md:text-2xl text-center lg:max-w-3/4 mx-auto mt-4 mb-16 font-light"
         >
           <span data-lang="gr">
-            Η ομάδα μας είναι έτοιμη να σας εξυπηρετήσει και να σας βοηθήσει με
-            ό,τι χρειάζεστε, με στόχο την καλύτερη εξυπηρέτησή σας
+            Ανακαλύψτε τις εξειδικευμένες υπηρεσίες καθαρισμού και συντήρησης
+            πισίνας που προσφέρουμε, προσαρμοσμένες στις ανάγκες σας!
           </span>
           <span data-lang="en">
-            Our team is ready to assist you and help with whatever you need,
-            aiming to provide the best service possible
+            Discover our specialized pool cleaning and maintenance services,
+            tailored to your needs!
           </span>
         </p>
-        <div class="bg-base-200 p-8 lg:p-16 rounded-lg max-w-3xl mx-auto">
-          <form class="flex flex-col gap-4">
-            <div>
-              <label class="block uppercase mb-2 font-semibold" for="name">
-                <span data-lang="gr">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</span>
-                <span data-lang="en">Full Name</span>
-              </label>
-              <input
-                class="input block w-full bg-white"
-                type="text"
-                id="name"
-                name="user_name"
-                required
-              />
-            </div>
-            <div>
-              <label class="block uppercase mb-2 font-semibold" for="email">
-                <span data-lang="gr">EMAIL</span>
-                <span data-lang="en">Email</span>
-              </label>
-              <input
-                class="input block w-full bg-white"
-                type="email"
-                id="email"
-                name="user_email"
-                required
-              />
-            </div>
-            <div>
-              <label class="block uppercase mb-2 font-semibold" for="telephone">
-                <span data-lang="gr">Τηλεφωνο</span>
-                <span data-lang="en">Telephone</span>
-              </label>
-              <input
-                class="input block w-full bg-white"
-                type="tel"
-                id="telephone"
-                name="telephone"
-                required
-              />
-            </div>
-            <div>
-              <label class="block uppercase mb-2 font-semibold" for="message">
-                <span data-lang="gr">ΜΗΝΥΜΑ</span>
-                <span data-lang="en">Message</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                class="textarea block w-full bg-white"
-                required
-              ></textarea>
-            </div>
-            <div class="mt-6 text-center">
-              <button class="btn btn-primary block w-full">
-                <span data-lang="gr">Αποστολή</span>
-                <span data-lang="en">Send</span>
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="bg-base-200 p-8 rounded-lg my-8">
-          <h2 class="text-xl font-bold text-start mb-8">
-            <span data-lang="gr">Στοιχεία Επικοινωνίας</span>
-            <span data-lang="en">Contact Information</span>
-          </h2>
-          <div class="flex justify-between items-center lg:w-1/2 my-8">
-            <div class="flex items-center gap-4">
-              <div class="bg-primary rounded-full p-2">
-                <img src="../icons/telephone.svg" class="size-5" />
+        <div class="flex flex-col gap-8">
+          <!-- 1. Τακτικός καθαρισμός πισίνας -->
+          <div>
+            <h1 class="font-semibold text-2xl">
+              <span data-lang="gr">Τακτικός καθαρισμός πισίνας</span>
+              <span data-lang="en">Regular Pool Cleaning</span>
+            </h1>
+            <p class="text-lg font-light mt-2 mb-4">
+              <span data-lang="gr"
+                >Ο τακτικός καθαρισμός της πισίνας περιλαμβάνει την απομάκρυνση
+                φύλλων, σκόνης και άλλων υπολειμμάτων από την επιφάνεια του
+                νερού. Οι επαγγελματίες καθαρισμού θα φροντίσουν επίσης για τη
+                σωστή κυκλοφορία του νερού και τον έλεγχο των χημικών ισορροπιών
+                για τη διατήρηση καθαρού και ασφαλούς νερού.</span
+              >
+              <span data-lang="en"
+                >Regular pool cleaning includes removing leaves, dust, and other
+                debris from the water surface. Professionals will also ensure
+                proper water circulation and check chemical balances to maintain
+                clean and safe water.</span
+              >
+            </p>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-3 items-stretch justify-start gap-6"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="images/services1.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
               </div>
-              <p>
-                <span data-lang="gr">Τηλέφωνο Επικοινωνίας</span>
-                <span data-lang="en">Contact Phone</span>
-              </p>
-            </div>
-            <p>+306982972144</p>
-          </div>
-          <div class="flex justify-between items-center lg:w-1/2 mt-8">
-            <div class="flex items-center gap-4">
-              <div class="bg-primary rounded-full p-2">
-                <img src="../icons/email.svg" class="size-5" />
+              <div class="overflow-hidden">
+                <img
+                  src="images/services2.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
               </div>
-              <p>
-                <span data-lang="gr">Ηλεκτρονική Διεύθυνση</span>
-                <span data-lang="en">Email</span>
-              </p>
-            </div>
-            <p>giannis.marar@hotmail.com</p>
-          </div>
-        </div>
-        <div class="bg-base-200 p-8 rounded-lg my-8">
-          <h2 class="text-xl font-bold text-start mb-8">
-            <span data-lang="gr">Μέσα Κοινωνικής Δικτύωσης</span>
-            <span data-lang="en">Social Media</span>
-          </h2>
-          <div class="flex justify-start items-center gap-4 mt-8">
-            <div class="bg-primary rounded-full p-2">
-              <img src="../icons/instagram.svg" class="size-6" />
-            </div>
-            <div class="bg-primary rounded-full p-2">
-              <img src="../icons/facebook.svg" class="size-6" />
-            </div>
-            <div class="bg-primary rounded-full p-2">
-              <img src="../icons/twitter.svg" class="size-6" />
+              <div class="overflow-hidden">
+                <img
+                  src="images/services3.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="bg-base-200 p-8 rounded-lg my-8">
-          <h2 class="text-xl font-bold text-start mb-8">
-            <span data-lang="gr">Η Εταιρεία Μας</span>
-            <span data-lang="en">Our Company</span>
-          </h2>
-          <div class="items-center gap-4 mt-8">
-            <div>
-              <div class="flex items-center gap-4 my-8">
-                <div class="bg-primary rounded-full p-2">
-                  <img src="../icons/location.svg" class="size-5" />
-                </div>
-                <div>
-                  <p>
-                    <span data-lang="gr">Τοποθεσία</span>
-                    <span data-lang="en">Location</span>
-                  </p>
-                  <p>
-                    <span data-lang="gr">Μηνά Βίστα 33, Χανιά</span>
-                    <span data-lang="en">Mina Vista 33, Chania</span>
-                  </p>
-                </div>
+
+          <!-- 2. Χημική εξισορρόπηση νερού -->
+          <div>
+            <h1 class="font-semibold text-2xl">
+              <span data-lang="gr">Χημική εξισορρόπηση νερού</span>
+              <span data-lang="en">Chemical Water Balancing</span>
+            </h1>
+            <p class="text-lg font-light mt-2 mb-4">
+              <span data-lang="gr"
+                >Η σωστή χημική εξισορρόπηση του νερού είναι απαραίτητη για την
+                υγεία και την ασφάλεια των κολυμβητών. Η υπηρεσία αυτή
+                περιλαμβάνει τη μέτρηση και ρύθμιση του pH, της αλκαλικότητας
+                και των επιπέδων χλωρίου, ώστε να αποφεύγονται ερεθισμοί και η
+                ανάπτυξη βακτηριδίων.</span
+              >
+              <span data-lang="en"
+                >Proper chemical water balancing is essential for the health and
+                safety of swimmers. This service includes measuring and
+                adjusting pH, alkalinity, and chlorine levels to prevent
+                irritation and bacterial growth.</span
+              >
+            </p>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-3 items-stretch justify-start gap-6"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="images/services1.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
               </div>
-              <div class="flex items-center gap-4 my-8">
-                <div class="bg-primary rounded-full p-2">
-                  <img src="../icons/clock.svg" class="size-5" />
-                </div>
-                <div>
-                  <p>
-                    <span data-lang="gr">Ωρες λειτουργίας</span>
-                    <span data-lang="en">Hour Schedule</span>
-                  </p>
-                  <p>
-                    <span data-lang="gr">Δευτ. - Παρ. 08:00 ΠM - 06:00 ΜM</span>
-                    <span data-lang="en">Mon. - Fri. 08:00 AM - 06:00 PM</span>
-                  </p>
-                </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services2.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services3.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
               </div>
             </div>
-            <div class="max-w-2xl rounded-xl">
-              <img
-                src="../images/company-map-location.png"
-                class="w-full rounded-xl"
-              />
+          </div>
+
+          <!-- 3. Συντήρηση φίλτρων πισίνας -->
+          <div>
+            <h1 class="font-semibold text-2xl">
+              <span data-lang="gr">Συντήρηση φίλτρων πισίνας</span>
+              <span data-lang="en">Pool Filter Maintenance</span>
+            </h1>
+            <p class="text-lg font-light mt-2 mb-4">
+              <span data-lang="gr"
+                >Τα φίλτρα της πισίνας είναι υπεύθυνα για την απομάκρυνση
+                μικροοργανισμών και άλλων ρύπων από το νερό. Η τακτική συντήρηση
+                των φίλτρων διασφαλίζει την καλύτερη δυνατή απόδοσή τους, καθώς
+                και την παράταση της διάρκειας ζωής τους.</span
+              >
+              <span data-lang="en"
+                >Pool filters are responsible for removing microorganisms and
+                other contaminants from the water. Regular maintenance ensures
+                optimal performance and extends their lifespan.</span
+              >
+            </p>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-3 items-stretch justify-start gap-6"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="images/services1.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services2.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services3.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Καθαρισμός πυθμένα και τοιχωμάτων -->
+          <div>
+            <h1 class="font-semibold text-2xl">
+              <span data-lang="gr">Καθαρισμός πυθμένα και τοιχωμάτων</span>
+              <span data-lang="en">Bottom and Wall Cleaning</span>
+            </h1>
+            <p class="text-lg font-light mt-2 mb-4">
+              <span data-lang="gr"
+                >Ο καθαρισμός του πυθμένα και των τοιχωμάτων της πισίνας είναι
+                απαραίτητος για την απομάκρυνση άλγης, αλάτων και άλλων
+                εναποθέσεων. Με επαγγελματικό εξοπλισμό, τα τοιχώματα και ο
+                πυθμένας καθαρίζονται σε βάθος, προσφέροντας μια λαμπερή και
+                υγιή πισίνα.</span
+              >
+              <span data-lang="en"
+                >Cleaning the bottom and walls of the pool is necessary to
+                remove algae, scales, and other deposits. Using professional
+                equipment, the walls and bottom are thoroughly cleaned,
+                providing a sparkling and healthy pool.</span
+              >
+            </p>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-3 items-stretch justify-start gap-6"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="images/services1.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services2.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services3.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Καθαρισμός αντλιών και σωληνώσεων -->
+          <div>
+            <h1 class="font-semibold text-2xl">
+              <span data-lang="gr">Καθαρισμός αντλιών και σωληνώσεων</span>
+              <span data-lang="en">Pump and Pipe Cleaning</span>
+            </h1>
+            <p class="text-lg font-light mt-2 mb-4">
+              <span data-lang="gr"
+                >Οι αντλίες και οι σωληνώσεις της πισίνας συχνά συσσωρεύουν
+                υπολείμματα και ρύπους, που μπορεί να επηρεάσουν την απόδοση του
+                συστήματος. Ο καθαρισμός αυτών των τμημάτων εξασφαλίζει τη
+                βέλτιστη κυκλοφορία του νερού και αποτρέπει προβλήματα
+                λειτουργίας.</span
+              >
+              <span data-lang="en"
+                >The pool pumps and pipes often accumulate debris and
+                contaminants that can affect system performance. Cleaning these
+                components ensures optimal water circulation and prevents
+                operational issues.</span
+              >
+            </p>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-3 items-stretch justify-start gap-6"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="images/services1.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services2.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services3.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Έλεγχος και συντήρηση του θερμαντήρα -->
+          <div>
+            <h1 class="font-semibold text-2xl">
+              <span data-lang="gr">Έλεγχος και συντήρηση του θερμαντήρα</span>
+              <span data-lang="en">Heater Inspection and Maintenance</span>
+            </h1>
+            <p class="text-lg font-light mt-2 mb-4">
+              <span data-lang="gr"
+                >Ο θερμαντήρας της πισίνας χρειάζεται τακτικό έλεγχο και
+                συντήρηση για να διασφαλίζεται η σωστή λειτουργία του. Αυτή η
+                υπηρεσία περιλαμβάνει τον έλεγχο των ρυθμίσεων θερμοκρασίας, τη
+                διάγνωση τυχόν βλαβών και τη διατήρηση της ενεργειακής
+                απόδοσης.</span
+              >
+              <span data-lang="en"
+                >The pool heater requires regular inspection and maintenance to
+                ensure proper operation. This service includes checking
+                temperature settings, diagnosing any faults, and maintaining
+                energy efficiency.</span
+              >
+            </p>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-3 items-stretch justify-start gap-6"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src="images/services1.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services2.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
+              <div class="overflow-hidden">
+                <img
+                  src="images/services3.jpg"
+                  class="hover:scale-110 transition-all duration-500 h-full object-cover"
+                  alt="pool service image"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -395,6 +527,6 @@
         <p>Copyright © 2025 - All right reserved</p>
       </aside>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
