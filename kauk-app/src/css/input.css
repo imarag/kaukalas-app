@@ -50,3 +50,7 @@
 .bg-hero-image {
   background-image: url("../src/images/hero-image-low-brightness.png");
 }
+
+.bg-pool-water {
+  background-image: url("../src/images/pool-water-reshaped.png");
+}
