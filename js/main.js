@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuButtonController = document.querySelector("#menu-button-controller");
     const mainNav = document.querySelector("#main-nav");
+    const accordionItems = document.querySelectorAll(".accordion-item")
     const languageToggleInput = document.querySelector('#language-container input');
     let langEnElements = document.querySelectorAll('[data-lang="en"]');
     let langGrElements = document.querySelectorAll('[data-lang="gr"]');
     const currentLanguage = localStorage.getItem("language") || "gr";
+
 
     function enableGreek() {
         langEnElements.forEach(el => el.style.display = 'none')
@@ -40,5 +42,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuButtonController.addEventListener("change", () => {
         mainNav.classList.toggle("show-nav")
+    })
+
+    accordionItems.forEach(accordion => {
+        const accordionBody = accordion.querySelector(".accordion-body")
+        const plusIcon = accordion.querySelector("#plus-icon");
+        const minusIcon = accordion.querySelector("#minus-icon");
+
+        plusIcon.style.display = "flex";
+        minusIcon.style.display = "none";
+
+        accordionBody.classList.remove("show-accordion")
+    })
+
+    accordionItems.forEach(accordion => {
+        accordion.addEventListener("click", () => {
+            const accordionBody = accordion.querySelector(".accordion-body")
+            const plusIcon = accordion.querySelector("#plus-icon");
+            const minusIcon = accordion.querySelector("#minus-icon");
+
+            accordionBody.classList.toggle("show-accordion")
+
+            if (accordionBody.classList.contains("show-accordion")) {
+                plusIcon.style.display = "none";
+                minusIcon.style.display = "flex";
+            }
+            else {
+                plusIcon.style.display = "flex";
+                minusIcon.style.display = "none";
+            }
+
+        })
     })
 });

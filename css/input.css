@@ -47,6 +47,10 @@
   width: 100%;
 }
 
+.show-accordion {
+  height: 100%;
+}
+
 .bg-hero-image {
   background-image: url("../images/hero-image-low-brightness.png");
 }
