@@ -9,10 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.4",
     "@tailwindcss/vite": "^4.1.4",
-    "daisyui": "^5.0.19",
-    "tailwindcss": "^4.1.4"
+    "daisyui": "^5.0.19"
   },
   "devDependencies": {
     "vite": "^6.3.2"
