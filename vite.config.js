@@ -1,8 +1,24 @@
 import { defineConfig } from 'vite'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
 export default defineConfig({
     plugins: [
         tailwindcss(),
     ],
-    base: '/kaukalas-app/'
+    base: '/kaukalas-app/',
+    build: {
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, 'index.html'),
+                contact: resolve(__dirname, 'contact.html'),
+                gallery: resolve(__dirname, 'gallery.html'),
+                services: resolve(__dirname, 'services.html'),
+            },
+        },
+    }
 })
+
