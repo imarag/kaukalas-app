@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <script type="module" crossorigin src="/kaukalas-app/assets/main-CUbKW5QN.js"></script>
-    <link rel="stylesheet" crossorigin href="/kaukalas-app/assets/main-BKJaxxJe.css">
+    <script type="module" crossorigin src="/kaukalas-app/assets/main-BnbWjlaf.js"></script>
+    <link rel="stylesheet" crossorigin href="/kaukalas-app/assets/main-Bf4iXMoj.css">
   </head>
-  <body data-theme="synthwave">
+  <body data-theme="synthwave" class="text-base-content text-base font-normal">
     <svg width="0" height="0" class="hidden">
       <symbol
         version="1.1"
@@ -115,7 +115,7 @@
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M12 7.25C12.4142 7.25 12.75 7.58579 12.75 8V11.6893L15.0303 13.9697C15.3232 14.2626 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2626 15.3232 13.9697 15.0303L11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V8C11.25 7.58579 11.5858 7.25 12 7.25Z"
-          fill="white"
+          fill="currentColor"
         ></path>
       </symbol>
       <symbol
@@ -284,7 +284,6 @@
           ></path>
         </g>
       </symbol>
-
       <symbol
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -321,15 +320,15 @@
     </svg>
     <header>
       <nav
-        class="flex flex-row items-center p-12 h-20 bg-transparent absolute start-0 end-0"
+        class="flex flex-row items-center p-4 lg:p-12 h-20 bg-transparent absolute start-0 end-0"
       >
-        <a href="index.html" class="text-xl font-bold z-50">
-          <svg class="w-44">
+        <a href="index.html" class="text-xl font-bold">
+          <svg class="w-40">
             <use xlink:href="#logo"></use>
           </svg>
         </a>
         <ul
-          class="flex flex-col items-center text-center bg-base-200 lg:bg-transparent justify-center lg:justify-start gap-4 ms-12 fixed lg:static lg:flex-row right-0 top-0 bottom-0 w-0 lg:w-full overflow-h-0 overflow-hidden z-40"
+          class="flex flex-col items-center text-center bg-base-200/70 backdrop-blur-lg lg:backdrop-blur-none lg:bg-transparent justify-center lg:justify-start gap-4 ms-12 fixed lg:static lg:flex-row right-0 top-0 bottom-0 w-0 lg:w-full overflow-hidden z-40"
           id="main-nav"
         >
           <li class="p-2 hover:bg-base-300 rounded-md">
@@ -357,7 +356,7 @@
             </a>
           </li>
         </ul>
-        <div id="language-container" class="ms-auto mx-4 z-50">
+        <div id="language-container" class="ms-auto me-auto sm:me-4">
           <label class="flex cursor-pointer gap-2">
             <span class="label-text">Gr</span>
             <input type="checkbox" value="Gr" class="toggle theme-controller" />
@@ -368,24 +367,24 @@
           class="btn btn-circle btn-ghost swap swap-rotate lg:h-0 overflow-hidden z-50"
         >
           <input type="checkbox" id="menu-button-controller" />
-          <svg class="size-6 swap-off">
+          <svg class="size-6 swap-off z-50">
             <use xlink:href="#burger"></use>
           </svg>
-          <svg class="size-6 swap-on">
+          <svg class="size-6 swap-on z-50">
             <use xlink:href="#close"></use>
           </svg>
         </label>
       </nav>
     </header>
-    <main class="text-base-content text-base">
+    <main>
       <section
         class="bg-hero-image bg-no-repeat bg-cover bg-top h-screen min-h-96 flex items-center justify-center"
       >
-        <div class="text-center container">
-          <h1 class="text-6xl md:text-8xl font-bold">
+        <div class="text-center">
+          <h1 class="text-6xl md:text-8xl font-bold drop-shadow-2xl">
             GK Pool & Villas<br />Services
           </h1>
-          <p class="text-2xl md:text-3xl mt-6">
+          <p class="text-2xl md:text-3xl mt-6 drop-shadow-2xl">
             <span data-lang="gr"
               >Επαγγελματικός Καθαρισμός Πισίνας, Εύκολα και Γρήγορα</span
             >
@@ -396,25 +395,26 @@
           <div
             class="w-3/5 mx-auto mt-24 flex flex-col md:flex-row items-stretch justify-center gap-y-5 gap-x-6"
           >
-            <a href="contact.html" class="btn btn-primary btn-lg">
+            <a href="contact.html" class="btn btn-primary btn-lg text-nowrap">
               <span data-lang="gr">Κλείστε ραντεβού</span>
               <span data-lang="en">Book an Appointment</span>
             </a>
-            <a href="services.html" class="btn btn-primary btn-outline btn-lg">
+            <a
+              href="services.html"
+              class="btn btn-primary btn-outline btn-lg text-nowrap"
+            >
               <span data-lang="gr">Μάθετε περισσότερα</span>
               <span data-lang="en">Learn More</span>
             </a>
           </div>
         </div>
       </section>
-      <section class="py-24 container">
-        <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4">
+      <section class="py-24 container text-center">
+        <h2 class="text-4xl lg:text-5xl font-semibold mb-4">
           <span data-lang="gr">Οι Υπηρεσίες Μας</span>
           <span data-lang="en">Our Services</span>
         </h2>
-        <p
-          class="text-lg md:text-2xl text-center lg:max-w-3/4 mx-auto font-light"
-        >
+        <p class="text-lg lg:text-2xl lg:max-w-5xl mx-auto font-light">
           <span data-lang="gr">
             Στην εταιρεία μας, προσφέρουμε μια σειρά υπηρεσιών καθαρισμού
             πισίνας για να διασφαλίσουμε ότι η πισίνα σας είναι πάντα καθαρή και
@@ -425,28 +425,28 @@
             that your pool is always clean and safe
           </span>
         </p>
-        <div class="text-center my-8">
+        <div class="my-8">
           <a href="services.html" class="btn btn-primary btn-outline">
             <span data-lang="gr">Μάθετε περισσότερα</span>
             <span data-lang="en">Learn More</span>
           </a>
         </div>
         <div
-          class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8 text-start lg:text-center text-lg font-light"
+          class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8 text-start lg:text-center"
         >
           <div>
-            <div class="overflow-h-0 overflow-hidden">
+            <div class="overflow-hidden rounded-md">
               <img
                 src="/kaukalas-app/assets/services1-C5KG9Z0P.jpg"
                 alt="Pool clearning equipment"
-                class="hover:scale-110 transition-all block mx-auto w-full rounded-md"
+                class="hover:scale-110 transition-all rounded-md duration-500 w-full"
               />
             </div>
-            <h2 class="font-bold text-xl mt-4 mb-2">
+            <h3 class="font-bold text-xl mt-4 mb-2">
               <span data-lang="gr">Χημική Ισορροπία</span>
               <span data-lang="en">Chemical Balance</span>
-            </h2>
-            <p>
+            </h3>
+            <p class="font-light">
               <span data-lang="gr"
                 >Έλεγχος και ρύθμιση των χημικών στοιχείων της πισίνας, όπως το
                 χλώριο και το pH.</span
@@ -458,18 +458,18 @@
             </p>
           </div>
           <div>
-            <div class="overflow-h-0 overflow-hidden">
+            <div class="overflow-hidden rounded-md">
               <img
                 src="/kaukalas-app/assets/services2-CFbyGDIC.jpg"
                 alt="A Professional cleanign a pool"
-                class="hover:scale-110 transition-all block mx-auto w-full rounded-md"
+                class="hover:scale-110 transition-all rounded-md duration-500 w-full"
               />
             </div>
-            <h2 class="font-bold text-xl mt-4 mb-2">
+            <h3 class="font-bold text-xl mt-4 mb-2">
               <span data-lang="gr">Καθαρισμός Πισίνας</span>
               <span data-lang="en">Pool Cleaning</span>
-            </h2>
-            <p>
+            </h3>
+            <p class="font-light">
               <span data-lang="gr"
                 >Καθαρισμός της γραμμής του νερού στην επιφάνεια της πισίνας για
                 την απομάκρυνση των ελαιωδών υπολειμμάτων.</span
@@ -481,18 +481,18 @@
             </p>
           </div>
           <div>
-            <div class="overflow-h-0 overflow-hidden">
+            <div class="overflow-hidden rounded-md">
               <img
                 src="/kaukalas-app/assets/services3-CNQpUZkH.jpg"
                 alt="A pool cleanign machine"
-                class="hover:scale-110 transition-all block mx-auto w-full rounded-md"
+                class="hover:scale-110 transition-all rounded-md duration-500 w-full"
               />
             </div>
-            <h2 class="font-bold text-xl mt-4 mb-2">
+            <h3 class="font-bold text-xl mt-4 mb-2">
               <span data-lang="gr">Καθαρισμός Φίλτρων</span>
               <span data-lang="en">Filter Cleaning</span>
-            </h2>
-            <p>
+            </h3>
+            <p class="font-light">
               <span data-lang="gr"
                 >Έλεγχος και καθαρισμός των φίλτρων της πισίνας για να
                 διασφαλιστεί η σωστή λειτουργία τους.</span
@@ -505,14 +505,12 @@
           </div>
         </div>
       </section>
-      <section class="py-24 container lg:max-w-3/4">
-        <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4">
+      <section class="py-24 container text-center">
+        <h3 class="text-4xl lg:text-5xl font-semibold mb-4">
           <span data-lang="gr">Τα Εργα Μας</span>
           <span data-lang="en">Our Projects</span>
-        </h2>
-        <p
-          class="text-lg md:text-2xl text-center lg:max-w-3/4 mx-auto font-light"
-        >
+        </h3>
+        <p class="text-lg lg:text-2xl lg:max-w-5xl mx-auto font-light">
           <span data-lang="gr">
             Ανακαλύψτε τις πλήρεις υπηρεσίες καθαρισμού πισίνας μας μέσα από τη
             λεπτομερή συλλογή φωτογραφιών πριν και μετά τον καθαρισμό
@@ -522,65 +520,65 @@
             and after photos
           </span>
         </p>
-        <div class="text-center my-8">
+        <div class="my-8">
           <a href="services.html" class="btn btn-primary btn-outline">
             <span data-lang="gr">Εξερευνήστε τα έργα μας</span>
             <span data-lang="en">Explore Our Projects</span>
           </a>
         </div>
         <div
-          class="grid grid-cols-2 gap-2 md:gap-4 justify-center items-center"
+          class="grid grid-cols-2 gap-2 lg:gap-4 justify-center items-center"
         >
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%201%20before-BOL-Qmxq.png"
               alt="gallery of pools before and after the pool cleaning services applied"
             />
           </div>
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%201%20after-BQqsc570.png"
               alt="gallery of pools before and after the pool cleaning services applied"
             />
           </div>
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%202%20before-Nhu7nGs3.png"
               alt="gallery of pools before and after the pool cleaning services applied"
             />
           </div>
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%202%20after-zLuaKyeB.png"
               alt="gallery of pools before and after the pool cleaning services applied"
             />
           </div>
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%203%20before-C2XL0ioX.png"
               alt="gallery of pools before and after the pool cleaning services applied"
             />
           </div>
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%203%20after-Ds5uEV-V.png"
               alt="gallery of pools before and after the pool cleaning services applied"
             />
           </div>
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%204%20before-CLvPWa4L.png"
               alt="gallery of pools before and after the pool cleaning services applied"
             />
           </div>
-          <div class="overflow-h-0 overflow-hidden">
+          <div class="overflow-hidden rounded-md">
             <img
               class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/image%204%20after-CCEgfGvs.png"
@@ -590,7 +588,7 @@
         </div>
       </section>
       <section class="py-24 container">
-        <p class="lg:w-1/2 mx-auto text-2xl text-center">
+        <p class="lg:w-2/3 xl:w-1/2 mx-auto text-2xl text-center">
           <span data-lang="gr"
             >Θέλετε να εξασφαλίσετε ότι η πισίνα σας θα παραμείνει πάντα καθαρή
             και έτοιμη για χρήση;</span
@@ -600,18 +598,18 @@
             for use?</span
           >
         </p>
-        <svg class="size-32 block mx-auto my-8">
+        <svg class="size-28 block mx-auto my-8">
           <use xlink:href="#pool"></use>
         </svg>
         <div
-          class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-center justify-around bg-base-200 p-6 rounded-md"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between bg-base-200 p-8 lg:p-12 rounded-md text-center lg:text-start"
         >
-          <div class="xl:px-8">
-            <h2 class="text-4xl font-semibold text-center lg:text-start mb-4">
+          <div>
+            <h2 class="text-4xl font-semibold mb-4">
               <span data-lang="gr">Επικοινωνίστε μαζί μας</span>
               <span data-lang="en">Contact us</span>
             </h2>
-            <p class="text-center lg:text-start text-lg mb-8">
+            <p class="text-lg font-light mb-8">
               <span data-lang="gr">
                 Είμαστε εδώ για να σας βοηθήσουμε με οποιεσδήποτε ερωτήσεις ή
                 απορίες έχετε σχετικά με τις υπηρεσίες καθαρισμού πισίνας μας
@@ -621,14 +619,14 @@
                 have about our pool cleaning services
               </span>
             </p>
-            <div class="text-center lg:text-start">
+            <div>
               <a href="contact.html" class="btn btn-primary">
                 <span data-lang="gr">Κλείστε ραντεβού τώρα</span>
                 <span data-lang="en">Book an Appointment Now</span>
               </a>
             </div>
           </div>
-          <div class="xl:px-8">
+          <div>
             <img
               class="w-full h-full object-cover rounded-md"
               src="/kaukalas-app/assets/cta-image-3L84Ac7P.png"
@@ -637,13 +635,13 @@
           </div>
         </div>
       </section>
-      <section class="py-24 container max-w-6xl">
-        <h2 class="text-4xl md:text-5xl font-semibold text-center mb-16">
+      <section class="py-24 container">
+        <h2 class="text-4xl md:text-5xl font-semibold text-center mb-12">
           <span data-lang="gr">Τι έχουν πεί για εμάς ?</span>
           <span data-lang="en">What have they said about us ?</span>
         </h2>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-stretch text-center text-lg font-light gap-4"
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-stretch text-center text-lg font-light gap-2 lg:gap-4"
         >
           <div class="md:col-span-1 xl:col-span-3 bg-base-200 rounded-md p-8">
             <h2 class="text-2xl font-semibold">David</h2>
@@ -740,7 +738,7 @@
             </p>
           </div>
           <div class="md:col-span-1 xl:col-span-2 bg-base-200 rounded-md p-8">
-            <h2 class="text-2xl font-semibold">Στυλιανόσ Βογιατζάκης</h2>
+            <h2 class="text-2xl font-semibold">Στυλιανός Βογιατζάκης</h2>
             <div
               class="flex items-center justify-center gap-2 my-4 text-warning"
             >
@@ -775,13 +773,15 @@
           </div>
         </div>
       </section>
-      <section class="py-24 container max-w-6xl">
-        <h2 class="text-4xl md:text-5xl font-semibold text-center mb-16">
+      <section class="py-24 container">
+        <h2 class="text-4xl md:text-5xl font-semibold text-center mb-12">
           <span data-lang="gr">Συχνές Ερωτήσεις</span>
           <span data-lang="en">Frequently Asked Questions</span>
         </h2>
-        <div class="flex flex-col items-stretch justify-center gap-4">
-          <div class="bg-base-200 p-6 accordion-item rounded-md">
+        <div class="flex flex-col items-stretch justify-center gap-2 lg:gap-4">
+          <div
+            class="bg-base-200 p-6 accordion-item rounded-md hover:bg-base-300 transition-all"
+          >
             <div class="flex justify-between accordion-header">
               <p class="font-bold">
                 <span data-lang="gr"
@@ -817,7 +817,9 @@
               </p>
             </div>
           </div>
-          <div class="bg-base-200 p-6 accordion-item rounded-md">
+          <div
+            class="bg-base-200 p-6 accordion-item rounded-md hover:bg-base-300 transition-all"
+          >
             <div class="flex justify-between accordion-header">
               <p class="font-bold">
                 <span data-lang="gr"
@@ -852,7 +854,9 @@
               </p>
             </div>
           </div>
-          <div class="bg-base-200 p-6 accordion-item rounded-md">
+          <div
+            class="bg-base-200 p-6 accordion-item rounded-md hover:bg-base-300 transition-all"
+          >
             <div class="flex justify-between accordion-header">
               <p class="font-bold">
                 <span data-lang="gr"
@@ -888,7 +892,9 @@
               </p>
             </div>
           </div>
-          <div class="bg-base-200 p-6 accordion-item rounded-md">
+          <div
+            class="bg-base-200 p-6 accordion-item rounded-md hover:bg-base-300 transition-all"
+          >
             <div class="flex justify-between accordion-header">
               <p class="font-bold">
                 <span data-lang="gr"
@@ -923,7 +929,9 @@
               </p>
             </div>
           </div>
-          <div class="bg-base-200 p-6 accordion-item rounded-md">
+          <div
+            class="bg-base-200 p-6 accordion-item rounded-md hover:bg-base-300 transition-all"
+          >
             <div class="flex justify-between accordion-header">
               <p class="font-bold">
                 <span data-lang="gr"
@@ -962,9 +970,10 @@
         </div>
       </section>
     </main>
-    <footer
-      class="bg-base-200 text-base-content text-base font-normal rounded p-12 flex flex-col items-center gap-8"
-    >
+    <footer class="bg-base-200 p-8 flex flex-col items-center gap-8">
+      <svg class="w-48 h-10">
+        <use xlink:href="#logo"></use>
+      </svg>
       <nav class="grid grid-cols-1 md:grid-flow-col text-center gap-4">
         <a href="index.html" class="link link-hover">
           <span data-lang="gr">Αρχική Σελίδα</span>
@@ -986,17 +995,17 @@
       <nav>
         <div class="flex items-center text-center gap-4">
           <a href="#">
-            <svg class="size-6">
+            <svg class="size-5">
               <use xlink:href="#instagram"></use>
             </svg>
           </a>
           <a href="#">
-            <svg class="size-6">
+            <svg class="size-5">
               <use xlink:href="#facebook"></use>
             </svg>
           </a>
           <a href="#">
-            <svg class="size-6">
+            <svg class="size-5">
               <use xlink:href="#twitter"></use>
             </svg>
           </a>
