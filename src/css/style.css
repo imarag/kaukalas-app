@@ -38,9 +38,16 @@
   --noise: 0;
 }
 
-@utility container {
-  margin-inline: auto;
-  padding-inline: 1rem;
+@theme {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+}
+
+.container {
+  @apply px-2 lg:px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px];
 }
 
 .show-nav {
