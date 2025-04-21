@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuButtonController = document.querySelector("#menu-button-controller");
     const mainNav = document.querySelector("#main-nav");
     const accordionItems = document.querySelectorAll(".accordion-item")
+    const carouselContainers = document.querySelectorAll(".carousel-container");
     const languageToggleInput = document.querySelector('#language-container input');
     let langEnElements = document.querySelectorAll('[data-lang="en"]');
     let langGrElements = document.querySelectorAll('[data-lang="gr"]');
@@ -45,9 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (mainNav.classList.contains("show-nav")) {
             document.body.classList.add("overflow-y-hidden")
+            menuButtonController.setAttribute('aria-expanded', 'true');
         }
         else {
             document.body.classList.remove("overflow-y-hidden")
+            menuButtonController.setAttribute('aria-expanded', 'false');
         }
     })
 
@@ -81,4 +84,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
         })
     })
+
+
+
+    carouselContainers.forEach(carousel => {
+        const carouselButtonLeft = carousel.querySelector(".carousel-left");
+        const carouselButtonRight = carousel.querySelector(".carousel-right");
+        const allImages = carousel.querySelectorAll("img");
+        const totalImages = allImages.length;
+        let pad = 0;
+
+        carouselButtonLeft.addEventListener("click", () => {
+            if (pad < 0) {
+                pad += 100
+                allImages.forEach(image => {
+                    image.style.transform = `translateX(${pad}%)`
+                })
+            }
+        })
+
+        carouselButtonRight.addEventListener("click", () => {
+            if (pad > -(totalImages - 1) * 100) {
+                pad -= 100
+                allImages.forEach(image => {
+                    image.style.transform = `translateX(${pad}%)`
+                })
+            }
+        })
+    })
+
 });
