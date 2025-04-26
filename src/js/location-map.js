@@ -13,4 +13,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var marker = L.marker([serviceLat, setviceLon]).addTo(map);
+var polygon = L.polygon([
+    [35.509425, 23.992274],
+    [35.491338, 24.049318],
+    [35.521281, 24.058794],
+    [35.518812, 24.013995],
+]).addTo(map);
