@@ -10,6 +10,7 @@
     "deploy": "npm run build && git add . && git commit -m \"Committing...\" && git push && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.4",
     "daisyui": "^5.0.19",
     "leaflet": "^1.9.4"

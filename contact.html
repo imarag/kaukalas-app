@@ -10,7 +10,7 @@
     <title>Contact Page</title>
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
-  <body data-theme="synthwave">
+  <body data-theme="synthwave" class="text-lg text-base-content font-normal">
     <header>
       <svg width="0" height="0" class="hidden" aria-hidden="true">
         <symbol
@@ -47,13 +47,15 @@
           ></path>
         </symbol>
       </svg>
-      <nav class="container flex flex-row items-center bg-transparent py-6">
+      <nav
+        class="container flex flex-row items-center bg-transparent absolute start-0 end-0 py-6"
+      >
         <a
           href="index.html"
           class="text-xl font-bold"
           aria-label="Go to homepage"
         >
-          <svg class="w-40 h-20">
+          <svg class="w-40 h-10">
             <use xlink:href="#logo"></use>
           </svg>
         </a>
@@ -62,25 +64,25 @@
           id="main-nav"
         >
           <li class="p-2 hover:bg-base-300 rounded-md">
-            <a class="no-underline" href="index.html">
+            <a class="no-underline text-base" href="index.html">
               <span data-lang="gr">Αρχική Σελίδα</span>
               <span data-lang="en">Home</span>
             </a>
           </li>
           <li class="p-2 hover:bg-base-300 rounded-md">
-            <a class="no-underline" href="services.html">
+            <a class="no-underline text-base" href="services.html">
               <span data-lang="gr">Υπηρεσίες</span>
               <span data-lang="en">Our Services</span>
             </a>
           </li>
           <li class="p-2 hover:bg-base-300 rounded-md">
-            <a class="no-underline" href="gallery.html">
+            <a class="no-underline text-base" href="gallery.html">
               <span data-lang="gr">Τα Εργα Μας</span>
               <span data-lang="en">Gallery</span>
             </a>
           </li>
           <li class="p-2 hover:bg-base-300 rounded-md">
-            <a class="no-underline" href="contact.html">
+            <a class="no-underline text-base" href="contact.html">
               <span data-lang="gr">Επικοινωνία</span>
               <span data-lang="en">Contact</span>
             </a>
@@ -135,13 +137,13 @@
       </nav>
     </header>
     <main class="text-base-content text-base">
-      <section class="py-24 container">
-        <h2 class="text-4xl md:text-5xl font-semibold text-center mb-4">
+      <section class="pt-32 pb-16 container">
+        <h2 class="text-4xl lg:text-5xl font-semibold text-center mb-4">
           <span data-lang="gr">Επικοινωνίστε Μαζί Μας</span>
           <span data-lang="en">Contact Us</span>
         </h2>
         <p
-          class="text-lg md:text-2xl text-center lg:max-w-3/4 mx-auto mb-16 font-light"
+          class="text-xl lg:text-2xl text-center lg:max-w-3/4 mx-auto mb-16 font-light"
         >
           <span data-lang="gr">
             Η ομάδα μας είναι έτοιμη να σας εξυπηρετήσει και να σας βοηθήσει με
@@ -152,74 +154,76 @@
             aiming to provide the best service possible
           </span>
         </p>
-        <div class="bg-base-200 p-8 rounded-md max-w-3xl mx-auto">
-          <form class="flex flex-col gap-4">
+        <div id="alert-component" role="alert" class="alert flex items-center rounded-none -translate-y-full transition-all duration-150 h-20 z-50 alert-success fixed top-0 left-0 right-0 " aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" id="alert-success-icon" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="alert-error-icon" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span id="alert-message" class="font-semibold"></span>
+        </div>
+        <div class="card max-w-3xl mx-auto">
+          <form class="flex flex-col gap-4" id="contact-form">
             <div>
               <label class="block uppercase mb-2 font-semibold" for="name">
-                <span data-lang="gr">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</span>
+                <span data-lang="gr">Ονοματεπωνυμο</span>
                 <span data-lang="en">Full Name</span>
               </label>
               <input
-                class="input block w-full bg-white"
+                class="input block w-full bg-white text-gray-800"
                 type="text"
                 id="name"
                 name="user_name"
+                maxlength="120"
               />
+              <p class="error text-error mt-1"></p>
             </div>
-            <div>
+            <div id="email-field">
               <label class="block uppercase mb-2 font-semibold" for="email">
-                <span data-lang="gr">EMAIL</span>
+                <span data-lang="gr">Email</span>
                 <span data-lang="en">Email</span>
               </label>
               <input
-                class="input block w-full bg-white"
+                class="input block w-full bg-white text-gray-800"
                 type="email"
                 id="email"
-                name="user_email"
+                name="user_email"                
                 required
               />
+              <p class="error text-error mt-1"></p>
             </div>
-            <div>
-              <label class="block uppercase mb-2 font-semibold" for="telephone">
-                <span data-lang="gr">Τηλεφωνο</span>
-                <span data-lang="en">Telephone</span>
-              </label>
-              <input
-                class="input block w-full bg-white"
-                type="tel"
-                id="telephone"
-                name="telephone"
-              />
-            </div>
-            <div>
+            <div id="message-field">
               <label class="block uppercase mb-2 font-semibold" for="message">
-                <span data-lang="gr">ΜΗΝΥΜΑ</span>
+                <span data-lang="gr">Μηνυμα</span>
                 <span data-lang="en">Message</span>
               </label>
               <textarea
                 id="message"
                 name="message"
-                rows="5"
-                class="textarea block w-full bg-white"
+                rows="8"
+                class="textarea block w-full bg-white text-gray-800"
                 required
               ></textarea>
+              <p class="error text-error mt-1"></p>
             </div>
             <div class="mt-6 text-center">
-              <button class="btn btn-primary block w-full">
+              <button class="btn flex items-center gap-2 btn-primary w-full">
                 <span data-lang="gr">Αποστολή</span>
                 <span data-lang="en">Send</span>
+                <span id="spinner" class="loading loading-spinner loading-md hidden" aria-hidden="true"></span>
               </button>
             </div>
           </form>
         </div>
       </section>
       <section class="pb-24 container">
-        <div class="bg-base-200 p-8 rounded-md my-2 lg:my-8">
+        <div class="card my-2 lg:my-8">
           <h2 class="text-2xl font-bold text-start mb-8">
             <span data-lang="gr">Στοιχεία Επικοινωνίας</span>
             <span data-lang="en">Contact Information</span>
           </h2>
-          <div class="flex items-center gap-4 my-4">
+          <div class="flex items-center gap-4">
             <div class="bg-primary text-base-200 rounded-full p-2">
               <svg
                 fill="current"
@@ -237,7 +241,7 @@
                 <span data-lang="gr">Τηλέφωνο Επικοινωνίας</span>
                 <span data-lang="en">Contact Phone</span>
               </p>
-              <p class="font-light text-base">+306982972144</p>
+              <p class="font-light text-base">+30 6973341740</p>
             </div>
           </div>
           <div class="flex items-center gap-4 my-4">
@@ -279,104 +283,41 @@
                 <span data-lang="gr">Ηλεκτρονική Διεύθυνση</span>
                 <span data-lang="en">Email</span>
               </p>
-              <p class="font-light text-base">giannis.marar@hotmail.com</p>
+              <p class="font-light text-base">kaukalas_giorgos@yahoo.gr</p>
             </div>
           </div>
         </div>
-        <div class="bg-base-200 p-8 rounded-md my-2 lg:my-8">
+        <div class="card my-2 lg:my-8">
           <h2 class="text-2xl font-bold text-start mb-8">
             <span data-lang="gr">Μέσα Κοινωνικής Δικτύωσης</span>
             <span data-lang="en">Social Media</span>
           </h2>
-          <div class="flex justify-start items-center gap-4 mt-8">
-            <div class="bg-primary text-base-200 rounded-full p-2">
-              <svg
-                class="size-6"
-                viewBox="0 0 20 20"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <title>instagram [#167]</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="Dribbble-Light-Preview"
-                    transform="translate(-340.000000, -7439.000000)"
-                    fill="currentColor"
-                  >
-                    <g id="icons" transform="translate(56.000000, 160.000000)">
-                      <path
-                        d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
-                        id="instagram-[#167]"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div class="bg-primary text-base-200 rounded-full p-2">
-              <svg
-                fill="currentColor"
-                class="size-6"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="2 2.02 20.03 19.95"
-              >
-                <path
-                  d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"
-                />
-              </svg>
-            </div>
-            <div class="bg-primary text-base-200 rounded-full p-2">
-              <svg
-                version="1.1"
-                class="size-6"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 20 16"
-              >
-                <title>twitter [#154]</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="Dribbble-Light-Preview"
-                    transform="translate(-60.000000, -7521.000000)"
-                    fill="currentColor"
-                  >
-                    <g id="icons" transform="translate(56.000000, 160.000000)">
-                      <path
-                        d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
-                        id="twitter-[#154]"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
+          <div class="flex justify-start items-center gap-4">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <div class="bg-primary text-base-200 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 256 256"><path fill="currentColor" d="M128 23.064c34.177 0 38.225.13 51.722.745c12.48.57 19.258 2.655 23.769 4.408c5.974 2.322 10.238 5.096 14.717 9.575s7.253 8.743 9.575 14.717c1.753 4.511 3.838 11.289 4.408 23.768c.615 13.498.745 17.546.745 51.723s-.13 38.226-.745 51.723c-.57 12.48-2.655 19.257-4.408 23.768c-2.322 5.974-5.096 10.239-9.575 14.718s-8.743 7.253-14.717 9.574c-4.511 1.753-11.289 3.839-23.769 4.408c-13.495.616-17.543.746-51.722.746s-38.228-.13-51.723-.746c-12.48-.57-19.257-2.655-23.768-4.408c-5.974-2.321-10.239-5.095-14.718-9.574c-4.479-4.48-7.253-8.744-9.574-14.718c-1.753-4.51-3.839-11.288-4.408-23.768c-.616-13.497-.746-17.545-.746-51.723s.13-38.225.746-51.722c.57-12.48 2.655-19.258 4.408-23.769c2.321-5.974 5.095-10.238 9.574-14.717c4.48-4.48 8.744-7.253 14.718-9.575c4.51-1.753 11.288-3.838 23.768-4.408c13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95c-8.418 3.271-15.556 7.648-22.672 14.764S9.991 35.738 6.72 44.155C3.555 52.297 1.392 61.602.77 75.226C.147 88.878 0 93.237 0 128s.147 39.122.77 52.774c.622 13.625 2.785 22.93 5.95 31.071c3.27 8.417 7.647 15.556 14.763 22.672s14.254 11.492 22.672 14.763c8.142 3.165 17.446 5.328 31.07 5.95c13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95c8.418-3.27 15.556-7.647 22.672-14.763s11.493-14.254 14.764-22.672c3.164-8.142 5.328-17.446 5.95-31.07c.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07c-3.271-8.418-7.648-15.556-14.764-22.672S220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0m0 62.27c-36.302 0-65.73 29.43-65.73 65.73s29.428 65.73 65.73 65.73c36.301 0 65.73-29.428 65.73-65.73c0-36.301-29.429-65.73-65.73-65.73m0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667s-19.103 42.667-42.667 42.667m83.686-110.994c0 8.484-6.876 15.36-15.36 15.36s-15.36-6.876-15.36-15.36s6.877-15.36 15.36-15.36s15.36 6.877 15.36 15.36"/></svg>
+              </div>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <div class="bg-primary text-base-200 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 256 256"><path fill="currentColor" d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445"/><path class="fill-primary" d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z"/></svg>
+              </div>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <div class="bg-primary text-base-200 rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 256 209"><path fill="currentColor" d="M256 25.45a105 105 0 0 1-30.166 8.27c10.845-6.5 19.172-16.793 23.093-29.057a105.2 105.2 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52c0 4.117.465 8.125 1.36 11.97c-43.65-2.191-82.35-23.1-108.255-54.876c-4.52 7.757-7.11 16.78-7.11 26.404c0 18.222 9.273 34.297 23.365 43.716a52.3 52.3 0 0 1-23.79-6.57q-.004.33-.003.661c0 25.447 18.104 46.675 42.13 51.5a52.6 52.6 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475c-17.975 14.086-40.622 22.483-65.228 22.483c-4.24 0-8.42-.249-12.529-.734c23.243 14.902 50.85 23.597 80.51 23.597c96.607 0 149.434-80.031 149.434-149.435q0-3.417-.152-6.795A106.8 106.8 0 0 0 256 25.45"/></svg>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="bg-base-200 p-8 rounded-md my-2 lg:my-8">
+        <div class="card my-2 lg:my-8">
           <h2 class="text-2xl font-bold text-start mb-8">
             <span data-lang="gr">Η Εταιρεία Μας</span>
             <span data-lang="en">Our Company</span>
           </h2>
-          <div class="items-center gap-4 mt-8">
+          <div class="items-center gap-4">
             <div>
-              <div class="flex items-center gap-4 my-4">
+              <div class="flex items-center gap-4">
                 <div class="bg-primary text-base-200 rounded-full p-2">
                   <svg
                     version="1.0"
@@ -400,8 +341,8 @@
                     <span data-lang="en">Location</span>
                   </p>
                   <p class="font-light text-base">
-                    <span data-lang="gr">Μηνά Βίστα 33, Χανιά</span>
-                    <span data-lang="en">Mina Vista 33, Chania</span>
+                    <span data-lang="gr">Κρήτη, Χανιά</span>
+                    <span data-lang="en">Crete, Chania</span>
                   </p>
                 </div>
               </div>
@@ -431,8 +372,8 @@
                     <span data-lang="en">Hour Schedule</span>
                   </p>
                   <p class="font-light text-base">
-                    <span data-lang="gr">Δευτ. - Παρ. 08:00 ΠM - 06:00 ΜM</span>
-                    <span data-lang="en">Mon. - Fri. 08:00 AM - 06:00 PM</span>
+                    <span data-lang="gr">Δευτ. - Κυρ. 09:00 πμ - 05:00 μμ - Πεμ. κλειστά</span>
+                    <span data-lang="en">Mon. - Sun. 09:00 am - 05:00 pm - Thu. closed</span>
                   </p>
                 </div>
               </div>
@@ -448,7 +389,7 @@
       <svg class="w-48 h-10">
         <use xlink:href="#logo"></use>
       </svg>
-      <nav class="grid grid-cols-1 md:grid-flow-col text-center gap-4">
+      <nav class="grid grid-cols-1 sm:grid-flow-col text-center gap-4">
         <a href="index.html" class="link link-hover">
           <span data-lang="gr">Αρχική Σελίδα</span>
           <span data-lang="en">Home</span>
@@ -466,100 +407,25 @@
           <span data-lang="en">Contact</span>
         </a>
       </nav>
-      <nav>
-        <ul class="flex items-center text-center gap-4">
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg
-                class="size-5"
-                viewBox="0 0 20 20"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-              >
-                <title>instagram [#167]</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="Dribbble-Light-Preview"
-                    transform="translate(-340.000000, -7439.000000)"
-                    fill="currentColor"
-                  >
-                    <g id="icons" transform="translate(56.000000, 160.000000)">
-                      <path
-                        d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
-                        id="instagram-[#167]"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <svg
-                fill="currentColor"
-                class="size-5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="2 2.02 20.03 19.95"
-              >
-                <path
-                  d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <svg
-                version="1.1"
-                class="size-5"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 20 16"
-              >
-                <title>twitter [#154]</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                >
-                  <g
-                    id="Dribbble-Light-Preview"
-                    transform="translate(-60.000000, -7521.000000)"
-                    fill="currentColor"
-                  >
-                    <g id="icons" transform="translate(56.000000, 160.000000)">
-                      <path
-                        d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
-                        id="twitter-[#154]"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-                
-              </svg>
-            </a>
-          </li>
+      <nav class="flex items-center text-center gap-4">
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 256 256"><path fill="currentColor" d="M128 23.064c34.177 0 38.225.13 51.722.745c12.48.57 19.258 2.655 23.769 4.408c5.974 2.322 10.238 5.096 14.717 9.575s7.253 8.743 9.575 14.717c1.753 4.511 3.838 11.289 4.408 23.768c.615 13.498.745 17.546.745 51.723s-.13 38.226-.745 51.723c-.57 12.48-2.655 19.257-4.408 23.768c-2.322 5.974-5.096 10.239-9.575 14.718s-8.743 7.253-14.717 9.574c-4.511 1.753-11.289 3.839-23.769 4.408c-13.495.616-17.543.746-51.722.746s-38.228-.13-51.723-.746c-12.48-.57-19.257-2.655-23.768-4.408c-5.974-2.321-10.239-5.095-14.718-9.574c-4.479-4.48-7.253-8.744-9.574-14.718c-1.753-4.51-3.839-11.288-4.408-23.768c-.616-13.497-.746-17.545-.746-51.723s.13-38.225.746-51.722c.57-12.48 2.655-19.258 4.408-23.769c2.321-5.974 5.095-10.238 9.574-14.717c4.48-4.48 8.744-7.253 14.718-9.575c4.51-1.753 11.288-3.838 23.768-4.408c13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95c-8.418 3.271-15.556 7.648-22.672 14.764S9.991 35.738 6.72 44.155C3.555 52.297 1.392 61.602.77 75.226C.147 88.878 0 93.237 0 128s.147 39.122.77 52.774c.622 13.625 2.785 22.93 5.95 31.071c3.27 8.417 7.647 15.556 14.763 22.672s14.254 11.492 22.672 14.763c8.142 3.165 17.446 5.328 31.07 5.95c13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95c8.418-3.27 15.556-7.647 22.672-14.763s11.493-14.254 14.764-22.672c3.164-8.142 5.328-17.446 5.95-31.07c.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07c-3.271-8.418-7.648-15.556-14.764-22.672S220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0m0 62.27c-36.302 0-65.73 29.43-65.73 65.73s29.428 65.73 65.73 65.73c36.301 0 65.73-29.428 65.73-65.73c0-36.301-29.429-65.73-65.73-65.73m0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667s-19.103 42.667-42.667 42.667m83.686-110.994c0 8.484-6.876 15.36-15.36 15.36s-15.36-6.876-15.36-15.36s6.877-15.36 15.36-15.36s15.36 6.877 15.36 15.36"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 256 256"><path fill="currentColor" d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445"/><path fill="#09002f" d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 256 209"><path fill="currentColor" d="M256 25.45a105 105 0 0 1-30.166 8.27c10.845-6.5 19.172-16.793 23.093-29.057a105.2 105.2 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52c0 4.117.465 8.125 1.36 11.97c-43.65-2.191-82.35-23.1-108.255-54.876c-4.52 7.757-7.11 16.78-7.11 26.404c0 18.222 9.273 34.297 23.365 43.716a52.3 52.3 0 0 1-23.79-6.57q-.004.33-.003.661c0 25.447 18.104 46.675 42.13 51.5a52.6 52.6 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475c-17.975 14.086-40.622 22.483-65.228 22.483c-4.24 0-8.42-.249-12.529-.734c23.243 14.902 50.85 23.597 80.51 23.597c96.607 0 149.434-80.031 149.434-149.435q0-3.417-.152-6.795A106.8 106.8 0 0 0 256 25.45"/></svg>
+          </a>
         </div>
       </nav>
-      <aside>
-        <p>Copyright © 2025 - All right reserved</p>
+      <aside class="text-center space-y-4">
+        <p>© 2025 GK Pool & Villas Services</p>
+        <p class="italic text-sm">Designed and created by <a class="link" target="_blank" href="https://www.linkedin.com/in/ioannis-maragkakis-1ba2851a9/">Ioannis Maragkakis</a></p>
       </aside>
     </footer>
     <script type="module" src="src/js/main.js"></script>
     <script type="module" src="src/js/location-map.js"></script>
+    <script type="module" src="src/js/contact-form-emailjs.js"></script>
   </body>
 </html>

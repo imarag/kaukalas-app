@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     accordionItems.forEach(accordion => {
         const accordionBody = accordion.querySelector(".accordion-body")
-        const plusIcon = accordion.querySelector("#plus-icon");
-        const minusIcon = accordion.querySelector("#minus-icon");
+        const plusIcon = accordion.querySelector(".plus-icon");
+        const minusIcon = accordion.querySelector(".minus-icon");
 
         plusIcon.style.display = "flex";
         minusIcon.style.display = "none";
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     accordionItems.forEach(accordion => {
         accordion.addEventListener("click", () => {
             const accordionBody = accordion.querySelector(".accordion-body")
-            const plusIcon = accordion.querySelector("#plus-icon");
-            const minusIcon = accordion.querySelector("#minus-icon");
+            const plusIcon = accordion.querySelector(".plus-icon");
+            const minusIcon = accordion.querySelector(".minus-icon");
 
             accordionBody.classList.toggle("show-accordion")
 
