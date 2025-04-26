@@ -8,6 +8,11 @@ const emailField = document.querySelector("#email-field");
 const messageField = document.querySelector("#message-field");
 const languageToggleInput = document.querySelector('#language-container input');
 
+const emailInput = emailField.querySelector("input[type='email']");
+const messageInput = messageField.querySelector("textarea");
+const emailInputErrorMessage = emailField.querySelector(".error");
+const messageInputErrorMessage = messageField.querySelector(".error");
+
 const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -71,11 +76,8 @@ function deactivateSpinner() {
 }
 
 function formIsValid() {
-    const emailInput = emailField.querySelector("input[type='email']");
-    const messageInput = messageField.querySelector("textarea");
-    const emailInputErrorMessage = emailField.querySelector(".error");
-    const messageInputErrorMessage = messageField.querySelector(".error");
-
+    emailInputErrorMessage.textContent = "";
+    messageInputErrorMessage.textContent = "";
     const emailRegexValidation = /^[\w\.+-]+@([\w-]+\.)+[a-zA-Z]{2,}$/;
 
     const languageSelected = languageToggleInput.checked ? 'en' : 'gr';
