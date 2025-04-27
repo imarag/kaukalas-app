@@ -10,7 +10,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
-  <body data-theme="synthwave" class="text-lg text-base-content font-normal">
+  <body data-theme="synthwave" class="bg-transparent text-lg text-base-content font-normal">
     <header>
       <svg width="0" height="0" class="hidden" aria-hidden="true">
         <symbol
@@ -137,8 +137,9 @@
       </nav>
     </header>
     <main>
+      <div class="bg-[url('../images/hero-image.png')] bg-no-repeat bg-cover bg-top fixed inset-0 -z-10 "></div>
       <section
-        class="bg-[url('../images/hero-image.png')] bg-no-repeat bg-cover bg-top h-screen min-h-96 flex items-center justify-center"
+        class="min-h-screen flex items-center justify-center"
       >
         <div class="text-center container">
           <h1 class="text-6xl lg:text-8xl font-bold drop-shadow-2xl">
@@ -169,629 +170,644 @@
           </div>
         </div>
       </section>
-      <section class="py-24 container text-center">
-        <h2 class="text-4xl lg:text-5xl font-semibold mb-4">
-          <span data-lang="gr">Οι Υπηρεσίες Μας</span>
-          <span data-lang="en">Our Services</span>
-        </h2>
-        <p class="text-xl lg:text-2xl lg:max-w-5xl mx-auto font-light">
-          <span data-lang="gr">
-            Στην εταιρεία μας, προσφέρουμε μια σειρά υπηρεσιών καθαρισμού
-            πισίνας για να διασφαλίσουμε ότι η πισίνα σας είναι πάντα καθαρή και
-            ασφαλής
-          </span>
-          <span data-lang="en">
-            At our company, we offer a range of pool cleaning services to ensure
-            that your pool is always clean and safe
-          </span>
-        </p>
-        <div class="my-8">
-          <a href="services.html" class="btn btn-primary btn-outline">
-            <span data-lang="gr">Μάθετε περισσότερα</span>
-            <span data-lang="en">Learn More</span>
-          </a>
-        </div>
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8 text-start lg:text-center"
-        >
-          <div>
-            <div class="overflow-hidden rounded-md">
-              <img
-                src="src/images/services1.jpg"
-                alt="Pool clearning equipment"
-                class="scale-120 hover:scale-100 transition-all rounded-md duration-500 w-full"
-              />
-            </div>
-            <h3 class="font-bold text-xl mt-4 mb-2">
-              <span data-lang="gr">Χημική Ισορροπία</span>
-              <span data-lang="en">Chemical Balance</span>
-            </h3>
-            <p class="font-light">
-              <span data-lang="gr"
-                >Έλεγχος και ρύθμιση των χημικών στοιχείων της πισίνας, όπως το
-                χλώριο και το pH.</span
-              >
-              <span data-lang="en"
-                >Checking and adjusting the chemical elements of the pool, such
-                as chlorine and pH.</span
-              >
-            </p>
+      <section class="py-24 bg-base-100 z-10 text-center">
+        <div class="container">
+
+          <h2 class="text-4xl lg:text-5xl font-semibold mb-4">
+            <span data-lang="gr">Οι Υπηρεσίες Μας</span>
+            <span data-lang="en">Our Services</span>
+          </h2>
+          <p class="text-xl lg:text-2xl lg:max-w-5xl mx-auto font-light">
+            <span data-lang="gr">
+              Στην εταιρεία μας, προσφέρουμε μια σειρά υπηρεσιών καθαρισμού
+              πισίνας για να διασφαλίσουμε ότι η πισίνα σας είναι πάντα καθαρή και
+              ασφαλής
+            </span>
+            <span data-lang="en">
+              At our company, we offer a range of pool cleaning services to ensure
+              that your pool is always clean and safe
+            </span>
+          </p>
+          <div class="my-8">
+            <a href="services.html" class="btn btn-primary btn-outline">
+              <span data-lang="gr">Μάθετε περισσότερα</span>
+              <span data-lang="en">Learn More</span>
+            </a>
           </div>
-          <div>
-            <div class="overflow-hidden rounded-md">
-              <img
-                src="src/images/services2.jpg"
-                alt="A Professional cleanign a pool"
-                class="scale-120 hover:scale-100 transition-all rounded-md duration-500 w-full"
-              />
-            </div>
-            <h3 class="font-bold text-xl mt-4 mb-2">
-              <span data-lang="gr">Καθαρισμός Πισίνας</span>
-              <span data-lang="en">Pool Cleaning</span>
-            </h3>
-            <p class="font-light">
-              <span data-lang="gr"
-                >Καθαρισμός της γραμμής του νερού στην επιφάνεια της πισίνας για
-                την απομάκρυνση των ελαιωδών υπολειμμάτων.</span
-              >
-              <span data-lang="en"
-                >Cleaning the water line on the surface of the pool to remove
-                oily residues.</span
-              >
-            </p>
-          </div>
-          <div>
-            <div class="overflow-hidden rounded-md">
-              <img
-                src="src/images/services3.jpg"
-                alt="A pool cleanign machine"
-                class="scale-120 hover:scale-100 transition-all rounded-md duration-500 w-full"
-              />
-            </div>
-            <h3 class="font-bold text-xl mt-4 mb-2">
-              <span data-lang="gr">Καθαρισμός Φίλτρων</span>
-              <span data-lang="en">Filter Cleaning</span>
-            </h3>
-            <p class="font-light">
-              <span data-lang="gr"
-                >Έλεγχος και καθαρισμός των φίλτρων της πισίνας για να
-                διασφαλιστεί η σωστή λειτουργία τους.</span
-              >
-              <span data-lang="en"
-                >Checking and cleaning the pool filters to ensure their proper
-                functioning.</span
-              >
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="py-24 container text-center">
-        <h3 class="text-4xl lg:text-5xl font-semibold mb-4">
-          <span data-lang="gr">Τα Εργα Μας</span>
-          <span data-lang="en">Our Projects</span>
-        </h3>
-        <p class="text-xl lg:text-2xl lg:max-w-5xl mx-auto font-light">
-          <span data-lang="gr">
-            Ανακαλύψτε τις πλήρεις υπηρεσίες καθαρισμού πισίνας μας μέσα από τη
-            λεπτομερή συλλογή φωτογραφιών πριν και μετά τον καθαρισμό
-          </span>
-          <span data-lang="en">
-            Discover our pool cleaning services through our collection of before
-            and after photos
-          </span>
-        </p>
-        <div class="my-8">
-          <a href="gallery.html" class="btn btn-primary btn-outline">
-            <span data-lang="gr">Εξερευνήστε τα έργα μας</span>
-            <span data-lang="en">Explore Our Projects</span>
-          </a>
-        </div>
-        <div
-          class="grid grid-cols-2 gap-2 sm:gap-4 justify-center items-center"
-        >
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 1 before.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 1 after.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 2 before.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 2 after.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 3 before.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 3 after.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 4 before.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-          <div class="overflow-hidden rounded-md">
-            <img
-              class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src="src/images/image 4 after.png"
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="py-24 container">
-        <p class="lg:w-2/3 xl:w-1/2 mx-auto text-2xl text-center">
-          <span data-lang="gr"
-            >Θέλετε να εξασφαλίσετε ότι η πισίνα σας θα παραμείνει πάντα καθαρή
-            και έτοιμη για χρήση;</span
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8 text-start lg:text-center"
           >
-          <span data-lang="en"
-            >Do you want to ensure that your pool stays always clean and ready
-            for use?</span
-          >
-        </p>
-        <svg
-          class="size-28 block mx-auto my-8"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="63.58 163.58 898.33 674.33"
-        >
-          <path
-            d="M451.7 837.9c44.4 0 84.2-20.4 110.2-52.2 17.3-18 17.3-18 34.7 0 26 31.8 65.7 52.2 110.2 52.2 44.4 0 84.2-20.4 110.2-52.2 17.3-18 17.3-18 34.7 0 26 31.8 65.7 52.2 110.2 52.2v-28.1c-43.8 0-83.1-25-102-63.4-10.3-21.1-40.6-21.1-51 0-18.8 38.4-58.2 63.4-102 63.4s-83.1-25-102-63.4c-10.3-21.1-40.6-21.1-51 0-18.8 38.4-58.2 63.4-102 63.4s-83.1-25-102-63.4c-10.3-21.1-40.6-21.1-51 0-18.8 38.4-58.2 63.4-102 63.4-44.8 0-83.7-26-102-63.4-11.3-20.8-39.6-20.8-27.7 7.4 21.9 49.4 71.8 84.1 129.8 84.1 44.4 0 84.2-20.4 110.2-52.2 17.3-18 17.3-18 34.7 0 25.6 31.8 65.3 52.2 109.8 52.2zM597.7 304.1v-56.7c-0.3-15.3-12.7-27.6-28.1-27.6-15.5 0-28.1 12.6-28.1 28.1 0 0 0 28.1-28.1 28.1s-28.1-28.1-28.1-28.1c0-46.5 37.7-84.3 84.3-84.3 46.5 0 84.3 37.7 84.3 84.3v332.5c8.9-8.8 16.5-19.1 22.1-30.7 10.3-21.1 40.6-21.1 51 0 18.8 38.4 58.2 63.4 102 63.4 44.8 0 83.7-26 102-63.4 11.3-20.8 39.6-20.8 27.7 7.4-21.9 49.4-71.8 84.1-129.8 84.1-44.4 0-84.2-20.4-110.2-52.2-17.3-18-17.3-18-34.7 0-26 31.8-65.7 52.2-110.2 52.2-44.4 0-84.2-20.4-110.2-52.2-17.3-18-17.3-18-34.7 0-26 31.8-65.7 52.2-110.2 52.2-44.4 0-84.2-20.4-110.2-52.2-17.3-18-17.3-18-34.7 0-26 31.8-65.7 52.2-110.2 52.2v-28.1c43.8 0 83.1-25 102-63.4 10.3-21.1 40.6-21.1 51 0 18.8 38.4 58.2 63.4 102 63.4 31.7 0 61.1-13.1 82.1-34.9V247.5c-0.3-15.3-12.7-27.6-28.1-27.6-15.5 0-28.1 12.6-28.1 28.1 0 0 0 28.1-28.1 28.1S288.7 248 288.7 248c0-46.5 37.7-84.3 84.3-84.3 46.5 0 84.3 37.7 84.3 84.3v56.2l140.4-0.1z"
-            fill="currentColor"
-          />
-          <path
-            d="M457.3 360.3h140.4v56.2H457.3zM457.3 472.7h140.4v56.2H457.3zM597.7 610.7V585H499c20.3 17.7 46.7 28.1 75 28.1 8.1 0 16-0.8 23.7-2.4z"
-            fill="current"
-          />
-        </svg>
-        <div
-          class="card grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between lg:p-12 text-center lg:text-start"
-        >
-          <div>
-            <h2 class="text-4xl font-semibold mb-4">
-              <span data-lang="gr">Επικοινωνίστε μαζί μας</span>
-              <span data-lang="en">Contact us</span>
-            </h2>
-            <p class="font-light mb-8">
-              <span data-lang="gr">
-                Είμαστε εδώ για να σας βοηθήσουμε με οποιεσδήποτε ερωτήσεις ή
-                απορίες έχετε σχετικά με τις υπηρεσίες καθαρισμού πισίνας μας
-              </span>
-              <span data-lang="en">
-                We are here to help you with any questions or concerns you may
-                have about our pool cleaning services
-              </span>
-            </p>
             <div>
-              <a href="contact.html" class="btn btn-primary">
-                <span data-lang="gr">Κλείστε ραντεβού τώρα</span>
-                <span data-lang="en">Book an Appointment Now</span>
-              </a>
+              <div class="overflow-hidden rounded-md">
+                <img
+                  src="src/images/services1.jpg"
+                  alt="Pool clearning equipment"
+                  class="scale-120 hover:scale-100 transition-all rounded-md duration-500 w-full"
+                />
+              </div>
+              <h3 class="font-bold text-xl mt-4 mb-2">
+                <span data-lang="gr">Χημική Ισορροπία</span>
+                <span data-lang="en">Chemical Balance</span>
+              </h3>
+              <p class="font-light">
+                <span data-lang="gr"
+                  >Έλεγχος και ρύθμιση των χημικών στοιχείων της πισίνας, όπως το
+                  χλώριο και το pH.</span
+                >
+                <span data-lang="en"
+                  >Checking and adjusting the chemical elements of the pool, such
+                  as chlorine and pH.</span
+                >
+              </p>
             </div>
-          </div>
-          <div>
-            <img
-              class="w-full h-full object-cover rounded-md"
-              src="src/images/cta-image.png"
-              alt="contact me for pool cleaning services"
-            />
+            <div>
+              <div class="overflow-hidden rounded-md">
+                <img
+                  src="src/images/services2.jpg"
+                  alt="A Professional cleanign a pool"
+                  class="scale-120 hover:scale-100 transition-all rounded-md duration-500 w-full"
+                />
+              </div>
+              <h3 class="font-bold text-xl mt-4 mb-2">
+                <span data-lang="gr">Καθαρισμός Πισίνας</span>
+                <span data-lang="en">Pool Cleaning</span>
+              </h3>
+              <p class="font-light">
+                <span data-lang="gr"
+                  >Καθαρισμός της γραμμής του νερού στην επιφάνεια της πισίνας για
+                  την απομάκρυνση των ελαιωδών υπολειμμάτων.</span
+                >
+                <span data-lang="en"
+                  >Cleaning the water line on the surface of the pool to remove
+                  oily residues.</span
+                >
+              </p>
+            </div>
+            <div>
+              <div class="overflow-hidden rounded-md">
+                <img
+                  src="src/images/services3.jpg"
+                  alt="A pool cleanign machine"
+                  class="scale-120 hover:scale-100 transition-all rounded-md duration-500 w-full"
+                />
+              </div>
+              <h3 class="font-bold text-xl mt-4 mb-2">
+                <span data-lang="gr">Καθαρισμός Φίλτρων</span>
+                <span data-lang="en">Filter Cleaning</span>
+              </h3>
+              <p class="font-light">
+                <span data-lang="gr"
+                  >Έλεγχος και καθαρισμός των φίλτρων της πισίνας για να
+                  διασφαλιστεί η σωστή λειτουργία τους.</span
+                >
+                <span data-lang="en"
+                  >Checking and cleaning the pool filters to ensure their proper
+                  functioning.</span
+                >
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section class="py-24 container">
-        <h2 class="text-4xl lg:text-5xl font-semibold text-center mb-12">
-          <span data-lang="gr">Τι έχουν πεί για εμάς ?</span>
-          <span data-lang="en">What have they said about us ?</span>
-        </h2>
-        <svg width="0" height="0" class="hidden" aria-hidden="true">
-          <symbol
-            version="1.0"
-            id="star"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            enable-background="new 0 0 64 64"
-            xml:space="preserve"
-            fill="currentColor"
-            viewBox="0 0 63.03 63"
+      <section class="py-24 bg-base-100 z-10 text-center">
+        <div class="container">
+
+          <h3 class="text-4xl lg:text-5xl font-semibold mb-4">
+            <span data-lang="gr">Τα Εργα Μας</span>
+            <span data-lang="en">Our Projects</span>
+          </h3>
+          <p class="text-xl lg:text-2xl lg:max-w-5xl mx-auto font-light">
+            <span data-lang="gr">
+              Ανακαλύψτε τις πλήρεις υπηρεσίες καθαρισμού πισίνας μας μέσα από τη
+              λεπτομερή συλλογή φωτογραφιών πριν και μετά τον καθαρισμό
+            </span>
+            <span data-lang="en">
+              Discover our pool cleaning services through our collection of before
+              and after photos
+            </span>
+          </p>
+          <div class="my-8">
+            <a href="gallery.html" class="btn btn-primary btn-outline">
+              <span data-lang="gr">Εξερευνήστε τα έργα μας</span>
+              <span data-lang="en">Explore Our Projects</span>
+            </a>
+          </div>
+          <div
+            class="grid grid-cols-2 gap-2 sm:gap-4 justify-center items-center"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                fill="currentColor"
-                d="M62.799,23.737c-0.47-1.399-1.681-2.419-3.139-2.642l-16.969-2.593L35.069,2.265 C34.419,0.881,33.03,0,31.504,0c-1.527,0-2.915,0.881-3.565,2.265l-7.623,16.238L3.347,21.096c-1.458,0.223-2.669,1.242-3.138,2.642 c-0.469,1.4-0.115,2.942,0.916,4l12.392,12.707l-2.935,17.977c-0.242,1.488,0.389,2.984,1.62,3.854 c1.23,0.87,2.854,0.958,4.177,0.228l15.126-8.365l15.126,8.365c0.597,0.33,1.254,0.492,1.908,0.492c0.796,0,1.592-0.242,2.269-0.72 c1.231-0.869,1.861-2.365,1.619-3.854l-2.935-17.977l12.393-12.707C62.914,26.68,63.268,25.138,62.799,23.737z"
-              ></path>
-            </g>
-          </symbol>
-        </svg>
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 justify-center items-stretch text-center font-light gap-2 sm:gap-4"
-        >
-          <div class="lg:col-span-1 xl:col-span-3 card">
-            <h2 class="text-2xl font-semibold">David</h2>
-            <div
-              class="flex items-center justify-center gap-2 my-4 text-warning"
-            >
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 1 before.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
             </div>
-            <p>
-              <span data-lang="gr"
-                >Ο Γιώργος φροντίζει την πισίνα μας τα τελευταία χρόνια και
-                επίσης κάνει τη συντήρηση στη βίλα μας. Τον συνιστώ ανεπιφύλακτα
-                για τη δουλειά του και την προσωπικότητά του.</span
-              >
-              <span data-lang="en"
-                >George has been taking care of our pool for the past few years
-                and also handles the maintenance of our villa. I wholeheartedly
-                recommend him for both his work and his character.</span
-              >
-            </p>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 1 after.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
+            </div>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 2 before.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
+            </div>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 2 after.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
+            </div>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 3 before.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
+            </div>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 3 after.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
+            </div>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 4 before.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
+            </div>
+            <div class="overflow-hidden rounded-md">
+              <img
+                class="scale-120 hover:scale-100 transition-all duration-500 w-full h-full object-cover rounded-md"
+                src="src/images/image 4 after.png"
+                alt="gallery of pools before and after the pool cleaning services applied"
+              />
+            </div>
           </div>
-          <div class="lg:col-span-1 xl:col-span-1 card">
-            <h2 class="text-2xl font-semibold">Thor-Kjetil Førli</h2>
-            <div
-              class="flex items-center justify-center gap-2 my-4 text-warning"
+        </div>
+      </section>
+      <section class="py-24 bg-base-100 z-10">
+        <div class="container">
+
+          <p class="lg:w-2/3 xl:w-1/2 mx-auto text-2xl text-center">
+            <span data-lang="gr"
+              >Θέλετε να εξασφαλίσετε ότι η πισίνα σας θα παραμείνει πάντα καθαρή
+              και έτοιμη για χρήση;</span
             >
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
+            <span data-lang="en"
+              >Do you want to ensure that your pool stays always clean and ready
+              for use?</span
+            >
+          </p>
+          <svg
+            class="size-28 block mx-auto my-8"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="63.58 163.58 898.33 674.33"
+          >
+            <path
+              d="M451.7 837.9c44.4 0 84.2-20.4 110.2-52.2 17.3-18 17.3-18 34.7 0 26 31.8 65.7 52.2 110.2 52.2 44.4 0 84.2-20.4 110.2-52.2 17.3-18 17.3-18 34.7 0 26 31.8 65.7 52.2 110.2 52.2v-28.1c-43.8 0-83.1-25-102-63.4-10.3-21.1-40.6-21.1-51 0-18.8 38.4-58.2 63.4-102 63.4s-83.1-25-102-63.4c-10.3-21.1-40.6-21.1-51 0-18.8 38.4-58.2 63.4-102 63.4s-83.1-25-102-63.4c-10.3-21.1-40.6-21.1-51 0-18.8 38.4-58.2 63.4-102 63.4-44.8 0-83.7-26-102-63.4-11.3-20.8-39.6-20.8-27.7 7.4 21.9 49.4 71.8 84.1 129.8 84.1 44.4 0 84.2-20.4 110.2-52.2 17.3-18 17.3-18 34.7 0 25.6 31.8 65.3 52.2 109.8 52.2zM597.7 304.1v-56.7c-0.3-15.3-12.7-27.6-28.1-27.6-15.5 0-28.1 12.6-28.1 28.1 0 0 0 28.1-28.1 28.1s-28.1-28.1-28.1-28.1c0-46.5 37.7-84.3 84.3-84.3 46.5 0 84.3 37.7 84.3 84.3v332.5c8.9-8.8 16.5-19.1 22.1-30.7 10.3-21.1 40.6-21.1 51 0 18.8 38.4 58.2 63.4 102 63.4 44.8 0 83.7-26 102-63.4 11.3-20.8 39.6-20.8 27.7 7.4-21.9 49.4-71.8 84.1-129.8 84.1-44.4 0-84.2-20.4-110.2-52.2-17.3-18-17.3-18-34.7 0-26 31.8-65.7 52.2-110.2 52.2-44.4 0-84.2-20.4-110.2-52.2-17.3-18-17.3-18-34.7 0-26 31.8-65.7 52.2-110.2 52.2-44.4 0-84.2-20.4-110.2-52.2-17.3-18-17.3-18-34.7 0-26 31.8-65.7 52.2-110.2 52.2v-28.1c43.8 0 83.1-25 102-63.4 10.3-21.1 40.6-21.1 51 0 18.8 38.4 58.2 63.4 102 63.4 31.7 0 61.1-13.1 82.1-34.9V247.5c-0.3-15.3-12.7-27.6-28.1-27.6-15.5 0-28.1 12.6-28.1 28.1 0 0 0 28.1-28.1 28.1S288.7 248 288.7 248c0-46.5 37.7-84.3 84.3-84.3 46.5 0 84.3 37.7 84.3 84.3v56.2l140.4-0.1z"
+              fill="currentColor"
+            />
+            <path
+              d="M457.3 360.3h140.4v56.2H457.3zM457.3 472.7h140.4v56.2H457.3zM597.7 610.7V585H499c20.3 17.7 46.7 28.1 75 28.1 8.1 0 16-0.8 23.7-2.4z"
+              fill="current"
+            />
+          </svg>
+          <div
+            class="card grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between lg:p-12 text-center lg:text-start"
+          >
+            <div>
+              <h2 class="text-4xl font-semibold mb-4">
+                <span data-lang="gr">Επικοινωνίστε μαζί μας</span>
+                <span data-lang="en">Contact us</span>
+              </h2>
+              <p class="font-light mb-8">
+                <span data-lang="gr">
+                  Είμαστε εδώ για να σας βοηθήσουμε με οποιεσδήποτε ερωτήσεις ή
+                  απορίες έχετε σχετικά με τις υπηρεσίες καθαρισμού πισίνας μας
+                </span>
+                <span data-lang="en">
+                  We are here to help you with any questions or concerns you may
+                  have about our pool cleaning services
+                </span>
+              </p>
+              <div>
+                <a href="contact.html" class="btn btn-primary">
+                  <span data-lang="gr">Κλείστε ραντεβού τώρα</span>
+                  <span data-lang="en">Book an Appointment Now</span>
+                </a>
+              </div>
             </div>
-            <p>
-              <span data-lang="gr">Επαγγελματίας και αξιόπιστος</span>
-              <span data-lang="en">Highly professional and trustworthy!</span>
-            </p>
+            <div>
+              <img
+                class="w-full h-full object-cover rounded-md"
+                src="src/images/cta-image.png"
+                alt="contact me for pool cleaning services"
+              />
+            </div>
           </div>
-          <div class="lg:col-span-1 xl:col-span-2 card">
-            <h2 class="text-2xl font-semibold">
-              <span>Βαγγέλης Λαμπρινός</span>
-            </h2>
-            <div
-              class="flex items-center justify-center gap-2 my-4 text-warning"
+        </div>
+      </section>
+      <section class="py-24 bg-base-100 z-10">
+        <div class="container">
+
+          <h2 class="text-4xl lg:text-5xl font-semibold text-center mb-12">
+            <span data-lang="gr">Τι έχουν πεί για εμάς ?</span>
+            <span data-lang="en">What have they said about us ?</span>
+          </h2>
+          <svg width="0" height="0" class="hidden" aria-hidden="true">
+            <symbol
+              version="1.0"
+              id="star"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              enable-background="new 0 0 64 64"
+              xml:space="preserve"
+              fill="currentColor"
+              viewBox="0 0 63.03 63"
             >
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill="currentColor"
+                  d="M62.799,23.737c-0.47-1.399-1.681-2.419-3.139-2.642l-16.969-2.593L35.069,2.265 C34.419,0.881,33.03,0,31.504,0c-1.527,0-2.915,0.881-3.565,2.265l-7.623,16.238L3.347,21.096c-1.458,0.223-2.669,1.242-3.138,2.642 c-0.469,1.4-0.115,2.942,0.916,4l12.392,12.707l-2.935,17.977c-0.242,1.488,0.389,2.984,1.62,3.854 c1.23,0.87,2.854,0.958,4.177,0.228l15.126-8.365l15.126,8.365c0.597,0.33,1.254,0.492,1.908,0.492c0.796,0,1.592-0.242,2.269-0.72 c1.231-0.869,1.861-2.365,1.619-3.854l-2.935-17.977l12.393-12.707C62.914,26.68,63.268,25.138,62.799,23.737z"
+                ></path>
+              </g>
+            </symbol>
+          </svg>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 justify-center items-stretch text-center font-light gap-2 sm:gap-4"
+          >
+            <div class="lg:col-span-1 xl:col-span-3 card">
+              <h2 class="text-2xl font-semibold">David</h2>
+              <div
+                class="flex items-center justify-center gap-2 my-4 text-warning"
+              >
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+              <p>
+                <span data-lang="gr"
+                  >Ο Γιώργος φροντίζει την πισίνα μας τα τελευταία χρόνια και
+                  επίσης κάνει τη συντήρηση στη βίλα μας. Τον συνιστώ ανεπιφύλακτα
+                  για τη δουλειά του και την προσωπικότητά του.</span
+                >
+                <span data-lang="en"
+                  >George has been taking care of our pool for the past few years
+                  and also handles the maintenance of our villa. I wholeheartedly
+                  recommend him for both his work and his character.</span
+                >
+              </p>
             </div>
-            <p>
-              <span data-lang="gr"
-                >Τέλεια και γρήγορη εξυπηρέτηση, υπεύθυνος επαγγελματίας με
-                λύσεις για όλα τα προβλήματα.</span
+            <div class="lg:col-span-1 xl:col-span-1 card">
+              <h2 class="text-2xl font-semibold">Thor-Kjetil Førli</h2>
+              <div
+                class="flex items-center justify-center gap-2 my-4 text-warning"
               >
-              <span data-lang="en"
-                >Perfect and fast service, responsible professional with
-                solutions for all problems.</span
-              >
-            </p>
-          </div>
-          <div class="lg:col-span-1 xl:col-span-2 card">
-            <h2 class="text-2xl font-semibold">Στυλιανός Βογιατζάκης</h2>
-            <div
-              class="flex items-center justify-center gap-2 my-4 text-warning"
-            >
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
-              <svg class="size-4">
-                <use xlink:href="#star"></use>
-              </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+              <p>
+                <span data-lang="gr">Επαγγελματίας και αξιόπιστος</span>
+                <span data-lang="en">Highly professional and trustworthy!</span>
+              </p>
             </div>
-            <p>
-              <span data-lang="gr"
-                >Συνεπής επαγγελματίας, γρήγορη εξυπηρέτηση και πολύ καλή
-                επικοινωνία!!! Ελπίζουμε να συνεχίσετε σε αυτό το επίπεδο
-                εξυπηρέτησης και αποτελεσματικότητας.</span
+            <div class="lg:col-span-1 xl:col-span-2 card">
+              <h2 class="text-2xl font-semibold">
+                <span>Βαγγέλης Λαμπρινός</span>
+              </h2>
+              <div
+                class="flex items-center justify-center gap-2 my-4 text-warning"
               >
-              <span data-lang="en"
-                >Consistent professional, fast service, and very good
-                communication! We hope you continue this level of service and
-                efficiency.</span
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+              <p>
+                <span data-lang="gr"
+                  >Τέλεια και γρήγορη εξυπηρέτηση, υπεύθυνος επαγγελματίας με
+                  λύσεις για όλα τα προβλήματα.</span
+                >
+                <span data-lang="en"
+                  >Perfect and fast service, responsible professional with
+                  solutions for all problems.</span
+                >
+              </p>
+            </div>
+            <div class="lg:col-span-1 xl:col-span-2 card">
+              <h2 class="text-2xl font-semibold">Στυλιανός Βογιατζάκης</h2>
+              <div
+                class="flex items-center justify-center gap-2 my-4 text-warning"
               >
-            </p>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="size-4">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+              <p>
+                <span data-lang="gr"
+                  >Συνεπής επαγγελματίας, γρήγορη εξυπηρέτηση και πολύ καλή
+                  επικοινωνία!!! Ελπίζουμε να συνεχίσετε σε αυτό το επίπεδο
+                  εξυπηρέτησης και αποτελεσματικότητας.</span
+                >
+                <span data-lang="en"
+                  >Consistent professional, fast service, and very good
+                  communication! We hope you continue this level of service and
+                  efficiency.</span
+                >
+              </p>
+            </div>
           </div>
         </div>
       </section> 
-      <section class="py-24 container">
-        <h2 class="text-4xl lg:text-5xl font-semibold text-center mb-12">
-          <span data-lang="gr">Συχνές Ερωτήσεις</span>
-          <span data-lang="en">Frequently Asked Questions</span>
-        </h2>
-        <svg width="0" height="0" class="hidden" aria-hidden="true">
-          <symbol
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="3.58 9.58 16.83 4.83"
-            id="minus"
-          >
-            <path
-              d="M6 12L18 12"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </symbol>
-          <symbol
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="3.58 3.58 16.83 16.83"
-            id="plus"
-          >
-            <path
-              d="M6 12H18M12 6V18"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </symbol>
-        </svg>
-        <div class="flex flex-col items-stretch justify-center gap-2 sm:gap-4">
-          <div
-            class="card p-6 accordion-item hover:bg-base-300 transition-all"
-          >
-            <div class="flex justify-between accordion-header">
-              <p class="font-bold">
-                <span data-lang="gr"
-                  >Ποιες υπηρεσίες προσφέρετε για τον καθαρισμό πισίνας;</span
-                >
-                <span data-lang="en"
-                  >What services do you offer for pool cleaning?</span
-                >
-              </p>
-              <div>
-                <svg class="plus-icon size-6">
-                  <use xlink:href="#plus"></use>
-                </svg>
-                <svg class="minus-icon size-6">
-                  <use xlink:href="#minus"></use>
-                </svg>
+      <section class="py-24 bg-base-100 z-10">
+        <div class="container">
+
+          <h2 class="text-4xl lg:text-5xl font-semibold text-center mb-12">
+            <span data-lang="gr">Συχνές Ερωτήσεις</span>
+            <span data-lang="en">Frequently Asked Questions</span>
+          </h2>
+          <svg width="0" height="0" class="hidden" aria-hidden="true">
+            <symbol
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="3.58 9.58 16.83 4.83"
+              id="minus"
+            >
+              <path
+                d="M6 12L18 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </symbol>
+            <symbol
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="3.58 3.58 16.83 16.83"
+              id="plus"
+            >
+              <path
+                d="M6 12H18M12 6V18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </symbol>
+          </svg>
+          <div class="flex flex-col items-stretch justify-center gap-2 sm:gap-4">
+            <div
+              class="card p-6 accordion-item hover:bg-base-300 transition-all"
+            >
+              <div class="flex justify-between accordion-header">
+                <p class="font-bold">
+                  <span data-lang="gr"
+                    >Ποιες υπηρεσίες προσφέρετε για τον καθαρισμό πισίνας;</span
+                  >
+                  <span data-lang="en"
+                    >What services do you offer for pool cleaning?</span
+                  >
+                </p>
+                <div>
+                  <svg class="plus-icon size-6">
+                    <use xlink:href="#plus"></use>
+                  </svg>
+                  <svg class="minus-icon size-6">
+                    <use xlink:href="#minus"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="h-0 overflow-hidden accordion-body">
+                <p class="font-light pt-4">
+                  <span data-lang="gr"
+                    >Προσφέρουμε μια σειρά υπηρεσιών που περιλαμβάνουν
+                    επαγγελματικό καθαρισμό πισίνας, συντήρηση εξοπλισμού, έλεγχο
+                    ισορροπίας χημικών, καθαρισμό φίλτρων και αναπλήρωση νερού για
+                    να διατηρείτε την πισίνα σας σε άριστη κατάσταση.</span
+                  >
+                  <span data-lang="en"
+                    >We offer a range of services including professional pool
+                    cleaning, equipment maintenance, chemical balance checks,
+                    filter cleaning, and water replenishment to keep your pool in
+                    top condition.</span
+                  >
+                </p>
               </div>
             </div>
-            <div class="h-0 overflow-hidden accordion-body">
-              <p class="font-light pt-4">
-                <span data-lang="gr"
-                  >Προσφέρουμε μια σειρά υπηρεσιών που περιλαμβάνουν
-                  επαγγελματικό καθαρισμό πισίνας, συντήρηση εξοπλισμού, έλεγχο
-                  ισορροπίας χημικών, καθαρισμό φίλτρων και αναπλήρωση νερού για
-                  να διατηρείτε την πισίνα σας σε άριστη κατάσταση.</span
-                >
-                <span data-lang="en"
-                  >We offer a range of services including professional pool
-                  cleaning, equipment maintenance, chemical balance checks,
-                  filter cleaning, and water replenishment to keep your pool in
-                  top condition.</span
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="card p-6 accordion-item hover:bg-base-300 transition-all"
-          >
-            <div class="flex justify-between accordion-header">
-              <p class="font-bold">
-                <span data-lang="gr"
-                  >Πόσο συχνά πρέπει να καθαρίζεται η πισίνα μου;</span
-                >
-                <span data-lang="en">How often should my pool be cleaned?</span>
-              </p>
-              <div>
-                <svg class="plus-icon size-6">
-                  <use xlink:href="#plus"></use>
-                </svg>
-                <svg class="minus-icon size-6">
-                  <use xlink:href="#minus"></use>
-                </svg>
+            <div
+              class="card p-6 accordion-item hover:bg-base-300 transition-all"
+            >
+              <div class="flex justify-between accordion-header">
+                <p class="font-bold">
+                  <span data-lang="gr"
+                    >Πόσο συχνά πρέπει να καθαρίζεται η πισίνα μου;</span
+                  >
+                  <span data-lang="en">How often should my pool be cleaned?</span>
+                </p>
+                <div>
+                  <svg class="plus-icon size-6">
+                    <use xlink:href="#plus"></use>
+                  </svg>
+                  <svg class="minus-icon size-6">
+                    <use xlink:href="#minus"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="h-0 overflow-hidden accordion-body">
+                <p class="font-light pt-4">
+                  <span data-lang="gr"
+                    >Συνιστάται να καθαρίζετε την πισίνα σας τουλάχιστον μία φορά
+                    την εβδομάδα για να διατηρείτε το νερό καθαρό και να
+                    εξασφαλίσετε την ομαλή λειτουργία του εξοπλισμού σας. Ωστόσο,
+                    η συχνότητα μπορεί να διαφέρει ανάλογα με τη χρήση και τους
+                    περιβαλλοντικούς παράγοντες.</span
+                  >
+                  <span data-lang="en"
+                    >It is recommended to clean your pool at least once a week to
+                    keep the water clear and ensure the proper functioning
+                    of your equipment. However, the frequency may vary depending
+                    on usage and environmental factors.</span
+                  >
+                </p>
               </div>
             </div>
-            <div class="h-0 overflow-hidden accordion-body">
-              <p class="font-light pt-4">
-                <span data-lang="gr"
-                  >Συνιστάται να καθαρίζετε την πισίνα σας τουλάχιστον μία φορά
-                  την εβδομάδα για να διατηρείτε το νερό καθαρό και να
-                  εξασφαλίσετε την ομαλή λειτουργία του εξοπλισμού σας. Ωστόσο,
-                  η συχνότητα μπορεί να διαφέρει ανάλογα με τη χρήση και τους
-                  περιβαλλοντικούς παράγοντες.</span
-                >
-                <span data-lang="en"
-                  >It is recommended to clean your pool at least once a week to
-                  keep the water clear and ensure the proper functioning
-                  of your equipment. However, the frequency may vary depending
-                  on usage and environmental factors.</span
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="card p-6 accordion-item hover:bg-base-300 transition-all"
-          >
-            <div class="flex justify-between accordion-header">
-              <p class="font-bold">
-                <span data-lang="gr"
-                  >Ποιες χημικές ουσίες χρησιμοποιούνται στη συντήρηση της
-                  πισίνας;</span
-                >
-                <span data-lang="en"
-                  >What chemicals are used in pool maintenance?</span
-                >
-              </p>
-              <div>
-                <svg class="plus-icon size-6">
-                  <use xlink:href="#plus"></use>
-                </svg>
-                <svg class="minus-icon size-6">
-                  <use xlink:href="#minus"></use>
-                </svg>
+            <div
+              class="card p-6 accordion-item hover:bg-base-300 transition-all"
+            >
+              <div class="flex justify-between accordion-header">
+                <p class="font-bold">
+                  <span data-lang="gr"
+                    >Ποιες χημικές ουσίες χρησιμοποιούνται στη συντήρηση της
+                    πισίνας;</span
+                  >
+                  <span data-lang="en"
+                    >What chemicals are used in pool maintenance?</span
+                  >
+                </p>
+                <div>
+                  <svg class="plus-icon size-6">
+                    <use xlink:href="#plus"></use>
+                  </svg>
+                  <svg class="minus-icon size-6">
+                    <use xlink:href="#minus"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="h-0 overflow-hidden accordion-body">
+                <p class="font-light pt-4">
+                  <span data-lang="gr"
+                    >Χρησιμοποιούμε διάφορες χημικές ουσίες, όπως χλώριο,
+                    ρυθμιστές pH, αλγηκτόνα και άλλες εξειδικευμένες θεραπείες για
+                    να εξασφαλίσουμε ότι το νερό της πισίνας σας είναι ασφαλές,
+                    καθαρό και ισορροπημένο.</span
+                  >
+                  <span data-lang="en"
+                    >We use various chemicals such as chlorine, pH regulators,
+                    algaecides, and other specialized treatments to ensure your
+                    pool water is safe, clean, and balanced.</span
+                  >
+                </p>
               </div>
             </div>
-            <div class="h-0 overflow-hidden accordion-body">
-              <p class="font-light pt-4">
-                <span data-lang="gr"
-                  >Χρησιμοποιούμε διάφορες χημικές ουσίες, όπως χλώριο,
-                  ρυθμιστές pH, αλγηκτόνα και άλλες εξειδικευμένες θεραπείες για
-                  να εξασφαλίσουμε ότι το νερό της πισίνας σας είναι ασφαλές,
-                  καθαρό και ισορροπημένο.</span
-                >
-                <span data-lang="en"
-                  >We use various chemicals such as chlorine, pH regulators,
-                  algaecides, and other specialized treatments to ensure your
-                  pool water is safe, clean, and balanced.</span
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="card p-6 accordion-item hover:bg-base-300 transition-all"
-          >
-            <div class="flex justify-between accordion-header">
-              <p class="font-bold">
-                <span data-lang="gr"
-                  >Προσφέρετε υπηρεσίες επείγοντος καθαρισμού πισίνας;</span
-                >
-                <span data-lang="en"
-                  >Do you offer emergency pool cleaning services?</span
-                >
-              </p>
-              <div>
-                <svg class="plus-icon size-6">
-                  <use xlink:href="#plus"></use>
-                </svg>
-                <svg class="minus-icon size-6">
-                  <use xlink:href="#minus"></use>
-                </svg>
+            <div
+              class="card p-6 accordion-item hover:bg-base-300 transition-all"
+            >
+              <div class="flex justify-between accordion-header">
+                <p class="font-bold">
+                  <span data-lang="gr"
+                    >Προσφέρετε υπηρεσίες επείγοντος καθαρισμού πισίνας;</span
+                  >
+                  <span data-lang="en"
+                    >Do you offer emergency pool cleaning services?</span
+                  >
+                </p>
+                <div>
+                  <svg class="plus-icon size-6">
+                    <use xlink:href="#plus"></use>
+                  </svg>
+                  <svg class="minus-icon size-6">
+                    <use xlink:href="#minus"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="h-0 overflow-hidden accordion-body">
+                <p class="font-light pt-4">
+                  <span data-lang="gr"
+                    >Ναι, προσφέρουμε υπηρεσίες επείγοντος καθαρισμού πισίνας για
+                    καταστάσεις που απαιτούν άμεση παρέμβαση. Μπορείτε να μας
+                    επικοινωνήσετε οποιαδήποτε στιγμή για επείγουσες ανάγκες
+                    συντήρησης της πισίνας.</span
+                  >
+                  <span data-lang="en"
+                    >Yes, we offer emergency pool cleaning services for situations
+                    requiring immediate intervention. You can contact us at any
+                    time for urgent pool maintenance needs.</span
+                  >
+                </p>
               </div>
             </div>
-            <div class="h-0 overflow-hidden accordion-body">
-              <p class="font-light pt-4">
-                <span data-lang="gr"
-                  >Ναι, προσφέρουμε υπηρεσίες επείγοντος καθαρισμού πισίνας για
-                  καταστάσεις που απαιτούν άμεση παρέμβαση. Μπορείτε να μας
-                  επικοινωνήσετε οποιαδήποτε στιγμή για επείγουσες ανάγκες
-                  συντήρησης της πισίνας.</span
-                >
-                <span data-lang="en"
-                  >Yes, we offer emergency pool cleaning services for situations
-                  requiring immediate intervention. You can contact us at any
-                  time for urgent pool maintenance needs.</span
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="card p-6 accordion-item hover:bg-base-300 transition-all"
-          >
-            <div class="flex justify-between accordion-header">
-              <p class="font-bold">
-                <span data-lang="gr"
-                  >Πώς μπορώ να προγραμματίσω μια υπηρεσία καθαρισμού
-                  πισίνας;</span
-                >
-                <span data-lang="en"
-                  >How can I schedule a pool cleaning service?</span
-                >
-              </p>
-              <div>
-                <svg class="plus-icon size-6">
-                  <use xlink:href="#plus"></use>
-                </svg>
-                <svg class="minus-icon size-6">
-                  <use xlink:href="#minus"></use>
-                </svg>
+            <div
+              class="card p-6 accordion-item hover:bg-base-300 transition-all"
+            >
+              <div class="flex justify-between accordion-header">
+                <p class="font-bold">
+                  <span data-lang="gr"
+                    >Πώς μπορώ να προγραμματίσω μια υπηρεσία καθαρισμού
+                    πισίνας;</span
+                  >
+                  <span data-lang="en"
+                    >How can I schedule a pool cleaning service?</span
+                  >
+                </p>
+                <div>
+                  <svg class="plus-icon size-6">
+                    <use xlink:href="#plus"></use>
+                  </svg>
+                  <svg class="minus-icon size-6">
+                    <use xlink:href="#minus"></use>
+                  </svg>
+                </div>
               </div>
-            </div>
-            <div class="h-0 overflow-hidden accordion-body">
-              <p class="font-light pt-4">
-                <span data-lang="gr"
-                  >Μπορείτε να προγραμματίσετε μια υπηρεσία καθαρισμού πισίνας
-                  μέσω της ιστοσελίδας μας συμπληρώνοντας την φόρμα επικοινωνίας
-                  ή καλώντας μας απευθείας. Προσφέρουμε ευέλικτο προγραμματισμό
-                  για να καλύψουμε τις ανάγκες σας.</span
-                >
-                <span data-lang="en"
-                  >You can schedule a pool cleaning service through our website
-                  by filling out the contact form or by calling us directly. We
-                  offer flexible scheduling to meet your needs.</span
-                >
-              </p>
+              <div class="h-0 overflow-hidden accordion-body">
+                <p class="font-light pt-4">
+                  <span data-lang="gr"
+                    >Μπορείτε να προγραμματίσετε μια υπηρεσία καθαρισμού πισίνας
+                    μέσω της ιστοσελίδας μας συμπληρώνοντας την φόρμα επικοινωνίας
+                    ή καλώντας μας απευθείας. Προσφέρουμε ευέλικτο προγραμματισμό
+                    για να καλύψουμε τις ανάγκες σας.</span
+                  >
+                  <span data-lang="en"
+                    >You can schedule a pool cleaning service through our website
+                    by filling out the contact form or by calling us directly. We
+                    offer flexible scheduling to meet your needs.</span
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
