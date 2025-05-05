@@ -9,6 +9,7 @@ export default defineConfig({
     plugins: [
         tailwindcss(),
     ],
+    base: '/kaukalas-app/',
     build: {
         rollupOptions: {
             input: {
