@@ -101,6 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     image.style.transform = `translateX(${pad}%)`
                 })
             }
+
+            carouselButtonLeft.style.visibility = "visible";
+            carouselButtonRight.style.visibility = "visible";
+
+            if (pad === 0) {
+                carouselButtonLeft.style.visibility = "hidden";
+            }
+
         })
 
         carouselButtonRight.addEventListener("click", () => {
@@ -110,6 +118,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     image.style.transform = `translateX(${pad}%)`
                 })
             }
+
+            carouselButtonLeft.style.visibility = "visible";
+            carouselButtonRight.style.visibility = "visible";
+
+            if (pad === -(totalImages - 1) * 100) {
+                carouselButtonRight.style.visibility = "hidden";
+            }
+
         })
     })
 
