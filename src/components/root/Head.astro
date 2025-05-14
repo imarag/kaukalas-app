@@ -1,0 +1,48 @@
+---
+const { pageTitle } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+<title>{pageTitle} | Giorgos Kaukalas Pool Cleaning Services</title>
+<link rel="icon" type="image/svg+xml" href="/favico.svg" />
+<meta
+  name="description"
+  content="Professional pool cleaning services by Giorgos Kaukalas in Chania, Crete to maintain a clean, safe, and beautiful pool."
+/>
+<meta
+  name="keywords"
+  content="pool cleaning, pool services, pool maintenance, pool cleaning near me, pool care, pool cleaning company"
+/>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Giorgos Kaukalas",
+    "image": "",
+    "@id": "",
+    "url": "",
+    "telephone": "+306973341740",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Chania",
+      "postalCode": "",
+      "addressCountry": "GR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.5138,
+      "longitude": 24.018
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "sameAs": "https://www.instagram.com/gk_poolcleaningservices/"
+  }
+</script>

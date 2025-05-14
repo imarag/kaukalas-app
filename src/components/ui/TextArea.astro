@@ -1,0 +1,14 @@
+---
+const {
+  class: className = "",
+  rows = "8",
+  errorMessage = "error",
+  ...props
+} = Astro.props;
+---
+
+<textarea
+  class=`textarea validator block w-full bg-white text-black ${className}`
+  rows={rows}
+  {...props}></textarea>
+<div class="validator-hint">{errorMessage}</div>

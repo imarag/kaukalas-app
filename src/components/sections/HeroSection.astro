@@ -1,0 +1,77 @@
+---
+import Link from "../ui/Link.astro";
+import { Icon } from "astro-icon/components";
+import Image from "astro/components/Image.astro";
+import HeroImage from "../../images/hero-image.png";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Image
+  class="fixed inset-0 w-full h-full object-cover -z-10"
+  alt=""
+  src={HeroImage}
+/>
+<section class="min-h-screen flex items-center justify-center relative">
+  <div class="text-center container">
+    <p class="mb-4 text-base">
+      <span class="bg-white/20 inline-block px-6 py-2 rounded-full text-white"
+        >{t("home.hero.eyebrow")}</span
+      >
+    </p>
+    <h1
+      class="text-6xl lg:text-8xl font-semibold drop-shadow-2xl text-white align-middle"
+    >
+      GK
+      <span class="text-primary">Pool & Villas</span><br />
+      Services
+      <span class="text-primary"
+        ><Icon
+          name="clean"
+          fill="#26A5FF"
+          class="size-18 sm:inline hidden"
+        /></span
+      >
+    </h1>
+    <p class="text-2xl lg:text-2xl mt-6 font-light drop-shadow-2xl text-white">
+      {t("home.hero.button-subtitle")}
+    </p>
+    <div
+      class="w-3/5 mx-auto mt-16 flex flex-col sm:flex-row items-center justify-center gap-6"
+    >
+      <Link
+        href="contact.html"
+        variant="button"
+        class="btn btn-primary btn-lg text-nowrap text-white"
+      >
+        {t("home.hero.button-left")}
+      </Link>
+      <Link
+        href="services.html"
+        variant="ghost"
+        class="flex items-center text-nowrap text-white underline sm:no-underline"
+      >
+        {t("home.hero.button-right")}
+        <Icon
+          name="greater-than"
+          class="size-6 ms-2 group-hover:ms-4 transition-all hidden sm:inline"
+        />
+      </Link>
+    </div>
+  </div>
+  <div
+    class="absolute bottom-8 end-1/2 md:end-8 translate-x-1/2 md:translate-0 w-auto md:w-auto text-sm bg-base-100/60 text-white p-4 rounded-md"
+  >
+    <h3 class="text-lg text-center text-nowrap">GK Pool and Villas services</h3>
+    <div class="flex items-center justify-center flex-wrap gap-2">
+      <span>5.0</span>
+      <Icon name="star" class="size-3 text-yellow-300" />
+      <Icon name="star" class="size-3 text-yellow-300" />
+      <Icon name="star" class="size-3 text-yellow-300" />
+      <Icon name="star" class="size-3 text-yellow-300" />
+      <Icon name="star" class="size-3 text-yellow-300" />
+      <span> Google Reviews</span>
+    </div>
+  </div>
+</section>

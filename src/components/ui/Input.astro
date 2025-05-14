@@ -1,0 +1,10 @@
+---
+const { type = "text", errorMessage, ...attrs } = Astro.props;
+---
+
+<input
+  type={type}
+  class="input validator block w-full bg-white text-black"
+  {...attrs}
+/>
+<div class="m-0 validator-hint">{errorMessage}</div>

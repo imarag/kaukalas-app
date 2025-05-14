@@ -1,0 +1,32 @@
+---
+import MainTitle from "../utils/MainTitle.astro";
+import MainSubTitle from "../utils/MainSubTitle.astro";
+import Image from "astro/components/Image.astro";
+import allGalleryImages from "../../data/all-gallery-images";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<MainTitle text={t("gallery.title")} class="mt-16" />
+<MainSubTitle text={t("gallery.subtitle")} class="mb-24" />
+<div
+  class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 justify-center items-stretch mt-24"
+>
+  {
+    allGalleryImages.map((el) => (
+      <div class="overflow-hidden rounded-md">
+        <Image
+          src={el.imageURL}
+          alt={el.alt}
+          class="hover:scale-100 scale-120 transition-all duration-500 w-full max-h-96 h-full object-cover rounded-md"
+        />
+      </div>
+    ))
+  }
+</div>

@@ -1,21 +1,27 @@
 {
-  "name": "kaukalas-app",
-  "private": true,
-  "version": "0.0.0",
+  "name": "kaukalas-app-astro",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "npm run build && git add . && git commit -m \"Committing...\" && git push && git subtree push --prefix dist origin gh-pages"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@fontsource-variable/roboto": "^5.2.5",
+    "@fontsource-variable/roboto-flex": "^5.2.5",
+    "@iconify-json/ic": "^1.2.2",
     "@tailwindcss/vite": "^4.1.4",
-    "daisyui": "^5.0.19",
-    "leaflet": "^1.9.4"
+    "astro": "^5.7.10",
+    "leaflet": "^1.9.4",
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
-    "vite": "^6.3.2"
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/mdi": "^1.2.3",
+    "astro-icon": "^1.1.5",
+    "daisyui": "^5.0.28"
   }
 }

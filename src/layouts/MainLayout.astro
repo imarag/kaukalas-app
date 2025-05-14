@@ -1,0 +1,33 @@
+---
+import NavBar from "../components/root/NavBar.astro";
+import Footer from "../components/root/Footer.astro";
+import Head from "../components/root/Head.astro";
+import { getLangFromUrl } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+import "../styles/style.css";
+import "@fontsource-variable/roboto-flex";
+const { pageTitle } = Astro.props;
+---
+
+<!doctype html>
+<html
+  lang={lang}
+  data-theme="synthwave"
+  class="font-display text-base text-white font-normal font-opensans"
+>
+  <head>
+    <Head pageTitle={pageTitle} />
+  </head>
+  <body
+    data-theme="synthwave"
+    class="bg-transparent text-base text-white font-normal font-opensans"
+  >
+    <header>
+      <NavBar />
+    </header>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,131 @@
+---
+import { Icon } from "astro-icon/components";
+import MainTitle from "../utils/MainTitle.astro";
+import MainSubTitle from "../utils/MainSubTitle.astro";
+import contactInfo from "../../data/contact-info";
+import socialMedia from "../../data/social-media";
+import ContactForm from "../sections/ContactForm.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<MainTitle text={t("contact.title")} class="mt-16" />
+<MainSubTitle text={t("contact.subtitle")} class="mb-24" />
+<div
+  class="bg-base-200 border border-base-300 rounded-md p-8 max-w-3xl mx-auto my-2 sm:my-8"
+>
+  <ContactForm />
+</div>
+
+<div class="bg-base-200 border border-base-300 rounded-md p-8 my-2 sm:my-8">
+  <h2 class="text-2xl font-bold text-start mb-8 text-primary">
+    {t("contact.contact-info.title")}
+  </h2>
+  <div class="flex items-center gap-4 my-4">
+    <div class="bg-primary text-base-200 rounded-full p-2">
+      <Icon name="telephone" />
+    </div>
+    <div>
+      <p class="font-semibold">{t("contact.contact-info.phone.title")}</p>
+      <p class="font-light text-base text-white/60">+30 6973341740</p>
+    </div>
+  </div>
+  <div class="flex items-center gap-4 my-4">
+    <div class="bg-primary text-base-200 rounded-full p-2">
+      <Icon name="envelope" />
+    </div>
+    <div>
+      <p class="font-semibold">{t("contact.contact-info.email.title")}</p>
+      <p class="font-light text-base text-white/60">
+        kaukalas_giorgos@yahoo.gr
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-base-200 border border-base-300 rounded-md p-8 my-2 sm:my-8">
+  <h2 class="text-2xl font-bold text-start mb-8 text-primary">
+    {t("contact.social-media.title")}
+  </h2>
+  <ul class="flex justify-start items-center gap-4 mt-8">
+    {
+      socialMedia.map((el) => (
+        <li class="bg-primary text-base-200 rounded-full">
+          <a
+            href={el.link}
+            target="_blank"
+            class="block p-2 w-full"
+            aria-label="Go to instagram page"
+          >
+            <Icon name={el.icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+<div class="bg-base-200 border border-base-300 rounded-md p-8 my-2 sm:my-8">
+  <h2 class="text-2xl font-bold text-start mb-8 text-primary">
+    {t("contact.company-info.title")}
+  </h2>
+  <div class="items-center gap-4 mt-8">
+    <div>
+      <div class="flex items-center gap-4 my-4">
+        <div class="bg-primary text-base-200 rounded-full p-2">
+          <Icon name="location" />
+        </div>
+        <div>
+          <p class="font-semibold">
+            {t("contact.company-info.location.title")}
+          </p>
+          <p class="font-light text-base text-white/60">
+            {t("contact.company-info.location.content")}
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 my-4">
+        <div class="bg-primary text-base-200 rounded-full p-2">
+          <Icon name="calendar" />
+        </div>
+        <div>
+          <p class="font-semibold">
+            {t("contact.company-info.schedule.title")}
+          </p>
+          <p class="font-light text-base text-white/60">
+            {t("contact.company-info.schedule.content")}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-2xl rounded-xl mt-8">
+      <div id="map" class="w-full h-96 rounded-md"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import L from "leaflet";
+  import "leaflet/dist/leaflet.css";
+
+  const serviceLat = 35.513;
+  const setviceLon = 24.018;
+  var map = L.map("map").setView([serviceLat, setviceLon], 13);
+
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  var polygon = L.polygon([
+    [35.509425, 23.992274],
+    [35.491338, 24.049318],
+    [35.521281, 24.058794],
+    [35.518812, 24.013995],
+  ]).addTo(map);
+</script>

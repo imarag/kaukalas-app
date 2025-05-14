@@ -1,0 +1,44 @@
+---
+import navLinks from "../../data/nav-links";
+import Logo from "../utils/Logo.astro";
+import { Icon } from "astro-icon/components";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<footer class="bg-base-200 text-base p-8 flex flex-col items-center gap-6">
+  <Logo />
+  <nav class="grid grid-cols-1 sm:grid-flow-col text-center gap-4">
+    {
+      navLinks.map((el) => (
+        <a href={translatePath(`/${el.href}`)} class="link link-hover">
+          {t(el.translateString)}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="flex items-center gap-2">
+    <a
+      href="https://www.instagram.com/gk_poolcleaningservices/"
+      class="inline-flex gap-2 items-center"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Go to Instagram"
+    >
+      <Icon name="instagram" />
+      <span class="italic">gk_poolcleaningservices</span>
+    </a>
+  </div>
+
+  <aside
+    class="flex flex-col sm:flex-row items-center gap-0 sm:gap-2 italic text-sm"
+  >
+    <p>© 2025 GK Pool & Villas Services</p>
+  </aside>
+</footer>

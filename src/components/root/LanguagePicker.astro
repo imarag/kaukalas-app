@@ -1,0 +1,27 @@
+---
+import { languages } from "../../i18n/ui";
+import { getLangFromUrl, useTranslatedPath } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+---
+
+<ul class="flex flex-row items-center gap-2">
+  <li class="rounded-md hover:bg-primary/80">
+    <a
+      class="text-sm inline-block size-full p-2"
+      href={translatePath("/", "gr")}
+    >
+      {languages["gr"]}
+    </a>
+  </li>
+  <li>|</li>
+  <li class="rounded-md hover:bg-primary/80">
+    <a
+      class="text-sm inline-block size-full p-2"
+      href={translatePath("/", "en")}
+    >
+      {languages["en"]}
+    </a>
+  </li>
+</ul>

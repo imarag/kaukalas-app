@@ -1,0 +1,85 @@
+---
+import navLinks from "../../data/nav-links";
+import Logo from "../utils/Logo.astro";
+import { Icon } from "astro-icon/components";
+import LanguagePicker from "./LanguagePicker.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+const currentPath = Astro.url.pathname;
+---
+
+<nav
+  id="main-nav"
+  class="absolute left-0 right-0 lg:bg-transparent transition-all duration-250 ease z-50"
+>
+  <div
+    class={`container flex flex-col lg:flex-row items-stretch lg:items-center gap-4 py-8  relative`}
+  >
+    <div class="me-8 shrink-0">
+      <a
+        href="index.html"
+        class="text-xl font-bold"
+        aria-label="Go to homepage"
+      >
+        <Logo />
+      </a>
+    </div>
+    <ul
+      id="main-nav-list"
+      class={`max-h-0 lg:max-h-20 flex flex-col lg:flex-row items-start lg:items-center overflow-hidden gap-2 relative size-full transition-all duration-250 ease`}
+    >
+      {
+        navLinks.map((el) => (
+          <li
+            class={`w-full lg:w-auto rounded-md hover:bg-primary/80 ${currentPath.includes(el.href) && "bg-primary/80"}`}
+          >
+            <a
+              href={translatePath(`/${el.href}`)}
+              class="text-sm font-medium block size-full p-2"
+            >
+              {t(el.translateString)}
+            </a>
+            <hr class="w-full lg:border-transparent border-0.5 border-gray-100/5" />
+          </li>
+        ))
+      }
+      <li class="absolute top-0 end-8 lg:static lg:ms-auto">
+        <LanguagePicker />
+      </li>
+    </ul>
+    <button
+      id="toggle-menu-button"
+      class="lg:hidden btn btn-md rounded-md text-xl btn-ghost absolute end-4"
+      data-bs-toggle="collapse"
+      data-bs-target="#main-nav-list"
+      aria-controls="main-nav-list"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <Icon name="menu" />
+    </button>
+  </div>
+</nav>
+
+<script>
+  const mainNav = document.querySelector("#main-nav");
+  const mainNavList = document.querySelector("#main-nav-list");
+  const toggleMenuButton = document.querySelector("#toggle-menu-button");
+  toggleMenuButton?.addEventListener("click", () => {
+    mainNav?.classList.toggle("bg-base-200");
+    mainNavList?.classList.toggle("max-h-0");
+    mainNavList?.classList.toggle("max-h-96");
+    if (mainNavList?.classList.contains("max-h-96")) {
+      toggleMenuButton.setAttribute("aria-expanded", "true");
+    } else {
+      toggleMenuButton.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>

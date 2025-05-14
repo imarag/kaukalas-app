@@ -1,0 +1,147 @@
+---
+// Imports
+import Label from "../ui/Label.astro";
+import TextArea from "../ui/TextArea.astro";
+import Input from "../ui/Input.astro";
+import Spinner from "../ui/Spinner.astro";
+import AlertMessage from "../ui/AlertMessage.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<AlertMessage />
+<form id="contact-form" class="flex flex-col gap-2">
+  <div class="flex flex-col gap-1">
+    <Label for="name">{t("contact.form.label.fullname")}</Label>
+    <Input
+      type="text"
+      id="name"
+      name="user_name"
+      maxlength="100"
+      required
+      errorMessage={t("contact.form.fullname.error")}
+    />
+  </div>
+  <div class="flex flex-col gap-1">
+    <Label for="email">{t("contact.form.label.email")}</Label>
+    <Input
+      type="email"
+      id="email"
+      name="user_email"
+      required
+      pattern="^[a-zA-Z0-9_.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$"
+      errorMessage={t("contact.form.email.error")}
+    />
+  </div>
+  <div class="flex flex-col gap-1">
+    <Label for="message">{t("contact.form.label.message")}</Label>
+    <TextArea
+      id="message"
+      name="message"
+      required
+      maxlength="1000"
+      errorMessage={t("contact.form.message.error")}
+    />
+  </div>
+  <div class="mt-4">
+    <button
+      class="btn btn-primary flex items-center gap-1 w-full text-white"
+      type="submit"
+    >
+      {t("contact.form.submit")}
+      <Spinner />
+    </button>
+  </div>
+  <p id="email-sent-success" class="hidden">
+    {t("contact.form.email-sent-success")}
+  </p>
+  <p id="email-sent-error" class="hidden">
+    {t("contact.form.email-sent-error")}
+  </p>
+</form>
+
+<script>
+  import emailjs from "@emailjs/browser";
+
+  const spinner = document.querySelector("#spinner");
+  const alertMessage = document.querySelector("#alert-message");
+
+  const publicKey = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+  const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+
+  if (!publicKey || !serviceId || !templateId) {
+    console.error("Missing EmailJS environment variables.");
+  }
+
+  emailjs.init({ publicKey });
+
+  function activateSpinner() {
+    spinner?.classList.remove("hidden");
+  }
+
+  function deactivateSpinner() {
+    spinner?.classList.add("hidden");
+  }
+
+  function showAlertMessage(type, message) {
+    const successClass = "bg-success/85";
+    const errorClass = "bg-error/85";
+
+    alertMessage?.classList.remove("-translate-y-full");
+    alertMessage?.classList.add("translate-y-0");
+
+    if (type === "success") {
+      alertMessage?.classList.add(successClass);
+      alertMessage?.classList.remove(errorClass);
+      document.querySelector("#alert-success-icon")?.classList.remove("hidden");
+      document.querySelector("#alert-error-icon")?.classList.add("hidden");
+    } else {
+      alertMessage?.classList.remove(successClass);
+      alertMessage?.classList.add(errorClass);
+      document.querySelector("#alert-success-icon")?.classList.add("hidden");
+      document.querySelector("#alert-error-icon")?.classList.remove("hidden");
+    }
+
+    alertMessage.querySelector("#message").textContent = message;
+
+    setTimeout(() => {
+      hideAlertMessage();
+    }, 5000);
+  }
+
+  function hideAlertMessage() {
+    alertMessage?.classList.add("-translate-y-full");
+    alertMessage?.classList.remove("translate-y-0");
+  }
+
+  window.onload = function () {
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        activateSpinner();
+        emailjs.sendForm(serviceId, templateId, this).then(
+          () => {
+            const message = document.querySelector(
+              "#email-sent-success"
+            )?.textContent;
+            showAlertMessage("success", message);
+            deactivateSpinner();
+          },
+          (error) => {
+            const message =
+              document.querySelector("#email-sent-error")?.textContent;
+            showAlertMessage("error", message);
+            deactivateSpinner();
+          }
+        );
+      });
+  };
+</script>

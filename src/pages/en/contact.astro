@@ -1,0 +1,15 @@
+---
+import ContactPage from "../../components/sections/ContactPage.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Section from "../../components/utils/Section.astro";
+import Container from "../../components/utils/Container.astro";
+const pageTitle = "Contact";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <Section>
+    <Container>
+      <ContactPage />
+    </Container>
+  </Section>
+</MainLayout>

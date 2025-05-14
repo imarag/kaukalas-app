@@ -1,0 +1,22 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import HeroSection from "../../components/sections/HeroSection.astro";
+import MainServicesSection from "../../components/sections/MainServicesSection.astro";
+import GallerySection from "../../components/sections/GallerySection.astro";
+import CTAContactSection from "../../components/sections/CTAContactSection.astro";
+import TestimonialsSection from "../../components/sections/TestimonialsSection.astro";
+import FAQSection from "../../components/sections/FAQSection.astro";
+const pageTitle = "Home";
+---
+
+<MainLayout pageTitle={pageTitle}>
+  <HeroSection
+    title="GK Pool & Villas Services"
+    subtitle="Professional Pool Cleaning, Easy and Fast"
+  />
+  <MainServicesSection />
+  <GallerySection />
+  <CTAContactSection />
+  <TestimonialsSection />
+  <FAQSection />
+</MainLayout>
