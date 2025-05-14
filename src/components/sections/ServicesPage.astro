@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import Symbol from "../utils/Symbol.astro";
 import MainTitle from "../../components/utils/MainTitle.astro";
 import MainSubTitle from "../../components/utils/MainSubTitle.astro";
 import Img from "../../components/utils/Img.astro";
@@ -21,19 +21,15 @@ const t = useTranslations(lang);
     allServices.map((el, ind) => (
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch my-8">
         <div>
-          <h1 class="font-semibold text-2xl mb-2">
-            {t(`services.service${ind + 1}.title`)}
+          <h1 class="font-semibold text-2xl mb-2 text-primary">
+            {el.title[lang]}
           </h1>
-          <p class="mb-8 font-light">
-            {t(`services.service${ind + 1}.description`)}
-          </p>
+          <p class="mb-8 font-light">{el.description[lang]}</p>
           <ul role="list" class="flex flex-col font-light gap-2">
-            {el.tags["en"].map((tag, tagInd) => (
+            {el.tags[lang].map((tag, tagInd) => (
               <li class="flex items-center gap-4">
-                <Icon name="double-check" />
-                <span>
-                  {t(`services.service${ind + 1}.bullet${tagInd + 1}`)}
-                </span>
+                <Symbol name="double-check" />
+                <span>{tag}</span>
               </li>
             ))}
           </ul>
@@ -42,7 +38,7 @@ const t = useTranslations(lang);
           id={`#image-carousel-${ind + 1}`}
           class="carousel-container overflow-hidden flex items-stretch flex-nowrap relative h-68 rounded-md"
         >
-          {el.imageURLs.map((el) => (
+          {el.images.map((el) => (
             <Img
               src={el.url}
               class="w-full h-full object-cover shrink-0 translate-x-0 transition-all duration-500 rounded-md"

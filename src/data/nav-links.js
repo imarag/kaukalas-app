@@ -1,18 +1,30 @@
 export default [
     {
         href: "index.html",
-        translateString: "nav.home.name",
+        name: {
+            en: "Home",
+            gr: "Αρχική Σελίδα",
+        },
     },
     {
         href: "services.html",
-        translateString: "nav.services.name",
+        name: {
+            en: "Our Services",
+            gr: "Οι Υπηρεσίες μας",
+        },
     },
     {
         href: "gallery.html",
-        translateString: "nav.gallery.name",
+        name: {
+            en: "Gallery",
+            gr: "Φωτογραφίες",
+        },
     },
     {
         href: "contact.html",
-        translateString: "nav.contact.name",
+        name: {
+            en: "Contact",
+            gr: "Επικοινωνία",
+        },
     },
 ];

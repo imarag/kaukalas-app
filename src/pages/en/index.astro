@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Section from "../../components/utils/Section.astro";
+import Container from "../../components/utils/Container.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import MainServicesSection from "../../components/sections/MainServicesSection.astro";
 import GallerySection from "../../components/sections/GallerySection.astro";
@@ -10,13 +12,30 @@ const pageTitle = "Home";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <HeroSection
-    title="GK Pool & Villas Services"
-    subtitle="Professional Pool Cleaning, Easy and Fast"
-  />
-  <MainServicesSection />
-  <GallerySection />
-  <CTAContactSection />
-  <TestimonialsSection />
-  <FAQSection />
+  <HeroSection />
+  <Section>
+    <Container>
+      <MainServicesSection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <GallerySection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <CTAContactSection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <TestimonialsSection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <FAQSection />
+    </Container>
+  </Section>
 </MainLayout>

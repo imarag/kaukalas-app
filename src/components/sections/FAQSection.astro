@@ -1,43 +1,37 @@
 ---
-import Section from "../utils/Section.astro";
-import Container from "../utils/Container.astro";
 import MainTitle from "../utils/MainTitle.astro";
+
 import faqs from "../../data/faqs";
+
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Section>
-  <Container>
-    <MainTitle text={t("home.faqs.title")} class="mb-12" />
-    <div
-      class="flex flex-col items-stretch justify-center gap-2 lg:gap-4"
-      id="faq-accordion"
-    >
-      {
-        faqs.map((item, ind) => (
-          <div class="collapse collapse-arrow bg-base-200 border border-base-300 rounded-md">
-            <input
-              type="checkbox"
-              name="my-accordion-2"
-              data-bs-toggle="collapse"
-              data-bs-target={`#faq-collapse-${ind + 1}`}
-              aria-controls={`faq-collapse-${ind + 1}`}
-            />
-            <div class="collapse-title font-semibold">
-              {t(`home.faqs.faq${ind + 1}.question`)}
-            </div>
-            <div
-              class="collapse-content text-sm"
-              id={`faq-collapse-${ind + 1}`}
-              data-bs-parent="#faq-accordion"
-            >
-              {t(`home.faqs.faq${ind + 1}.answer`)}
-            </div>
-          </div>
-        ))
-      }
-    </div>
-  </Container>
-</Section>
+<MainTitle text={t("home.faqs.title")} class="mb-12" />
+<div
+  class="flex flex-col items-stretch justify-center gap-2 lg:gap-4"
+  id="faq-accordion"
+>
+  {
+    faqs.map((el, ind) => (
+      <div class="collapse collapse-arrow bg-base-200 border border-base-300 rounded-md">
+        <input
+          type="checkbox"
+          name="my-accordion-2"
+          data-bs-toggle="collapse"
+          data-bs-target={`#faq-collapse-${ind + 1}`}
+          aria-controls={`faq-collapse-${ind + 1}`}
+        />
+        <div class="collapse-title font-semibold">{el.question[lang]}</div>
+        <div
+          class="collapse-content text-sm"
+          id={`faq-collapse-${ind + 1}`}
+          data-bs-parent="#faq-accordion"
+        >
+          {el.answer[lang]}
+        </div>
+      </div>
+    ))
+  }
+</div>

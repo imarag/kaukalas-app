@@ -1,8 +1,8 @@
 ---
 const { text, class: className = "" } = Astro.props;
-const titleClass = `text-4xl lg:text-5xl font-semibold text-primary text-center mb-4 ${className}`;
+const globalClass = `text-4xl lg:text-5xl font-semibold text-primary text-center mb-4 ${className}`;
 ---
 
-<h2 class={titleClass}>
+<h2 class={globalClass}>
   {text}
 </h2>

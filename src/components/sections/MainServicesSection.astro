@@ -1,6 +1,4 @@
 ---
-import Section from "../utils/Section.astro";
-import Container from "../utils/Container.astro";
 import MainTitle from "../utils/MainTitle.astro";
 import MainSubTitle from "../utils/MainSubTitle.astro";
 import Link from "../ui/Link.astro";
@@ -11,37 +9,27 @@ const t = useTranslations(lang);
 import mainServices from "../../data/main-services";
 ---
 
-<Section>
-  <Container>
-    <MainTitle text={t("home.services.title")} />
-    <MainSubTitle text={t("home.services.subtitle")} />
-    <div class="my-8 text-center">
-      <Link variant="outline" href="services.html"
-        >{t("home.services.cta")}</Link
-      >
-    </div>
-    <div
-      class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8 text-start lg:text-center"
-    >
-      {
-        mainServices.map((serv, ind) => (
-          <div>
-            <div class="overflow-hidden rounded-md">
-              <Img
-                src={serv.imageURL}
-                alt={serv.imageAlt}
-                class="hover:scale-110 transition-all rounded-md duration-500 w-full"
-              />
-            </div>
-            <h3 class="font-bold text-xl mt-4 mb-2">
-              {t(`home.services.service${ind + 1}.title`)}
-            </h3>
-            <p class="font-extralight text-base">
-              {t(`home.services.service${ind + 1}.description`)}
-            </p>
-          </div>
-        ))
-      }
-    </div>
-  </Container>
-</Section>
+<MainTitle text={t("home.services.title")} />
+<MainSubTitle text={t("home.services.subtitle")} />
+<div class="my-8 text-center">
+  <Link variant="outline" href="services.html">{t("home.services.cta")}</Link>
+</div>
+<div
+  class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-8 text-start lg:text-center"
+>
+  {
+    mainServices.map((serv, ind) => (
+      <div>
+        <div class="overflow-hidden rounded-md">
+          <Img
+            src={serv.url}
+            alt={serv.alt}
+            class="hover:scale-110 transition-all rounded-md duration-500 w-full"
+          />
+        </div>
+        <h3 class="font-bold text-xl mt-4 mb-2">{serv.title[lang]}</h3>
+        <p class="font-extralight text-base">{serv.description[lang]}</p>
+      </div>
+    ))
+  }
+</div>

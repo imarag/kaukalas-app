@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import Symbol from "../utils/Symbol.astro";
 import MainTitle from "../utils/MainTitle.astro";
 import MainSubTitle from "../utils/MainSubTitle.astro";
 import contactInfo from "../../data/contact-info";
@@ -29,21 +29,21 @@ const t = useTranslations(lang);
   </h2>
   <div class="flex items-center gap-4 my-4">
     <div class="bg-primary text-base-200 rounded-full p-2">
-      <Icon name="telephone" />
+      <Symbol name="telephone" />
     </div>
     <div>
       <p class="font-semibold">{t("contact.contact-info.phone.title")}</p>
-      <p class="font-light text-base text-white/60">+30 6973341740</p>
+      <p class="font-light text-base text-white/60">{contactInfo.phone}</p>
     </div>
   </div>
   <div class="flex items-center gap-4 my-4">
     <div class="bg-primary text-base-200 rounded-full p-2">
-      <Icon name="envelope" />
+      <Symbol name="envelope" />
     </div>
     <div>
       <p class="font-semibold">{t("contact.contact-info.email.title")}</p>
       <p class="font-light text-base text-white/60">
-        kaukalas_giorgos@yahoo.gr
+        {contactInfo.email}
       </p>
     </div>
   </div>
@@ -58,11 +58,12 @@ const t = useTranslations(lang);
         <li class="bg-primary text-base-200 rounded-full">
           <a
             href={el.link}
-            target="_blank"
             class="block p-2 w-full"
-            aria-label="Go to instagram page"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Go to ${el.name} page`}
           >
-            <Icon name={el.icon} />
+            <Symbol name={el.icon} />
           </a>
         </li>
       ))
@@ -77,27 +78,27 @@ const t = useTranslations(lang);
     <div>
       <div class="flex items-center gap-4 my-4">
         <div class="bg-primary text-base-200 rounded-full p-2">
-          <Icon name="location" />
+          <Symbol name="location" />
         </div>
         <div>
           <p class="font-semibold">
             {t("contact.company-info.location.title")}
           </p>
           <p class="font-light text-base text-white/60">
-            {t("contact.company-info.location.content")}
+            {contactInfo.company.location[lang]}
           </p>
         </div>
       </div>
       <div class="flex items-center gap-4 my-4">
         <div class="bg-primary text-base-200 rounded-full p-2">
-          <Icon name="calendar" />
+          <Symbol name="calendar" />
         </div>
         <div>
           <p class="font-semibold">
             {t("contact.company-info.schedule.title")}
           </p>
           <p class="font-light text-base text-white/60">
-            {t("contact.company-info.schedule.content")}
+            {contactInfo.company.schedule[lang]}
           </p>
         </div>
       </div>

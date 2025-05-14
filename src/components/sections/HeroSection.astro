@@ -1,6 +1,6 @@
 ---
 import Link from "../ui/Link.astro";
-import { Icon } from "astro-icon/components";
+import Symbol from "../utils/Symbol.astro";
 import Image from "astro/components/Image.astro";
 import HeroImage from "../../images/hero-image.png";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
@@ -27,7 +27,7 @@ const t = useTranslations(lang);
       <span class="text-primary">Pool & Villas</span><br />
       Services
       <span class="text-primary"
-        ><Icon
+        ><Symbol
           name="clean"
           fill="#26A5FF"
           class="size-18 sm:inline hidden"
@@ -53,7 +53,7 @@ const t = useTranslations(lang);
         class="flex items-center text-nowrap text-white underline sm:no-underline"
       >
         {t("home.hero.button-right")}
-        <Icon
+        <Symbol
           name="greater-than"
           class="size-6 ms-2 group-hover:ms-4 transition-all hidden sm:inline"
         />
@@ -66,11 +66,11 @@ const t = useTranslations(lang);
     <h3 class="text-lg text-center text-nowrap">GK Pool and Villas services</h3>
     <div class="flex items-center justify-center flex-wrap gap-2">
       <span>5.0</span>
-      <Icon name="star" class="size-3 text-yellow-300" />
-      <Icon name="star" class="size-3 text-yellow-300" />
-      <Icon name="star" class="size-3 text-yellow-300" />
-      <Icon name="star" class="size-3 text-yellow-300" />
-      <Icon name="star" class="size-3 text-yellow-300" />
+      <Symbol name="star" class="size-3 text-yellow-300" />
+      <Symbol name="star" class="size-3 text-yellow-300" />
+      <Symbol name="star" class="size-3 text-yellow-300" />
+      <Symbol name="star" class="size-3 text-yellow-300" />
+      <Symbol name="star" class="size-3 text-yellow-300" />
       <span> Google Reviews</span>
     </div>
   </div>

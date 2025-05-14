@@ -1,36 +1,20 @@
 ---
 const { message, type = "success" } = Astro.props;
+import Symbol from "../utils/Symbol.astro";
 const alertBaseClass =
   "alert flex items-center rounded-none -translate-y-full transition-all duration-150 h-20 z-50 alert-success fixed top-0 left-0 right-0";
 ---
 
 <div id="alert-message" role="alert" class={alertBaseClass}>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
+  <Symbol
+    name="check"
+    class="h-6 w-6 shrink-0 stroke-current"
     id="alert-success-icon"
+  />
+  <Symbol
+    name="check"
     class="h-6 w-6 shrink-0 stroke-current"
-    fill="none"
-    viewBox="0 0 24 24"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-  </svg>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
     id="alert-error-icon"
-    class="h-6 w-6 shrink-0 stroke-current"
-    fill="none"
-    viewBox="0 0 24 24"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-    ></path>
-  </svg>
+  />
   <span id="message" class="font-semibold">{message}</span>
 </div>

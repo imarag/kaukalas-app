@@ -1,49 +1,41 @@
 ---
-import Section from "../utils/Section.astro";
-import Container from "../utils/Container.astro";
 import MainTitle from "../utils/MainTitle.astro";
-import MainSubTitle from "../utils/MainSubTitle.astro";
 import Link from "../ui/Link.astro";
 import Img from "../utils/Img.astro";
 import { Icon } from "astro-icon/components";
 import CTAImage from "../../images/cta-image.png";
+import PoolIcon from "../../images/pool.svg";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Section>
-  <Container>
-    <p class="lg:w-2/3 xl:w-1/2 mx-auto text-2xl text-center">
-      {t("home.contact.eyebrow")}
+<p class="lg:w-2/3 xl:w-1/2 mx-auto text-2xl text-center">
+  {t("home.contact.eyebrow")}
+</p>
+<div class="text-primary">
+  <PoolIcon class="text-primary size-28 block mx-auto my-8" />
+</div>
+<div
+  class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between bg-base-200 border border-base-300 rounded-md p-8 lg:p-12 text-center lg:text-start"
+>
+  <div>
+    <MainTitle
+      text={t("home.contact.title")}
+      class="mb-4 text-center lg:text-start"
+    />
+    <p class="font-extralight text-lg mb-8">
+      {t("home.contact.subtitle")}
     </p>
-    <div class="text-primary">
-      <Icon name="pool" class="text-primary size-28 block mx-auto my-8" />
+    <div>
+      <Link href="contact.html" variant="button">{t("home.contact.cta")}</Link>
     </div>
-    <div
-      class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-between bg-base-200 border border-base-300 rounded-md p-8 lg:p-12 text-center lg:text-start"
-    >
-      <div>
-        <MainTitle
-          text={t("home.contact.title")}
-          class="mb-4 text-center lg:text-start"
-        />
-        <p class="font-extralight text-lg mb-8">
-          {t("home.contact.subtitle")}
-        </p>
-        <div>
-          <Link href="contact.html" variant="button"
-            >{t("home.contact.cta")}</Link
-          >
-        </div>
-      </div>
-      <div>
-        <Img
-          className="w-full h-full object-cover rounded-md"
-          src={CTAImage}
-          alt="contact me for pool cleaning services"
-        />
-      </div>
-    </div>
-  </Container>
-</Section>
+  </div>
+  <div>
+    <Img
+      className="w-full h-full object-cover rounded-md"
+      src={CTAImage}
+      alt="contact me for pool cleaning services"
+    />
+  </div>
+</div>

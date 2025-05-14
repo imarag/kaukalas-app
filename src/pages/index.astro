@@ -1,26 +1,41 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Section from "../components/utils/Section.astro";
+import Container from "../components/utils/Container.astro";
 import HeroSection from "../components/sections/HeroSection.astro";
 import MainServicesSection from "../components/sections/MainServicesSection.astro";
 import GallerySection from "../components/sections/GallerySection.astro";
 import CTAContactSection from "../components/sections/CTAContactSection.astro";
 import TestimonialsSection from "../components/sections/TestimonialsSection.astro";
 import FAQSection from "../components/sections/FAQSection.astro";
-import faqs from "../data/faqs";
-import mainServices from "../data/main-services";
-import mainGalleryImages from "../data/main-gallery-images";
-import testimonials from "../data/testimonials";
 const pageTitle = "Home";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <HeroSection
-    title="GK Pool & Villas Services"
-    subtitle="Professional Pool Cleaning, Easy and Fast"
-  />
-  <MainServicesSection mainServices={mainServices} />
-  <GallerySection mainGalleryImages={mainGalleryImages} />
-  <CTAContactSection />
-  <TestimonialsSection testimonials={testimonials} />
-  <FAQSection faqs={faqs} />
+  <HeroSection />
+  <Section>
+    <Container>
+      <MainServicesSection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <GallerySection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <CTAContactSection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <TestimonialsSection />
+    </Container>
+  </Section>
+  <Section>
+    <Container>
+      <FAQSection />
+    </Container>
+  </Section>
 </MainLayout>

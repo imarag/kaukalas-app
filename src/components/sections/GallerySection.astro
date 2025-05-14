@@ -1,6 +1,4 @@
 ---
-import Section from "../utils/Section.astro";
-import Container from "../utils/Container.astro";
 import MainTitle from "../utils/MainTitle.astro";
 import MainSubTitle from "../utils/MainSubTitle.astro";
 import Link from "../ui/Link.astro";
@@ -11,26 +9,21 @@ const t = useTranslations(lang);
 import mainGalleryImages from "../../data/main-gallery-images";
 ---
 
-<Section>
-  <Container>
-    <MainTitle text={t("home.gallery.title")} />
-    <MainSubTitle text={t("home.gallery.subtitle")} />
-    <div class="my-8 text-center">
-      <Link href="gallery.html" variant="outline">{t("home.services.cta")}</Link
-      >
-    </div>
-    <div class="grid grid-cols-2 gap-2 lg:gap-4 justify-center items-center">
-      {
-        mainGalleryImages.map((galImg) => (
-          <div class="overflow-hidden rounded-md">
-            <Img
-              class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
-              src={galImg}
-              alt="gallery of pools before and after the pool cleaning services applied"
-            />
-          </div>
-        ))
-      }
-    </div>
-  </Container>
-</Section>
+<MainTitle text={t("home.gallery.title")} />
+<MainSubTitle text={t("home.gallery.subtitle")} />
+<div class="my-8 text-center">
+  <Link href="gallery.html" variant="outline">{t("home.services.cta")}</Link>
+</div>
+<div class="grid grid-cols-2 gap-2 lg:gap-4 justify-center items-center">
+  {
+    mainGalleryImages.map((galImg) => (
+      <div class="overflow-hidden rounded-md">
+        <Img
+          class="hover:scale-110 transition-all duration-500 w-full h-full object-cover rounded-md"
+          src={galImg}
+          alt="gallery of pools before and after the pool cleaning services applied"
+        />
+      </div>
+    ))
+  }
+</div>

@@ -1,6 +1,5 @@
 export default [
     {
-        href: "#",
         question: {
             gr: "Ποιες υπηρεσίες προσφέρετε για τον καθαρισμό πισίνας?",
             en: "What services do you offer for pool cleaning?",
@@ -11,7 +10,6 @@ export default [
         },
     },
     {
-        href: "#",
         question: {
             gr: "Πόσο συχνά πρέπει να καθαρίζεται η πισίνα μου?",
             en: "How often should my pool be cleaned?",
@@ -22,7 +20,6 @@ export default [
         },
     },
     {
-        href: "#",
         question: {
             gr: "Ποιες χημικές ουσίες χρησιμοποιούνται στη συντήρηση της πισίνας?",
             en: "What chemicals are used in pool maintenance?",
@@ -33,7 +30,6 @@ export default [
         },
     },
     {
-        href: "#",
         question: {
             gr: "Προσφέρετε υπηρεσίες επείγοντος καθαρισμού πισίνας?",
             en: "Do you offer emergency pool cleaning services?",
@@ -44,7 +40,6 @@ export default [
         },
     },
     {
-        href: "#",
         question: {
             gr: "Πώς μπορώ να προγραμματίσω μια υπηρεσία καθαρισμού πισίνας?",
             en: "How can I schedule a pool cleaning service?",

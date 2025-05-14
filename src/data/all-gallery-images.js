@@ -16,63 +16,63 @@ import galleryImage15 from "../images/gallery15.jpg";
 
 export default [
     {
-        imageURL: galleryImage1,
-        alt: "Clean pool with crystal clear water surrounded by lush greenery",
+        url: galleryImage1,
+        alt: "Clean pool with crystal clear water",
     },
     {
-        imageURL: galleryImage2,
+        url: galleryImage2,
         alt: "Immaculately cleaned pool with pristine blue water and a relaxing atmosphere",
     },
     {
-        imageURL: galleryImage3,
+        url: galleryImage3,
         alt: "Sparkling clean pool reflecting the bright sun and clear sky",
     },
     {
-        imageURL: galleryImage4,
-        alt: "Well-maintained pool with clear water and decorative stone features",
+        url: galleryImage4,
+        alt: "Well-maintained pool with clear water",
     },
     {
-        imageURL: galleryImage5,
-        alt: "A beautifully cleaned pool with lounge chairs and sunny weather",
+        url: galleryImage5,
+        alt: "A beautifully cleaned pool with sunny weather",
     },
     {
-        imageURL: galleryImage6,
-        alt: "Crystal clear pool water with surrounding palm trees in a tropical setting",
+        url: galleryImage6,
+        alt: "Crystal clear pool water",
     },
     {
-        imageURL: galleryImage7,
+        url: galleryImage7,
         alt: "Luxury pool with perfectly cleaned water and modern design",
     },
     {
-        imageURL: galleryImage8,
+        url: galleryImage8,
         alt: "Shiny clean pool with a shallow beach entry and calm water",
     },
     {
-        imageURL: galleryImage9,
+        url: galleryImage9,
         alt: "Infinity pool with spotless water and stunning scenic backdrop",
     },
     {
-        imageURL: galleryImage10,
+        url: galleryImage10,
         alt: "Round pool with clean, inviting water and elegant mosaic tiles",
     },
     {
-        imageURL: galleryImage11,
-        alt: "Poolside with clear water and a hot tub, all cleaned to perfection",
+        url: galleryImage11,
+        alt: "Poolside with clear water",
     },
     {
-        imageURL: galleryImage12,
+        url: galleryImage12,
         alt: "Vibrant, clean pool with colorful tiles and a relaxing patio area",
     },
     {
-        imageURL: galleryImage13,
-        alt: "A pristine pool surrounded by lounge chairs and a poolside bar",
+        url: galleryImage13,
+        alt: "A pristine pool",
     },
     {
-        imageURL: galleryImage14,
+        url: galleryImage14,
         alt: "Stylishly cleaned pool with perfectly maintained water and a modern ambiance",
     },
     {
-        imageURL: galleryImage15,
-        alt: "Cozy backyard pool with crystal clear water and a fire pit for relaxation",
+        url: galleryImage15,
+        alt: "Cozy backyard pool with crystal clear water",
     },
 ];

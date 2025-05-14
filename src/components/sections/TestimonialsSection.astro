@@ -1,39 +1,29 @@
 ---
-import Section from "../utils/Section.astro";
-import Container from "../utils/Container.astro";
 import MainTitle from "../utils/MainTitle.astro";
-import { Icon } from "astro-icon/components";
+import Symbol from "../utils/Symbol.astro";
 import testimonials from "../../data/testimonials";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Section>
-  <Container>
-    <MainTitle text={t("home.testimonials.title")} class="mb-12" />
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-stretch text-center text-lg font-light gap-2 lg:gap-4"
-    >
-      {
-        testimonials.map((el, ind) => (
-          <div class="md:col-span-1 xl:col-span-2  bg-base-200 border border-base-300 rounded-md p-8">
-            <h2 class="text-2xl font-semibold">
-              {t(`home.testimonials.testimonial${ind + 1}.name`)}
-            </h2>
-            <div class="flex items-center justify-center gap-2 my-4 text-warning">
-              <Icon name="star" class="size-4 text-yellow-300" />
-              <Icon name="star" class="size-4 text-yellow-300" />
-              <Icon name="star" class="size-4 text-yellow-300" />
-              <Icon name="star" class="size-4 text-yellow-300" />
-              <Icon name="star" class="size-4 text-yellow-300" />
-            </div>
-            <p class="text-base">
-              {t(`home.testimonials.testimonial${ind + 1}.feedback`)}
-            </p>
-          </div>
-        ))
-      }
-    </div>
-  </Container>
-</Section>
+<MainTitle text={t("home.testimonials.title")} class="mb-12" />
+<div
+  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-stretch text-center text-lg font-light gap-2 lg:gap-4"
+>
+  {
+    testimonials.map((el, ind) => (
+      <div class="md:col-span-1 xl:col-span-2  bg-base-200 border border-base-300 rounded-md p-8">
+        <h2 class="text-2xl font-semibold">{el.name}</h2>
+        <div class="flex items-center justify-center gap-2 my-4 text-warning">
+          <Symbol name="star" class="size-4 text-yellow-300" />
+          <Symbol name="star" class="size-4 text-yellow-300" />
+          <Symbol name="star" class="size-4 text-yellow-300" />
+          <Symbol name="star" class="size-4 text-yellow-300" />
+          <Symbol name="star" class="size-4 text-yellow-300" />
+        </div>
+        <p class="text-base">{el.feedback[lang]}</p>
+      </div>
+    ))
+  }
+</div>

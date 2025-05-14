@@ -1,6 +1,6 @@
 import LeavesCleaning from "../images/leaves-cleaning.webp";
 import PoolCleaningEquipment4 from "../images/pool-cleaning-equipment4.jpg";
-import PoolCleaningEquipment5 from "../images/services3.jpg";
+import PoolCleaningEquipment5 from "../images/service3-water-cleaning.jpg";
 
 import PoolChemical1 from "../images/pool-chemical1.jpg";
 import PoolChemical2 from "../images/pool-chemical.jpg";
@@ -40,7 +40,7 @@ export default [
                 "Adjusting the chemical balance of the water",
             ],
         },
-        imageURLs: [
+        images: [
             { url: LeavesCleaning, alt: "Καθαρισμός επιφάνειας πισίνας / Pool surface cleaning" },
             { url: PoolCleaningEquipment4, alt: "Κυκλοφορία νερού / Water circulation" },
             { url: PoolCleaningEquipment5, alt: "Έλεγχος ποιότητας νερού / Water quality check" },
@@ -67,7 +67,7 @@ export default [
                 "Maintaining proper chlorine levels",
             ],
         },
-        imageURLs: [
+        images: [
             { url: PoolChemical1, alt: "Έλεγχος pH νερού / pH water testing" },
             { url: PoolChemical2, alt: "Προσθήκη χημικών / Chemical dosing" },
         ],
@@ -93,7 +93,7 @@ export default [
                 "Checking system functionality",
             ],
         },
-        imageURLs: [
+        images: [
             { url: PoolFilter1, alt: "Φίλτρο πισίνας / Pool filter" },
             { url: PoolFilter2, alt: "Καθαρισμός φίλτρου / Filter cleaning" },
         ],
@@ -119,7 +119,7 @@ export default [
                 "Sanitizing bottom and walls",
             ],
         },
-        imageURLs: [
+        images: [
             { url: PoolCleaningEquipment1, alt: "Άλγες στον πυθμένα / Algae in pool bottom" },
             { url: PoolCleaningEquipment2, alt: "Καθαρισμός τοιχωμάτων / Wall scrubbing" },
             { url: PoolCleaningEquipment3, alt: "Εργαλεία καθαρισμού πισίνας / Pool cleaning tools" },
@@ -146,7 +146,7 @@ export default [
                 "Improving system efficiency",
             ],
         },
-        imageURLs: [
+        images: [
             { url: PoolCover, alt: "Αντλία πισίνας / Pool pump" },
             { url: PoolCover2, alt: "Καθαρισμός σωληνώσεων / Pipe flushing" },
             { url: PoolFishNet, alt: "Φραγμένη σωλήνα / Clogged pipe" },
