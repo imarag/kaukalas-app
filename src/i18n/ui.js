@@ -1,12 +1,20 @@
 export const languages = {
-    en: 'En',
-    gr: 'Gr',
+    en: 'EN',
+    gr: 'GR',
 };
 
 export const defaultLang = 'gr';
 export const showDefaultLang = false;
+
 export const ui = {
     "en": {
+        "head.meta.description": "Professional pool cleaning services in the city of Chania in Crete to maintain a clean, safe, and functional pool.",
+        "head.meta.keywords": "pool cleaning, pool services, pool maintenance, pool cleaning near me, pool care, pool cleaning company",
+        "layout.page-title": "Giorgos Kaukalas Pool Cleaning Services",
+        "contact.page-title": "Contact Us",
+        "gallery.page-title": "Pool Cleaning Project Gallery",
+        "home.page-title": "Professional Pool Cleaning in Chania",
+        "services.page-title": "Our Pool Cleaning Services",
         "contact.title": "Contact Us",
         "contact.subtitle": "Our team is ready to assist you and help with whatever you need, aiming to provide the best service possible",
         "contact.form.label.fullname": "Full Name",
@@ -14,9 +22,9 @@ export const ui = {
         "contact.form.label.phonenumber": "Phone Number",
         "contact.form.label.message": "Message",
         "contact.form.submit": "Send",
-        "contact.form.fullname.error": "You must fill in a user fullname",
-        "contact.form.email.error": "You must fill in a valid user email",
-        "contact.form.message.error": "You must include a message",
+        "contact.form.fullname.error": "You must enter your full name",
+        "contact.form.email.error": "You must enter a valid email address",
+        "contact.form.message.error": "Please include a message",
         "contact.form.email-sent-success": "Email has been sent successfully!",
         "contact.form.email-sent-error": "Cannot send the email! Please try again.",
         "contact.contact-info.title": "Contact Information",
@@ -27,7 +35,7 @@ export const ui = {
         "contact.company-info.location.title": "Location",
         "contact.company-info.schedule.title": "Hour Schedule",
         "gallery.title": "Pool Cleaning Project Gallery",
-        "gallery.subtitle": "Explore our work through a variety of images showcasing the quality, innovation, and attention to detail that characterize each of our projects ",
+        "gallery.subtitle": "Explore our work through a variety of images showcasing the quality, innovation, and attention to detail that characterize each of our projects.",
         "services.title": "Our Services",
         "services.subtitle": "Discover our specialized pool cleaning and maintenance services, tailored to your needs!",
         "home.hero.subtitle": "Professional Pool Cleaning, Easy and Fast",
@@ -44,11 +52,18 @@ export const ui = {
         "home.contact.subtitle": "We are here to help you with any questions or concerns you may have about our pool cleaning services",
         "home.contact.eyebrow": "Do you want to ensure that your pool stays always clean and ready for use?",
         "home.contact.cta": "Book an Appointment Now",
-        "home.testimonials.title": "What have they said about us ?",
+        "home.testimonials.title": "What our clients say about us",
         "home.faqs.title": "Frequently Asked Questions",
     }
     ,
     "gr": {
+        "head.meta.description": "Επαγγελματικές υπηρεσίες καθαρισμού πισίνας στη τοποθεσία Χανίων για μια καθαρή, ασφαλή και λειτουργική πισίνα.",
+        "head.meta.keywords": "καθαρισμός πισίνας, υπηρεσίες πισίνας, συντήρηση πισίνας, καθαρισμός πισίνας Χανιά, φροντίδα πισίνας",
+        "layout.page-title": "Καυκαλάς Γιώργος υπηρεσίες καθαρισμού πισίνας",
+        "contact.page-title": "Επικοινωνήστε Μαζί Μας",
+        "gallery.page-title": "Συλλογή Έργων Καθαρισμού Πισίνας",
+        "home.page-title": "Επαγγελματικός Καθαρισμός Πισίνας στα Χανιά",
+        "services.page-title": "Οι Υπηρεσίες Καθαρισμού Πισίνας μας",
         "contact.title": "Επικοινωνήστε Μαζί Μας",
         "contact.subtitle": "Η ομάδα μας είναι έτοιμη να σας εξυπηρετήσει και να σας βοηθήσει με ό,τι χρειαστείτε, με στόχο την καλύτερη δυνατή εξυπηρέτηση",
         "contact.form.label.fullname": "Ονοματεπώνυμο",
@@ -56,8 +71,8 @@ export const ui = {
         "contact.form.label.phonenumber": "Τηλέφωνο",
         "contact.form.label.message": "Μήνυμα",
         "contact.form.submit": "Αποστολή",
-        "contact.form.fullname.error": "Πρέπει να συμπληρώσετε το πλήρες όνομα χρήστη",
-        "contact.form.email.error": "Πρέπει να εισαγάγετε ένα έγκυρο email χρήστη",
+        "contact.form.fullname.error": "Πρέπει να συμπληρώσετε το ονοματεπώνυμό σας",
+        "contact.form.email.error": "Πρέπει να εισαγάγετε ένα έγκυρο email",
         "contact.form.message.error": "Πρέπει να συμπεριλάβετε ένα μήνυμα",
         "contact.form.email-sent-success": "Το email στάλθηκε με επιτυχία!",
         "contact.form.email-sent-error": "Αδυναμία αποστολής email! Παρακαλώ δοκιμάστε ξανά.",

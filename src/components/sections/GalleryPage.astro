@@ -3,11 +3,7 @@ import MainTitle from "../utils/MainTitle.astro";
 import MainSubTitle from "../utils/MainSubTitle.astro";
 import Image from "astro/components/Image.astro";
 import allGalleryImages from "../../data/all-gallery-images";
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

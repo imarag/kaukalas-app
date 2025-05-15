@@ -5,8 +5,8 @@ import PoolCleaningEquipment5 from "../images/service3-water-cleaning.jpg";
 import PoolChemical1 from "../images/pool-chemical1.jpg";
 import PoolChemical2 from "../images/pool-chemical.jpg";
 
-import PoolFilter1 from "../images//pool-filter.jpg";
-import PoolFilter2 from "../images//pool-filter2.jpg";
+import PoolFilter1 from "../images/pool-filter.jpg";
+import PoolFilter2 from "../images/pool-filter2.jpg";
 
 import PoolCleaningEquipment1 from "../images/pool-cleaning-equipment.jpg";
 import PoolCleaningEquipment2 from "../images/pool-cleaning-equipment2.jpg";
@@ -17,7 +17,6 @@ import PoolCover2 from "../images/pool-cover2.jpg";
 import PoolFishNet from "../images/clean-pool-fish-net.jpg"
 
 
-
 export default [
     {
         title: {
@@ -25,8 +24,8 @@ export default [
             en: "Regular Pool Cleaning",
         },
         description: {
-            gr: "Ο τακτικός καθαρισμός της πισίνας εξασφαλίζει καθαρό και ασφαλές νερό.",
-            en: "Regular pool cleaning ensures clean and safe water.",
+            gr: "Ο τακτικός καθαρισμός της πισίνας εξασφαλίζει καθαρό και ασφαλές νερό για όλους τους χρήστες, προλαμβάνει την ανάπτυξη άλγης και μικροοργανισμών, και συμβάλλει στη σωστή λειτουργία όλου του συστήματος.",
+            en: "Regular pool cleaning ensures crystal-clear and safe water for all users, helps prevent algae and microorganism buildup, and supports the proper operation of the entire system.",
         },
         tags: {
             gr: [
@@ -52,8 +51,8 @@ export default [
             en: "Chemical Water Balancing",
         },
         description: {
-            gr: "Απαραίτητη για την υγεία και ασφάλεια των κολυμβητών.",
-            en: "Essential for swimmer health and safety.",
+            gr: "Η σωστή χημική εξισορρόπηση του νερού είναι ζωτικής σημασίας για την υγιεινή της πισίνας, αποτρέπει τη διάβρωση του εξοπλισμού και μειώνει τον κίνδυνο μολύνσεων και ερεθισμών στους λουόμενους.",
+            en: "Proper chemical balancing is critical for maintaining pool hygiene, preventing equipment corrosion, and reducing the risk of infections or irritation for swimmers.",
         },
         tags: {
             gr: [
@@ -78,8 +77,8 @@ export default [
             en: "Pool Filter Maintenance",
         },
         description: {
-            gr: "Βελτιστοποίηση λειτουργίας των φίλτρων και παράταση ζωής τους.",
-            en: "Optimize filter performance and extend lifespan.",
+            gr: "Η συντήρηση των φίλτρων είναι απαραίτητη για την αποτελεσματική απομάκρυνση ρύπων από το νερό. Ένα καθαρό φίλτρο συμβάλλει στην καλύτερη ποιότητα του νερού και μειώνει τη φθορά των εξαρτημάτων.",
+            en: "Filter maintenance is essential for effective debris removal and water clarity. A clean filter improves water quality and extends the life of pool components.",
         },
         tags: {
             gr: [
@@ -104,8 +103,8 @@ export default [
             en: "Bottom and Wall Cleaning",
         },
         description: {
-            gr: "Για υγιεινή και καθαρή πισίνα χωρίς άλγες και άλατα.",
-            en: "Keeps the pool clean and free of algae and scale.",
+            gr: "Η απομάκρυνση άλγης, αλάτων και άλλων επικαθίσεων από τον πυθμένα και τα τοιχώματα της πισίνας εξασφαλίζει καθαρότητα, αποτρέπει την ολίσθηση και συμβάλλει στη συνολική υγιεινή του χώρου.",
+            en: "Removing algae, scale, and buildup from the pool's bottom and walls ensures a clean appearance, prevents slipping hazards, and contributes to overall hygiene.",
         },
         tags: {
             gr: [
@@ -131,8 +130,8 @@ export default [
             en: "Pump and Pipe Cleaning",
         },
         description: {
-            gr: "Πρόληψη φραγών και διασφάλιση καλής κυκλοφορίας.",
-            en: "Prevent clogs and ensure good circulation.",
+            gr: "Ο καθαρισμός αντλιών και σωληνώσεων αποτρέπει τις φραγές, διατηρεί την πίεση και τη ροή του νερού, και παρατείνει τη διάρκεια ζωής του εξοπλισμού, εξοικονομώντας χρήματα από μελλοντικές επισκευές.",
+            en: "Cleaning pumps and pipes prevents blockages, maintains water pressure and flow, and extends equipment lifespan, helping avoid costly repairs down the line.",
         },
         tags: {
             gr: [

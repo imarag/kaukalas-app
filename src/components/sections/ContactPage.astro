@@ -5,11 +5,7 @@ import MainSubTitle from "../utils/MainSubTitle.astro";
 import contactInfo from "../../data/contact-info";
 import socialMedia from "../../data/social-media";
 import ContactForm from "../sections/ContactForm.astro";
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

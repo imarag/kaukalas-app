@@ -15,8 +15,8 @@ export default [
             en: "How often should my pool be cleaned?",
         },
         answer: {
-            gr: "Συνιστάται να καθαρίζετε την πισίνα σας τουλάχιστον μία φορά την εβδομάδα για να διατηρείτε το νερό κρυστάλλινο και να εξασφαλίσετε την ομαλή λειτουργία του εξοπλισμού σας. Ωστόσο, η συχνότητα μπορεί να διαφέρει ανάλογα με τη χρήση και τους περιβαλλοντικούς παράγοντες.",
-            en: "It is recommended to clean your pool at least once a week to keep the water crystal clear and ensure the proper functioning of your equipment. However, the frequency may vary depending on usage and environmental factors.",
+            gr: "Συνιστάται να καθαρίζετε την πισίνα σας τουλάχιστον μία φορά την εβδομάδα για να διατηρείτε το νερό καθαρό και να εξασφαλίσετε την ομαλή λειτουργία του εξοπλισμού σας. Ωστόσο, η συχνότητα μπορεί να διαφέρει ανάλογα με τη χρήση και τους περιβαλλοντικούς παράγοντες.",
+            en: "It is recommended to clean your pool at least once a week to keep the water clear and ensure the proper functioning of your equipment. However, the frequency may vary depending on usage and environmental factors.",
         },
     },
     {
@@ -25,8 +25,8 @@ export default [
             en: "What chemicals are used in pool maintenance?",
         },
         answer: {
-            gr: "Χρησιμοποιούμε διάφορες χημικές ουσίες, όπως χλώριο, ρυθμιστές pH, αλγηκτόνα και άλλες εξειδικευμένες θεραπείες για να εξασφαλίσουμε ότι το νερό της πισίνας σας είναι ασφαλές, καθαρό και ισορροπημένο.",
-            en: "We use various chemicals such as chlorine, pH regulators, algaecides, and other specialized treatments to ensure your pool water is safe, clean, and balanced.",
+            gr: "Χρησιμοποιούμε διάφορες χημικές ουσίες, όπως χλώριο, ρυθμιστές pH, αλγηκτόνα και άλλες εξειδικευμένες ουσίες για να εξασφαλίσουμε ότι το νερό της πισίνας σας είναι ασφαλές, καθαρό και ισορροπημένο.",
+            en: "We use various chemicals such as chlorine, pH regulators, algaecides, and other specialized chemicals to ensure your pool water is safe, clean, and balanced.",
         },
     },
     {
@@ -45,7 +45,7 @@ export default [
             en: "How can I schedule a pool cleaning service?",
         },
         answer: {
-            gr: "Μπορείτε να προγραμματίσετε μια υπηρεσία καθαρισμού πισίνας μέσω της ιστοσελίδας μας συμπληρώνοντας την φόρμα επικοινωνίας ή καλώντας μας απευθείας. Προσφέρουμε ευέλικτο προγραμματισμό για να καλύψουμε τις ανάγκες σας.",
+            gr: "Μπορείτε να προγραμματίσετε μια υπηρεσία καθαρισμού πισίνας μέσω της ιστοσελίδας μας συμπληρώνοντας την φόρμα επικοινωνίας ή καλώντας μας απευθείας. Προσφέρουμε ευέλικτο πρόγραμμα για να καλύψουμε τις ανάγκες σας.",
             en: "You can schedule a pool cleaning service through our website by filling out the contact form or by calling us directly. We offer flexible scheduling to meet your needs.",
         },
     },

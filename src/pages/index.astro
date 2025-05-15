@@ -8,7 +8,10 @@ import GallerySection from "../components/sections/GallerySection.astro";
 import CTAContactSection from "../components/sections/CTAContactSection.astro";
 import TestimonialsSection from "../components/sections/TestimonialsSection.astro";
 import FAQSection from "../components/sections/FAQSection.astro";
-const pageTitle = "Home";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const pageTitle = t("home.page-title");
 ---
 
 <MainLayout pageTitle={pageTitle}>

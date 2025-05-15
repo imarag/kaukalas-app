@@ -4,11 +4,7 @@ import MainTitle from "../../components/utils/MainTitle.astro";
 import MainSubTitle from "../../components/utils/MainSubTitle.astro";
 import Img from "../../components/utils/Img.astro";
 import allServices from "../../data/all-services";
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from "../../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -24,9 +20,9 @@ const t = useTranslations(lang);
           <h1 class="font-semibold text-2xl mb-2 text-primary">
             {el.title[lang]}
           </h1>
-          <p class="mb-8 font-light">{el.description[lang]}</p>
-          <ul role="list" class="flex flex-col font-light gap-2">
-            {el.tags[lang].map((tag, tagInd) => (
+          <p class="mb-8 font-light text-white/90">{el.description[lang]}</p>
+          <ul role="list" class="flex flex-col font-light gap-2 text-white/90">
+            {el.tags[lang].map((tag) => (
               <li class="flex items-center gap-4">
                 <Symbol name="double-check" />
                 <span>{tag}</span>
