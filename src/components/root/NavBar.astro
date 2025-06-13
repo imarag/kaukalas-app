@@ -6,6 +6,7 @@ import LanguagePicker from "./LanguagePicker.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 const { lang } = Astro.props;
 const currentPath = Astro.url.pathname;
+console.log(currentPath, "**");
 ---
 
 <nav
@@ -31,7 +32,7 @@ const currentPath = Astro.url.pathname;
       {
         navLinks.map((el) => (
           <li
-            class={`w-full lg:w-auto rounded-md hover:bg-primary/80 ${currentPath.includes(el.href) && "bg-primary/80"}`}
+            class={`w-full lg:w-auto rounded-md hover:bg-primary/80 ${currentPath.includes(el.href) || ((currentPath === "/" || currentPath === "/en") && el.href === "index.html") ? "bg-primary/80" : ""}`}
           >
             <a
               href={getRelativeLocaleUrl(lang, el.href)}
