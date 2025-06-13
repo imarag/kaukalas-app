@@ -3,14 +3,8 @@ import navLinks from "../../data/nav-links";
 import Logo from "../utils/Logo.astro";
 import socialMedia from "../../data/social-media";
 import Symbol from "../utils/Symbol.astro";
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from "../../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
+const { lang } = Astro.props;
+import { getRelativeLocaleUrl } from "astro:i18n";
 ---
 
 <footer
@@ -20,7 +14,7 @@ const translatePath = useTranslatedPath(lang);
   <nav class="grid grid-cols-1 sm:grid-flow-col text-center gap-4">
     {
       navLinks.map((el) => (
-        <a href={translatePath(`/${el.href}`)} class="link link-hover">
+        <a href={getRelativeLocaleUrl(lang, el.href)} class="link link-hover">
           {el.name[lang]}
         </a>
       ))

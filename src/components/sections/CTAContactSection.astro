@@ -2,11 +2,10 @@
 import MainTitle from "../utils/MainTitle.astro";
 import Link from "../ui/Link.astro";
 import Img from "../utils/Img.astro";
-import { Icon } from "astro-icon/components";
 import CTAImage from "../../images/cta-image.png";
 import PoolIcon from "../../images/pool.svg";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 

@@ -6,25 +6,21 @@ import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  build: {
+    format: 'file'
+  },
+  site: "https://poolcleaningkaukalas.gr",
   vite: {
     plugins: [tailwindcss()],
   },
-
   integrations: [
-    icon(),
-    sitemap({
-      i18n: {
-        defaultLocale: 'gr',
-        locales: {
-          gr: 'el-GR',
-          en: 'en-US',
-        },
-      },
-    })
+    icon()
   ],
-
   i18n: {
     locales: ["gr", "en"],
     defaultLocale: "gr",
+    routing: {
+      prefixDefaultLocale: true
+    }
   }
 });

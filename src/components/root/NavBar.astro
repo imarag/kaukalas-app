@@ -3,15 +3,9 @@ import navLinks from "../../data/nav-links";
 import Logo from "../utils/Logo.astro";
 import Symbol from "../utils/Symbol.astro";
 import LanguagePicker from "./LanguagePicker.astro";
-import {
-  getLangFromUrl,
-  useTranslations,
-  useTranslatedPath,
-} from "../../i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
+import { getLangFromUrl } from "../../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+const { lang } = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -41,7 +35,7 @@ const currentPath = Astro.url.pathname;
             class={`w-full lg:w-auto rounded-md hover:bg-primary/80 ${currentPath.includes(el.href) && "bg-primary/80"}`}
           >
             <a
-              href={translatePath(`/${el.href}`)}
+              href={getRelativeLocaleUrl(lang, el.href)}
               class="text-sm font-medium block size-full p-2"
             >
               {el.name[lang]}

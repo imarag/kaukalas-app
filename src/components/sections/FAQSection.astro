@@ -4,7 +4,7 @@ import MainTitle from "../utils/MainTitle.astro";
 import faqs from "../../data/faqs";
 
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 

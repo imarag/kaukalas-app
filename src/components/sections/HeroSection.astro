@@ -4,7 +4,7 @@ import Symbol from "../utils/Symbol.astro";
 import Image from "astro/components/Image.astro";
 import HeroImage from "../../images/hero-image.png";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 

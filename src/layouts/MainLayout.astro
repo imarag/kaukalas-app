@@ -6,8 +6,7 @@ import Head from "../components/root/Head.astro";
 import "../styles/style.css";
 import "@fontsource-variable/roboto-flex";
 
-import { getLangFromUrl } from "../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
+const { lang } = Astro.props;
 
 const { pageTitle } = Astro.props;
 ---
@@ -23,11 +22,11 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <header>
-      <NavBar />
+      <NavBar lang={lang} />
     </header>
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

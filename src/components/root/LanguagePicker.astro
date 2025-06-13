@@ -1,17 +1,13 @@
 ---
 import { languages } from "../../i18n/ui";
-import { getLangFromUrl, useTranslatedPath } from "../../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
-const translatePath = useTranslatedPath(lang);
-const lastPart = Astro.url.pathname.split("/").filter(Boolean).pop();
-const selectedPage = lastPart ? "/" + lastPart : "/index.html";
+import { getRelativeLocaleUrl } from "astro:i18n";
 ---
 
 <ul class="flex flex-row items-center gap-2">
   <li class="rounded-md hover:bg-primary/80">
     <a
       class="text-sm inline-block size-full p-2"
-      href={translatePath(selectedPage, "gr")}
+      href={getRelativeLocaleUrl("gr")}
     >
       {languages["gr"]}
     </a>
@@ -20,7 +16,7 @@ const selectedPage = lastPart ? "/" + lastPart : "/index.html";
   <li class="rounded-md hover:bg-primary/80">
     <a
       class="text-sm inline-block size-full p-2"
-      href={translatePath(selectedPage, "en")}
+      href={getRelativeLocaleUrl("en")}
     >
       {languages["en"]}
     </a>
