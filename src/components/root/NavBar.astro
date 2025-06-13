@@ -3,7 +3,6 @@ import navLinks from "../../data/nav-links";
 import Logo from "../utils/Logo.astro";
 import Symbol from "../utils/Symbol.astro";
 import LanguagePicker from "./LanguagePicker.astro";
-import { getLangFromUrl } from "../../i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 const { lang } = Astro.props;
 const currentPath = Astro.url.pathname;

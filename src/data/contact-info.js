@@ -1,5 +1,5 @@
 export default {
-    email: "kaukalas_giorgos@yahoo.gr",
+    email: "kafkalas_giorgos@yahoo.gr",
     phone: "+30 6973341740",
     company: {
         name: "GK Pool & Villas Services",
