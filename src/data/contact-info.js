@@ -4,12 +4,12 @@ export default {
     company: {
         name: "GK Pool & Villas Services",
         location: {
-            "en": "Chania, Crete",
-            "gr": "Χανιά, Κρήτη"
+            en: "Chania, Crete",
+            el: "Χανιά, Κρήτη"
         },
         schedule: {
-            "gr": "Δευτ. - Παρ. 08:00 ΠM - 06:00 ΜM",
-            "en": "Mon. - Fri. 08:00 AM - 06:00 PM"
+            el: "Δευτ. - Παρ. 08:00 ΠM - 06:00 ΜM",
+            en: "Mon. - Fri. 08:00 AM - 06:00 PM"
         }
     },
 };

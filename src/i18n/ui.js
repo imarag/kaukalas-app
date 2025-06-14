@@ -1,9 +1,9 @@
 export const languages = {
     en: 'EN',
-    gr: 'GR',
+    el: 'GR',
 };
 
-export const defaultLang = 'gr';
+export const defaultLang = 'el';
 export const showDefaultLang = false;
 
 export const ui = {
@@ -56,7 +56,7 @@ export const ui = {
         "home.faqs.title": "Frequently Asked Questions",
     }
     ,
-    "gr": {
+    "el": {
         "head.meta.description": "Επαγγελματικές υπηρεσίες καθαρισμού πισίνας στη τοποθεσία Χανίων για μια καθαρή, ασφαλή και λειτουργική πισίνα.",
         "head.meta.keywords": "καθαρισμός πισίνας, υπηρεσίες πισίνας, συντήρηση πισίνας, καθαρισμός πισίνας Χανιά, φροντίδα πισίνας",
         "layout.page-title": "Καυκαλάς Γιώργος υπηρεσίες καθαρισμού πισίνας",

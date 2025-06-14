@@ -33,7 +33,7 @@ const currentPath = Astro.url.pathname;
           <li
             class={`w-full lg:w-auto rounded-md hover:bg-primary/80 ${
               currentPath.endsWith(`/${el.href}`) ||
-              (["/gr", "/en", "/", "/en/"].includes(currentPath) &&
+              (["/gr", "/en", "/", "/en/", "/en.html"].includes(currentPath) &&
                 el.href === "index.html")
                 ? "bg-primary/80"
                 : ""

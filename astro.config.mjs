@@ -7,17 +7,26 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   build: {
-    format: 'file'
+    format: 'preserve'
   },
   site: "https://poolcleaningkaukalas.gr",
   vite: {
     plugins: [tailwindcss()],
   },
   integrations: [
-    icon()
+    icon(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'el',
+        locales: {
+          en: 'en-US',
+          el: 'el-GR',
+        },
+      },
+    }),
   ],
   i18n: {
-    locales: ["gr", "en"],
-    defaultLocale: "gr",
+    locales: ["el", "en"],
+    defaultLocale: "el",
   }
 });
