@@ -3,8 +3,8 @@ import NavBar from "../components/root/NavBar.astro";
 import Footer from "../components/root/Footer.astro";
 import Head from "../components/root/Head.astro";
 
+import "@fontsource-variable/roboto";
 import "../styles/style.css";
-import "@fontsource-variable/roboto-flex";
 
 const { lang } = Astro.props;
 
@@ -28,18 +28,6 @@ const { pageTitle } = Astro.props;
       <slot />
     </main>
     <Footer lang={lang} />
+    <script type="module" src="/src/scripts/cookieconsent-config.js"></script>
   </body>
 </html>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TMERB1LXGL"
-></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-TMERB1LXGL");
-</script>
